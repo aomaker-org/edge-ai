@@ -38,6 +38,12 @@ edge-ai/
 ├── irislime/              # Header domain for components derived from irislime
 │   ├── README.md          # Provenance and rules for irislime baseline assets
 │   └── derived_components/ # Ported engine code, make files, and diagnostic wrappers
+├── ai-log-diff/           # AI-assisted semantic log diffing subproject
+│   ├── README.md          # Subproject overview
+│   └── tools/             # Log normalizer and template differ utility
+├── web/                   # Web dashboard & infrastructure domain
+│   ├── README.md          # Ecosystem web index
+│   └── DASHBOARD_ARCHITECTURE.md # GitHub Pages, Actions, & API dashboard design
 ├── infra/                 # Infrastructure and Make modules
 │   └── make/              # Modular makefiles (base.mk, etc.)
 ├── src/                   # Core C++/Python source modules
