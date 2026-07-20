@@ -19,7 +19,12 @@ Per **Rule 7** in [AI.md](file:///home/fekerr/src/edge-ai/AI.md):
 
 | ID | File Path | Line Range | Purpose / Rationale | Status | Approved By |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| *(None)* | *(No /dev/null redirections currently exist in repo)* | - | - | - | - |
+| `EXC-001` | `infra/make/base.mk` | L18 | Silent fallback on systems lacking `nproc` binary | Approved | fekerr / AGY |
+| `EXC-002` | `infra/make/base.mk` | L19 | Suppress stderr when querying Linux sysfs P-core topology | Approved | fekerr / AGY |
+| `EXC-003` | `infra/make/base.mk` | L20 | Suppress stderr when querying Linux sysfs E-core topology | Approved | fekerr / AGY |
+| `EXC-004` | `infra/make/base.mk` | L23 | Suppress stderr when reading `/proc/meminfo` memory data | Approved | fekerr / AGY |
+| `EXC-005` | `infra/make/base.mk` | L95 | Suppress output during `tree` command existence check | Approved | fekerr / AGY |
+| `EXC-006` | `infra/make/litert.mk` | L33 | Suppress output during `bazel` build tool existence probe | Approved | fekerr / AGY |
 
 ---
 

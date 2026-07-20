@@ -1,5 +1,5 @@
 # ==============================================================================
-# Filename:     infra/make/base.mk
+# Filename:     irislime/derived_components/make/base.mk
 # Purpose:      RAM-Aware Topology Parsing & Safe Toolchain Pre-flight Sanity Check
 # Architecture: Root-Anchored via $(PROJECT_ROOT), Out-of-Tree (build/)
 # Standard:     Rule 7 (/dev/null Registry) & Rule 8 (YYMMDD_HHMM_NNN Timestamping)

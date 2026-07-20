@@ -25,7 +25,7 @@
 - [x] Created high-autonomy launch script ([tools/agy-run-20260720.sh](file:///home/fekerr/src/edge-ai/tools/agy-run-20260720.sh)), root symlink `agy-run-20260720.sh`, and `make agy-launch` Makefile target.
 
 ### Milestone 2: Core Hardware & Subsystem Migration (Upcoming)
-- [ ] Port C++ engine build modules from `irislime` into modular makefiles (`infra/make/*.mk`).
+- [x] Port C++ engine build modules from `irislime` into modular makefiles (`infra/make/*.mk`).
 - [ ] Establish isolated hardware inference validation targets (`make test`).
 - [ ] Implement `uv` environment dependency management in `pyproject.toml`.
 
@@ -43,6 +43,7 @@
 - `260720_0818_001` - Created `edge-ai/web/` architecture domain detailing GitHub Pages/Actions dashboard, OCI/GCP free tier hosting analysis, WireGuard & Mosquitto MQTT network overlay, and `aomaker.org` / `jason-lab.dev` integration plan.
 - `260720_0823_001` - Added `irislime/irislime` Git submodule and generated deep review suite (`review_commit_history.md`, `review_architectural_audit.md`, `review_technical_debt_and_improvements.md`, `review_summary.md`) auditing all 111 commits and technical debt resolutions.
 - `260720_0827_001` - Created executable launcher script `tools/agy-run-20260720.sh`, root symlink `agy-run-20260720.sh`, and `make agy-launch` target for high-autonomy AGY session startup.
+- `260720_0831_001` - Ported hardware acceleration make modules (`base.mk`, `litert.mk`, `openvino.mk`, `sycl.mk`, `vulkan.mk`) from `irislime/derived_components` into `infra/make/`, verified out-of-tree builds with `make build`, enforced Rule 7 (`/dev/null` prohibition & registry) and Rule 8 (`YYMMDD_HHMM_NNN`) timestamping, and synced telemetry with `make agy-sync`.
 
 
 

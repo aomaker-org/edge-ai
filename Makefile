@@ -18,6 +18,10 @@ export BUILD_DIR LOGS_DIR AGY_DIR
 
 # 3. Guard Rails & Core Subsystems
 include infra/make/base.mk
+include infra/make/litert.mk
+include infra/make/openvino.mk
+include infra/make/sycl.mk
+include infra/make/vulkan.mk
 
 .PHONY: all help clean distclean agy-sync agy-status test build
 
@@ -52,9 +56,8 @@ ai-log-diff-demo: ## Execute AI semantic log diff demonstration
 		--md-out $(BUILD_DIR)/log_diff_demo_report.md
 	@echo "[ai-log-diff-demo] Report generated at $(BUILD_DIR)/log_diff_demo_report.md"
 
-build: ## Build project targets (out-of-tree in build/)
-	@mkdir -p $(BUILD_DIR)
-	@echo "[build] Build directory ready at $(BUILD_DIR)"
+build: build-base ## Build project targets (out-of-tree in build/)
+
 
 test: ## Execute test suite idempotently
 	@echo "[test] Test runner placeholder"
