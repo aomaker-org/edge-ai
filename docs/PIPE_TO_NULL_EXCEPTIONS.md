@@ -25,6 +25,11 @@ Per **Rule 7** in [AI.md](file:///home/fekerr/src/edge-ai/AI.md):
 | `EXC-004` | `infra/make/base.mk` | L23 | Suppress stderr when reading `/proc/meminfo` memory data | Approved | fekerr / AGY |
 | `EXC-005` | `infra/make/base.mk` | L95 | Suppress output during `tree` command existence check | Approved | fekerr / AGY |
 | `EXC-006` | `infra/make/litert.mk` | L33 | Suppress output during `bazel` build tool existence probe | Approved | fekerr / AGY |
+| `EXC-007` | `tools/provision.sh` | L35 | Mute raw binary cryptographic GPG dearmor output | Approved | fekerr / AGY |
+| `EXC-008` | `tools/provision.sh` | L61 | Suppress stderr when querying Win32_Processor across non-WSL boundary | Approved | fekerr / AGY |
+| `EXC-009` | `tools/provision.sh` | L83 | Mute stdout/stderr during silent `uv` binary existence probe | Approved | fekerr / AGY |
+| `EXC-010` | `tools/provision.sh` | L98 | Suppress stderr when querying git submodule status | Approved | fekerr / AGY |
+| `EXC-011` | `tools/provision.sh` | L110 | Mute stdout/stderr during secondary `uv` check | Approved | fekerr / AGY |
 
 ---
 
