@@ -22,6 +22,7 @@
 - [x] Created `ai-log-diff/` subproject ([ai-log-diff/README.md](file:///home/fekerr/src/edge-ai/ai-log-diff/README.md)), research paper ([ai-log-diff/docs/RESEARCH_AND_SPECIFICATION.md](file:///home/fekerr/src/edge-ai/ai-log-diff/docs/RESEARCH_AND_SPECIFICATION.md)), semantic log differ tool ([ai-log-diff/tools/semantic_log_differ.py](file:///home/fekerr/src/edge-ai/ai-log-diff/tools/semantic_log_differ.py)), and example logs.
 - [x] Established `edge-ai/web/` domain ([web/README.md](file:///home/fekerr/src/edge-ai/web/README.md)) detailing dashboard architecture via GitHub Pages/Actions/API ([web/DASHBOARD_ARCHITECTURE.md](file:///home/fekerr/src/edge-ai/web/DASHBOARD_ARCHITECTURE.md)), infrastructure & free-tier hosting analysis ([web/INFRASTRUCTURE_AND_HOSTING.md](file:///home/fekerr/src/edge-ai/web/INFRASTRUCTURE_AND_HOSTING.md)), WireGuard/Mosquitto telemetry pipeline ([web/NETWORK_AND_TELEMETRY_PIPELINE.md](file:///home/fekerr/src/edge-ai/web/NETWORK_AND_TELEMETRY_PIPELINE.md)), and `aomaker.org` / `jason-lab.dev` integration plan ([web/AOMAKER_INTEGRATION_PLAN.md](file:///home/fekerr/src/edge-ai/web/AOMAKER_INTEGRATION_PLAN.md)).
 - [x] Added `irislime/irislime` as a Git submodule tracking `git@github.com:aomaker-org/irislime.git` and generated deep review suite ([irislime/docs/review_summary.md](file:///home/fekerr/src/edge-ai/irislime/docs/review_summary.md)) auditing all 111 commits ([review_commit_history.md](file:///home/fekerr/src/edge-ai/irislime/docs/review_commit_history.md)), subsystem architecture ([review_architectural_audit.md](file:///home/fekerr/src/edge-ai/irislime/docs/review_architectural_audit.md)), and technical debt fixes ([review_technical_debt_and_improvements.md](file:///home/fekerr/src/edge-ai/irislime/docs/review_technical_debt_and_improvements.md)).
+- [x] Created high-autonomy launch script ([tools/agy-run-20260720.sh](file:///home/fekerr/src/edge-ai/tools/agy-run-20260720.sh)), root symlink `agy-run-20260720.sh`, and `make agy-launch` Makefile target.
 
 ### Milestone 2: Core Hardware & Subsystem Migration (Upcoming)
 - [ ] Port C++ engine build modules from `irislime` into modular makefiles (`infra/make/*.mk`).
@@ -41,6 +42,8 @@
 - `260720_0812_001` - Generated `irislime_manifest.md` & `irislime_manifest.json` classifying 391 files into `source_files`, `built_files`, and `log_files`. Established `ai-log-diff/` subproject framework, research specification, semantic differ tool, example logs, and `make ai-log-diff-demo` target.
 - `260720_0818_001` - Created `edge-ai/web/` architecture domain detailing GitHub Pages/Actions dashboard, OCI/GCP free tier hosting analysis, WireGuard & Mosquitto MQTT network overlay, and `aomaker.org` / `jason-lab.dev` integration plan.
 - `260720_0823_001` - Added `irislime/irislime` Git submodule and generated deep review suite (`review_commit_history.md`, `review_architectural_audit.md`, `review_technical_debt_and_improvements.md`, `review_summary.md`) auditing all 111 commits and technical debt resolutions.
+- `260720_0827_001` - Created executable launcher script `tools/agy-run-20260720.sh`, root symlink `agy-run-20260720.sh`, and `make agy-launch` target for high-autonomy AGY session startup.
+
 
 
 

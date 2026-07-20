@@ -39,6 +39,9 @@ agy-sync: ## Idempotently sync AI agent prompt & response history into agy/
 agy-status: ## Display statistics of captured AI session telemetry
 	@$(PYTHON) tools/sync_agy_logs.py --status --workspace "$(PROJECT_ROOT)"
 
+agy-launch: ## Launch high-autonomy AGY session wrapper script
+	@./tools/agy-run-20260720.sh
+
 manifest-gen: ## Regenerate irislime full file manifest (JSON & Markdown)
 	@$(PYTHON) tools/generate_irislime_manifest.py
 
