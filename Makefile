@@ -19,12 +19,13 @@ export BUILD_DIR LOGS_DIR AGY_DIR
 # 3. Guard Rails & Core Subsystems
 include infra/make/base.mk
 include infra/make/linux.mk
+include infra/make/telemetry_debug.mk
 include infra/make/litert.mk
 include infra/make/openvino.mk
 include infra/make/sycl.mk
 include infra/make/vulkan.mk
 
-.PHONY: all help clean distclean agy-sync agy-status test build
+.PHONY: all help clean distclean agy-sync agy-status test build build-debug build-telemetry build-matrix
 
 
 all: help
