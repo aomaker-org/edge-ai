@@ -7,6 +7,7 @@ Welcome to the **`edge-ai` Learning & System Engineering Domain**. This director
 ## 📚 Curriculum Overview & Lesson Plan Index
 
 - 🎯 **[GOAL_INTEL_MLE_AGENTIC_AI.md](file:///home/fekerr/src/edge-ai/learning/GOAL_INTEL_MLE_AGENTIC_AI.md)** – Master Learning Goal Specification: Intel Machine Learning Engineer (Agentic AI & Edge SLM Architecture, Job Req JR0284870).
+- 🎬 **[GOAL_EVERY_AI_CONCEPT_EXPLAINED.md](file:///home/fekerr/src/edge-ai/learning/GOAL_EVERY_AI_CONCEPT_EXPLAINED.md)** – Master Learning Goal Specification: Deconstructed 38 Core AI Topics from *"Every AI Concept Explained Intuitively!"* (YouTube ID `LlYcDGrnXeY`).
 - 📖 **[LESSON_PLANS.md](file:///home/fekerr/src/edge-ai/learning/LESSON_PLANS.md)** – Comprehensive 4-stage learning roadmap and hands-on exercises.
 - ⚡ **[01_FOUNDATION_AND_ROOT_HYGIENE.md](file:///home/fekerr/src/edge-ai/learning/01_FOUNDATION_AND_ROOT_HYGIENE.md)** – Lesson 1: Root directory hygiene, dynamic Makefile anchoring (`PROJECT_ROOT`), and append-only task tracking.
 - 📦 **[02_OUT_OF_TREE_BUILDS_AND_SUBMODULES.md](file:///home/fekerr/src/edge-ai/learning/02_OUT_OF_TREE_BUILDS_AND_SUBMODULES.md)** – Lesson 2: Git submodules (`irislime`, `llama.cpp`), CMake out-of-tree compilation, and artifact/log separation.
