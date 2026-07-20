@@ -35,6 +35,9 @@ edge-ai/
 ├── agy/                   # Captured AI agent session telemetry (append-only)
 │   ├── prompts.jsonl      # SHA256-deduplicated append-only event stream
 │   └── sessions/          # Session summary records in Markdown
+├── irislime/              # Header domain for components derived from irislime
+│   ├── README.md          # Provenance and rules for irislime baseline assets
+│   └── derived_components/ # Ported engine code, make files, and diagnostic wrappers
 ├── infra/                 # Infrastructure and Make modules
 │   └── make/              # Modular makefiles (base.mk, etc.)
 ├── src/                   # Core C++/Python source modules
@@ -43,6 +46,24 @@ edge-ai/
 ├── docs/                  # Architecture specifications and technical notes
 ├── build/                 # Out-of-tree build output (gitignored)
 └── logs/                  # Runtime and diagnostic logs (gitignored)
+```
+
+---
+
+## 📥 Repository Cloning & Submodule Initialization
+
+Because GitHub's web interface only suggests the standard `git clone` command line without submodules, use one of the following commands:
+
+### Single-Step Clone with Submodules (Recommended)
+```bash
+git clone --recurse-submodules git@github.com:aomaker-org/edge-ai.git
+```
+
+### Standard Clone + Manual Submodule Sync
+```bash
+git clone git@github.com:aomaker-org/edge-ai.git
+cd edge-ai
+git submodule update --init --recursive
 ```
 
 ---

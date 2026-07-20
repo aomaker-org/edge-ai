@@ -17,6 +17,7 @@
 - [x] Established core workspace documentation ([README.md](file:///home/fekerr/src/edge-ai/README.md), [GETTING_STARTED.md](file:///home/fekerr/src/edge-ai/GETTING_STARTED.md), [QUICK_START.md](file:///home/fekerr/src/edge-ai/QUICK_START.md), [AI.md](file:///home/fekerr/src/edge-ai/AI.md), [TODO.md](file:///home/fekerr/src/edge-ai/TODO.md)).
 - [x] Enforced Rule 7 (NO PIPE TO NULL unless necessary, commented, and registered) in [AI.md](file:///home/fekerr/src/edge-ai/AI.md) and established [docs/PIPE_TO_NULL_EXCEPTIONS.md](file:///home/fekerr/src/edge-ai/docs/PIPE_TO_NULL_EXCEPTIONS.md).
 - [x] Defined and enforced Rule 8 (`YYMMDD_HHMM_NNN` timestamping standard) in [docs/TIMESTAMPING_STANDARD.md](file:///home/fekerr/src/edge-ai/docs/TIMESTAMPING_STANDARD.md) and updated [tools/sync_agy_logs.py](file:///home/fekerr/src/edge-ai/tools/sync_agy_logs.py).
+- [x] Created `irislime/derived_components/` header domain ([irislime/README.md](file:///home/fekerr/src/edge-ai/irislime/README.md)) and documented full `git clone --recurse-submodules` & `git submodule update --init --recursive` commands in [README.md](file:///home/fekerr/src/edge-ai/README.md), [GETTING_STARTED.md](file:///home/fekerr/src/edge-ai/GETTING_STARTED.md), and [QUICK_START.md](file:///home/fekerr/src/edge-ai/QUICK_START.md).
 
 ### Milestone 2: Core Hardware & Subsystem Migration (Upcoming)
 - [ ] Port C++ engine build modules from `irislime` into modular makefiles (`infra/make/*.mk`).
@@ -32,5 +33,7 @@
 - `2026-07-20 08:00` - Initialized repository structure, dynamic Make anchor, and `agy` telemetry pipeline.
 - `2026-07-20 08:04` - Created `docs/` directory and established `/dev/null` redirection policy registry ([docs/PIPE_TO_NULL_EXCEPTIONS.md](file:///home/fekerr/src/edge-ai/docs/PIPE_TO_NULL_EXCEPTIONS.md)). Audited codebase (0 `/dev/null` redirections currently present).
 - `260720_0806_001` - Established `YYMMDD_HHMM_NNN` timestamping standard specification ([docs/TIMESTAMPING_STANDARD.md](file:///home/fekerr/src/edge-ai/docs/TIMESTAMPING_STANDARD.md)) with sequence override support (`--seq-start`).
+- `260720_0808_001` - Created `irislime/derived_components/` header domain and updated [README.md](file:///home/fekerr/src/edge-ai/README.md), [GETTING_STARTED.md](file:///home/fekerr/src/edge-ai/GETTING_STARTED.md), and [QUICK_START.md](file:///home/fekerr/src/edge-ai/QUICK_START.md) with full Git clone submodule command lines (`--recurse-submodules` and `git submodule update --init --recursive`).
+
 
 

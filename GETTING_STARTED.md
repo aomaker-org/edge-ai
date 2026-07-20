@@ -15,7 +15,27 @@ Ensure your execution environment satisfies the following baseline requirements:
 
 ---
 
-## 2. Environment Initialization & Project Root Anchoring
+## 2. Cloning the Repository & Submodule Initialization
+
+Because GitHub's default web interface only provides standard `git clone` URLs without submodules, choose one of the following methods when pulling down the workspace:
+
+### Method A: Single-Step Clone with Submodules (Recommended)
+```bash
+git clone --recurse-submodules git@github.com:aomaker-org/edge-ai.git
+cd edge-ai
+```
+
+### Method B: Standard Clone + Manual Submodule Sync
+If you cloned the repository using GitHub's standard command line:
+```bash
+git clone git@github.com:aomaker-org/edge-ai.git
+cd edge-ai
+git submodule update --init --recursive
+```
+
+---
+
+## 3. Environment Initialization & Project Root Anchoring
 
 The workspace enforces absolute project root resolution through the top-level [Makefile](file:///home/fekerr/src/edge-ai/Makefile).
 
