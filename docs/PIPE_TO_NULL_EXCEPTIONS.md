@@ -35,6 +35,7 @@ Per **Rule 7** in [AI.md](file:///home/fekerr/src/edge-ai/AI.md):
 | `EXC-014` | `tools/tree_log_watcher.sh` | L41 | Mute stdout/stderr for `inotifywait` utility existence probe | Approved | fekerr / AGY |
 | `EXC-015` | `tools/tree_log_watcher.sh` | L44 | Mute output stream of `inotifywait` to trigger clean UI re-render | Approved | fekerr / AGY |
 | `EXC-016` | `tools/tree_log_watcher.sh` | L20 | Mute stdout/stderr for `python3` binary existence probe | Approved | fekerr / AGY |
+| `EXC-017` | `infra/make/base.mk` | L96 | Suppress stderr when querying find fallback for binary logs | Approved | fekerr / AGY |
 
 ---
 

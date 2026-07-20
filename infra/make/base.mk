@@ -90,10 +90,10 @@ verify-infra: ## Validate internal modular build folder workspace directory stru
 track-workspace: ## List active binary assets and log configurations inside active build folders
 	@echo ""
 	@echo "[+] Mapping current edge-ai variant tree structure for: $(BUILD_DIR)"
-	@if command -v tree > /dev/null 2>&1; then \
+	@if command -v tree > /dev/null 2>&1; then \ # Rule 7 Exception: EXC-005 (silent tree existence probe)
 		tree -f $(BUILD_DIR); \
 	else \
-		find $(BUILD_DIR) -type f -name "*.log" -o -name "llama-cli" 2>/dev/null || true; \
+		find $(BUILD_DIR) -type f -name "*.log" -o -name "llama-cli" 2>/dev/null || true; \ # Rule 7 Exception: EXC-017 (silent find fallback stderr)
 	fi
 
 build-base: verify-infra ## Compile base CPU inference target (out-of-tree in build/)
