@@ -50,5 +50,7 @@ make agy-status
 
 ---
 
-For detailed environment options, see **[GETTING_STARTED.md](file:///home/fekerr/src/edge-ai/GETTING_STARTED.md)**.
+For detailed environment options, see **[GETTING_STARTED.md](file:///home/fekerr/src/edge-ai/GETTING_STARTED.md)** and **[PROVISIONING_NOTES.md](file:///home/fekerr/src/edge-ai/docs/PROVISIONING_NOTES.md)**.
+For hardware throttling & telemetry guidelines, see **[RESOURCE_THROTTLING_AND_TELEMETRY.md](file:///home/fekerr/src/edge-ai/docs/RESOURCE_THROTTLING_AND_TELEMETRY.md)**.
+For `aomaker-org/llama.cpp` patch necessity analysis, see **[LLAMA_CPP_FORK_AUDIT.md](file:///home/fekerr/src/edge-ai/docs/LLAMA_CPP_FORK_AUDIT.md)**.
 For AI agent engagement guardrails, see **[AI.md](file:///home/fekerr/src/edge-ai/AI.md)**.

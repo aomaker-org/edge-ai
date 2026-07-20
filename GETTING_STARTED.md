@@ -94,5 +94,8 @@ When migrating or adapting components from `../irislime`:
 ## 5. Next Steps
 
 - Review **[QUICK_START.md](file:///home/fekerr/src/edge-ai/QUICK_START.md)** for rapid execution recipes.
+- Review **[PROVISIONING_NOTES.md](file:///home/fekerr/src/edge-ai/docs/PROVISIONING_NOTES.md)** for Win11 winget & WSL2 Ubuntu provisioning guides.
+- Review **[RESOURCE_THROTTLING_AND_TELEMETRY.md](file:///home/fekerr/src/edge-ai/docs/RESOURCE_THROTTLING_AND_TELEMETRY.md)** for <50% laptop thermal & load management guidelines.
+- Review **[LLAMA_CPP_FORK_AUDIT.md](file:///home/fekerr/src/edge-ai/docs/LLAMA_CPP_FORK_AUDIT.md)** for `aomaker-org/llama.cpp` patch audit and necessity analysis.
 - Review **[AI.md](file:///home/fekerr/src/edge-ai/AI.md)** for rules governing AI agent interactions.
 - Check **[TODO.md](file:///home/fekerr/src/edge-ai/TODO.md)** for active workspace tasks.

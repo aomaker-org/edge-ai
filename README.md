@@ -78,6 +78,9 @@ git submodule update --init --recursive
 
 - 📖 **[GETTING_STARTED.md](file:///home/fekerr/src/edge-ai/GETTING_STARTED.md)** – Comprehensive setup guide.
 - ⚡ **[QUICK_START.md](file:///home/fekerr/src/edge-ai/QUICK_START.md)** – Fast setup instructions for immediate execution.
+- 💻 **[PROVISIONING_NOTES.md](file:///home/fekerr/src/edge-ai/docs/PROVISIONING_NOTES.md)** – Win11 winget, WSL2 Ubuntu, and Native vs WSL build specifications.
+- ⚡ **[RESOURCE_THROTTLING_AND_TELEMETRY.md](file:///home/fekerr/src/edge-ai/docs/RESOURCE_THROTTLING_AND_TELEMETRY.md)** – <50% laptop resource throttling & telemetry guardrails.
+- 🦙 **[LLAMA_CPP_FORK_AUDIT.md](file:///home/fekerr/src/edge-ai/docs/LLAMA_CPP_FORK_AUDIT.md)** – `aomaker-org/llama.cpp` patch audit and necessity analysis.
 - 🤖 **[AI.md](file:///home/fekerr/src/edge-ai/AI.md)** – Rules of engagement for AI coding agents.
 - 📝 **[TODO.md](file:///home/fekerr/src/edge-ai/TODO.md)** – Append-only task ledger.
 

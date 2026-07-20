@@ -28,6 +28,10 @@
 - [x] Port C++ engine build modules from `irislime` into modular makefiles (`infra/make/*.mk`).
 - [ ] Establish isolated hardware inference validation targets (`make test`).
 - [ ] Implement `uv` environment dependency management in `pyproject.toml`.
+- [ ] Configure native Linux build targets and toolchain matrix (`gcc`/`clang`).
+- [ ] Create GitHub Codespaces `.devcontainer/devcontainer.json` configuration.
+- [ ] Build Docker containerization image (`Dockerfile`) for isolated edge-ai execution.
+- [ ] Implement real-time system load monitoring telemetry script to enforce <50% laptop CPU/RAM load limit.
 
 ---
 
@@ -45,10 +49,5 @@
 - `260720_0827_001` - Created executable launcher script `tools/agy-run-20260720.sh`, root symlink `agy-run-20260720.sh`, and `make agy-launch` target for high-autonomy AGY session startup.
 - `260720_0831_001` - Ported hardware acceleration make modules (`base.mk`, `litert.mk`, `openvino.mk`, `sycl.mk`, `vulkan.mk`) from `irislime/derived_components` into `infra/make/`, verified out-of-tree builds with `make build`, enforced Rule 7 (`/dev/null` prohibition & registry) and Rule 8 (`YYMMDD_HHMM_NNN`) timestamping, and synced telemetry with `make agy-sync`.
 - `260720_0834_001` - Merged feature branch into `main` (approving initial repo creation commits), created `tools/agy-next-work.sh` launcher script with root symlink `agy-next-work.sh`, and added `make agy-next` target.
-
-
-
-
-
-
+- `260720_0841_001` - Created provisioning specifications ([docs/PROVISIONING_NOTES.md](file:///home/fekerr/src/edge-ai/docs/PROVISIONING_NOTES.md)), hardware load throttling & telemetry guidelines ([docs/RESOURCE_THROTTLING_AND_TELEMETRY.md](file:///home/fekerr/src/edge-ai/docs/RESOURCE_THROTTLING_AND_TELEMETRY.md)), and llama.cpp fork necessity audit ([docs/LLAMA_CPP_FORK_AUDIT.md](file:///home/fekerr/src/edge-ai/docs/LLAMA_CPP_FORK_AUDIT.md)). Updated top-level documentation with dual concise/verbose formats and submodule clone instructions.
 
