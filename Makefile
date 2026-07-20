@@ -55,6 +55,9 @@ agy-next: ## Launch next work high-autonomy AGY session wrapper script
 manifest-gen: ## Regenerate irislime full file manifest (JSON & Markdown)
 	@$(PYTHON) tools/generate_irislime_manifest.py
 
+manifest-build: ## Audit built executables, libraries, tests, and logs into docs/BUILD_AND_TEST_MANIFEST.md
+	@$(PYTHON) tools/generate_build_manifest.py
+
 watch-logs: ## Live-stream 'tree -f' output for logs as files are created/updated
 	@./tools/tree_log_watcher.sh $(LOGS_DIR)
 
@@ -67,6 +70,8 @@ ai-log-diff-demo: ## Execute AI semantic log diff demonstration
 
 build: build-base ## Build project targets (out-of-tree in build/)
 
+test-all: ## Discover and execute all compiled unit test executables under throttled load
+	@$(PYTHON) tools/test_runner_matrix.py --build-dir build --logs-dir logs
 
 test: test-inference ## Execute test suite idempotently
 
