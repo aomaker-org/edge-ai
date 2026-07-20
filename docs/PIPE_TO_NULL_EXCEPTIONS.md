@@ -30,6 +30,10 @@ Per **Rule 7** in [AI.md](file:///home/fekerr/src/edge-ai/AI.md):
 | `EXC-009` | `tools/provision.sh` | L83 | Mute stdout/stderr during silent `uv` binary existence probe | Approved | fekerr / AGY |
 | `EXC-010` | `tools/provision.sh` | L98 | Suppress stderr when querying git submodule status | Approved | fekerr / AGY |
 | `EXC-011` | `tools/provision.sh` | L110 | Mute stdout/stderr during secondary `uv` check | Approved | fekerr / AGY |
+| `EXC-012` | `tools/tree_log_watcher.sh` | L28 | Mute stdout/stderr for `tree` utility existence probe | Approved | fekerr / AGY |
+| `EXC-013` | `tools/tree_log_watcher.sh` | L32 | Mute stderr for `find` fallback query on fresh directories | Approved | fekerr / AGY |
+| `EXC-014` | `tools/tree_log_watcher.sh` | L41 | Mute stdout/stderr for `inotifywait` utility existence probe | Approved | fekerr / AGY |
+| `EXC-015` | `tools/tree_log_watcher.sh` | L44 | Mute output stream of `inotifywait` to trigger clean UI re-render | Approved | fekerr / AGY |
 
 ---
 

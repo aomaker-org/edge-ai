@@ -54,6 +54,9 @@ agy-next: ## Launch next work high-autonomy AGY session wrapper script
 manifest-gen: ## Regenerate irislime full file manifest (JSON & Markdown)
 	@$(PYTHON) tools/generate_irislime_manifest.py
 
+watch-logs: ## Live-stream 'tree -f' output for logs as files are created/updated
+	@./tools/tree_log_watcher.sh $(LOGS_DIR)
+
 ai-log-diff-demo: ## Execute AI semantic log diff demonstration
 	@$(PYTHON) ai-log-diff/tools/semantic_log_differ.py \
 		--log-a ai-log-diff/examples/build_pass_001.log \
