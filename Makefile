@@ -46,6 +46,9 @@ agy-status: ## Display statistics of captured AI session telemetry
 agy-launch: ## Launch high-autonomy AGY session wrapper script
 	@./tools/agy-run-20260720.sh
 
+agy-next: ## Launch next work high-autonomy AGY session wrapper script
+	@./tools/agy-next-work.sh
+
 manifest-gen: ## Regenerate irislime full file manifest (JSON & Markdown)
 	@$(PYTHON) tools/generate_irislime_manifest.py
 
