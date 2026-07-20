@@ -25,7 +25,7 @@ include infra/make/openvino.mk
 include infra/make/sycl.mk
 include infra/make/vulkan.mk
 
-.PHONY: all help clean distclean agy-sync agy-status test build build-debug build-telemetry build-matrix
+.PHONY: all help clean distclean agy-sync agy-status agy-launch agy-next new-agy test build build-debug build-telemetry build-matrix
 
 
 all: help
@@ -51,6 +51,9 @@ agy-launch: ## Launch high-autonomy AGY session wrapper script
 
 agy-next: ## Launch next work high-autonomy AGY session wrapper script
 	@./tools/agy-next-work.sh
+
+new-agy: ## Launch high-autonomy AGY session configured with Claude 3.7 Sonnet for 1-hour clock time
+	@./tools/agy-claude-1hr.sh
 
 manifest-gen: ## Regenerate irislime full file manifest (JSON & Markdown)
 	@$(PYTHON) tools/generate_irislime_manifest.py
