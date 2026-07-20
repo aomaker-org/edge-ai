@@ -2,8 +2,8 @@
 
 This manifest provides both **Concise (TL;DR)** and **Verbose (Architectural)** asset tracking for all compiled executables, shared libraries, test binaries, and separated telemetry log files across `edge-ai`.
 
-- **Generated Timestamp**: `2026-07-20T09:34:43.130715`
-- **Rule 8 Timestamp Tag**: `260720_0934_001`
+- **Generated Timestamp**: `2026-07-20T09:48:23.502490`
+- **Rule 8 Timestamp Tag**: `260720_0948_001`
 - **Project Root**: `/home/fekerr/src/edge-ai`
 
 ---
@@ -12,16 +12,16 @@ This manifest provides both **Concise (TL;DR)** and **Verbose (Architectural)** 
 
 | Asset Category | Total Items Found | Primary Output Directory | Status |
 | :--- | :--- | :--- | :--- |
-| 🚀 **Built Executables** | **81** binaries | `build/base_release/bin/`, `build/*/bin/` | **Validated** |
-| 📦 **Shared Libraries & Artifacts** | **1711** libraries/objects | `build/*/bin/`, `build/*/` | **Validated** |
-| 🧪 **Test Executables** | **41** unit test binaries | `build/*/bin/` | **Validated** |
+| 🚀 **Built Executables** | **135** binaries | `build/base_release/bin/`, `build/*/bin/` | **Validated** |
+| 📦 **Shared Libraries & Artifacts** | **2080** libraries/objects | `build/*/bin/`, `build/*/` | **Validated** |
+| 🧪 **Test Executables** | **82** unit test binaries | `build/*/bin/` | **Validated** |
 | 📝 **Separated Log & Telemetry Files** | **5** log files | `logs/`, `logs/tests/`, `logs/debug/`, `agy/` | **Separated & Active** |
 
 ---
 
 ## 🏛️ 2. Verbose Asset Inventory by Section
 
-### A. 🚀 Built Executables & Engine Binaries (81 Files)
+### A. 🚀 Built Executables & Engine Binaries (135 Files)
 
 | Binary Name | Relative File Path | File Size | SHA256 Prefix | Executable |
 | :--- | :--- | :--- | :--- | :--- |
@@ -31,12 +31,62 @@ This manifest provides both **Concise (TL;DR)** and **Verbose (Architectural)** 
 | `a.out` | `build/base_debug/CMakeFiles/4.2.3/CompilerIdCXX/a.out` | 15.7 KB | `a761a1ebb40e916e` | ✅ |
 | `ompver_C.bin` | `build/base_debug/CMakeFiles/FindOpenMP/ompver_C.bin` | 15.9 KB | `03282ec0c8e57f6b` | ✅ |
 | `ompver_CXX.bin` | `build/base_debug/CMakeFiles/FindOpenMP/ompver_CXX.bin` | 16.0 KB | `5a1e1b933e4a8bd1` | ✅ |
+| `export-graph-ops` | `build/base_debug/bin/export-graph-ops` | 3.99 MB | `356530b31e9cf9d1` | ✅ |
 | `libggml-base.so.0` | `build/base_debug/bin/libggml-base.so.0` | 4.20 MB | `8c480b5a4f4d85b7` | ✅ |
 | `libggml-base.so.0.15.2` | `build/base_debug/bin/libggml-base.so.0.15.2` | 4.20 MB | `8c480b5a4f4d85b7` | ✅ |
 | `libggml-cpu.so.0` | `build/base_debug/bin/libggml-cpu.so.0` | 3.70 MB | `1d7b9785061b79d3` | ✅ |
 | `libggml-cpu.so.0.15.2` | `build/base_debug/bin/libggml-cpu.so.0.15.2` | 3.70 MB | `1d7b9785061b79d3` | ✅ |
 | `libggml.so.0` | `build/base_debug/bin/libggml.so.0` | 722.1 KB | `094b229f47c304a4` | ✅ |
 | `libggml.so.0.15.2` | `build/base_debug/bin/libggml.so.0.15.2` | 722.1 KB | `094b229f47c304a4` | ✅ |
+| `libllama-common.so.0` | `build/base_debug/bin/libllama-common.so.0` | 59.97 MB | `` | ✅ |
+| `libllama-common.so.0.0.9802` | `build/base_debug/bin/libllama-common.so.0.0.9802` | 59.97 MB | `` | ✅ |
+| `libllama.so.0` | `build/base_debug/bin/libllama.so.0` | 62.49 MB | `` | ✅ |
+| `libllama.so.0.0.9802` | `build/base_debug/bin/libllama.so.0.0.9802` | 62.49 MB | `` | ✅ |
+| `libmtmd.so.0` | `build/base_debug/bin/libmtmd.so.0` | 14.08 MB | `4dda2d1d77ae940a` | ✅ |
+| `libmtmd.so.0.0.9802` | `build/base_debug/bin/libmtmd.so.0.0.9802` | 14.08 MB | `4dda2d1d77ae940a` | ✅ |
+| `llama-batched` | `build/base_debug/bin/llama-batched` | 718.8 KB | `c5b95514e1a08b1f` | ✅ |
+| `llama-batched-bench` | `build/base_debug/bin/llama-batched-bench` | 16.9 KB | `819c2845020b854c` | ✅ |
+| `llama-bench` | `build/base_debug/bin/llama-bench` | 102.4 KB | `6b44114a2343da49` | ✅ |
+| `llama-cli` | `build/base_debug/bin/llama-cli` | 102.4 KB | `72d79e1f3e41c334` | ✅ |
+| `llama-completion` | `build/base_debug/bin/llama-completion` | 16.9 KB | `1e87e0b030562031` | ✅ |
+| `llama-convert-llama2c-to-ggml` | `build/base_debug/bin/llama-convert-llama2c-to-ggml` | 620.4 KB | `d07105bd840e20d6` | ✅ |
+| `llama-debug` | `build/base_debug/bin/llama-debug` | 2.63 MB | `d57e2d6ac3044d11` | ✅ |
+| `llama-debug-template-parser` | `build/base_debug/bin/llama-debug-template-parser` | 5.21 MB | `68369d5b7fee5080` | ✅ |
+| `llama-diffusion-cli` | `build/base_debug/bin/llama-diffusion-cli` | 1.45 MB | `2b3cfeb5036a23ff` | ✅ |
+| `llama-embedding` | `build/base_debug/bin/llama-embedding` | 817.4 KB | `d12557d505b91016` | ✅ |
+| `llama-eval-callback` | `build/base_debug/bin/llama-eval-callback` | 662.4 KB | `aae995cb48b9e1ee` | ✅ |
+| `llama-finetune` | `build/base_debug/bin/llama-finetune` | 650.2 KB | `b07f3dea72568bb0` | ✅ |
+| `llama-gemma3-cli` | `build/base_debug/bin/llama-gemma3-cli` | 91.7 KB | `2d61013c075c5c28` | ✅ |
+| `llama-gen-docs` | `build/base_debug/bin/llama-gen-docs` | 813.8 KB | `e9f45d8aa835969b` | ✅ |
+| `llama-gguf` | `build/base_debug/bin/llama-gguf` | 204.0 KB | `87a6131607e79de8` | ✅ |
+| `llama-gguf-hash` | `build/base_debug/bin/llama-gguf-hash` | 230.3 KB | `4d7b7fbabe1e29cd` | ✅ |
+| `llama-gguf-split` | `build/base_debug/bin/llama-gguf-split` | 275.8 KB | `14e5b61464705929` | ✅ |
+| `llama-idle` | `build/base_debug/bin/llama-idle` | 654.5 KB | `7ff6b83a340c68a5` | ✅ |
+| `llama-imatrix` | `build/base_debug/bin/llama-imatrix` | 3.51 MB | `c265db37c5ac9af1` | ✅ |
+| `llama-llava-cli` | `build/base_debug/bin/llama-llava-cli` | 91.7 KB | `2d61013c075c5c28` | ✅ |
+| `llama-lookahead` | `build/base_debug/bin/llama-lookahead` | 790.1 KB | `c23d192aa91fb024` | ✅ |
+| `llama-lookup` | `build/base_debug/bin/llama-lookup` | 892.4 KB | `153ce76fc04f60fc` | ✅ |
+| `llama-lookup-create` | `build/base_debug/bin/llama-lookup-create` | 827.4 KB | `7ee5d44303dbf1aa` | ✅ |
+| `llama-lookup-merge` | `build/base_debug/bin/llama-lookup-merge` | 331.8 KB | `fdd8457c88021829` | ✅ |
+| `llama-lookup-stats` | `build/base_debug/bin/llama-lookup-stats` | 885.2 KB | `6cd18b1eb68d73d1` | ✅ |
+| `llama-minicpmv-cli` | `build/base_debug/bin/llama-minicpmv-cli` | 91.7 KB | `2d61013c075c5c28` | ✅ |
+| `llama-parallel` | `build/base_debug/bin/llama-parallel` | 780.4 KB | `ddaa7258c39d5486` | ✅ |
+| `llama-passkey` | `build/base_debug/bin/llama-passkey` | 673.4 KB | `b03f8dceeed5ec0a` | ✅ |
+| `llama-perplexity` | `build/base_debug/bin/llama-perplexity` | 16.9 KB | `77d0e226d17b95be` | ✅ |
+| `llama-q8dot` | `build/base_debug/bin/llama-q8dot` | 163.7 KB | `9ff65ab46ebcb4c9` | ✅ |
+| `llama-quantize` | `build/base_debug/bin/llama-quantize` | 102.4 KB | `32a327191f7d2a41` | ✅ |
+| `llama-qwen2vl-cli` | `build/base_debug/bin/llama-qwen2vl-cli` | 91.7 KB | `2d61013c075c5c28` | ✅ |
+| `llama-retrieval` | `build/base_debug/bin/llama-retrieval` | 959.5 KB | `6cfb5fc0547e511f` | ✅ |
+| `llama-server` | `build/base_debug/bin/llama-server` | 102.4 KB | `feb7716da59e2ca8` | ✅ |
+| `llama-simple` | `build/base_debug/bin/llama-simple` | 153.9 KB | `74c53827943c005c` | ✅ |
+| `llama-simple-chat` | `build/base_debug/bin/llama-simple-chat` | 239.8 KB | `04a7d4a44864c559` | ✅ |
+| `llama-speculative` | `build/base_debug/bin/llama-speculative` | 1.19 MB | `07dff8e4dcad08bf` | ✅ |
+| `llama-speculative-simple` | `build/base_debug/bin/llama-speculative-simple` | 1.03 MB | `253aefb6e3860c7f` | ✅ |
+| `llama-template-analysis` | `build/base_debug/bin/llama-template-analysis` | 4.34 MB | `5259e2503b38063c` | ✅ |
+| `llama-tokenize` | `build/base_debug/bin/llama-tokenize` | 219.3 KB | `161fee0a04444839` | ✅ |
+| `llama-tts` | `build/base_debug/bin/llama-tts` | 5.04 MB | `4c7fe5efedf773e9` | ✅ |
+| `llama-vdot` | `build/base_debug/bin/llama-vdot` | 189.3 KB | `ed42f0debd589b4e` | ✅ |
+| `llama-ui-embed` | `build/base_debug/tools/ui/llama-ui-embed` | 527.8 KB | `328d935257ca17de` | ✅ |
 | `CMakeDetermineCompilerABI_C.bin` | `build/base_release/CMakeFiles/4.2.3/CMakeDetermineCompilerABI_C.bin` | 15.6 KB | `c6ec47bb5780897f` | ✅ |
 | `CMakeDetermineCompilerABI_CXX.bin` | `build/base_release/CMakeFiles/4.2.3/CMakeDetermineCompilerABI_CXX.bin` | 15.7 KB | `7aad0854c05cc22f` | ✅ |
 | `a.out` | `build/base_release/CMakeFiles/4.2.3/CompilerIdC/a.out` | 15.7 KB | `7a1142938e504e0b` | ✅ |
@@ -106,10 +156,14 @@ This manifest provides both **Concise (TL;DR)** and **Verbose (Architectural)** 
 | `llama-tts` | `build/base_release/bin/llama-tts` | 411.7 KB | `602c7c9f6d678c2b` | ✅ |
 | `llama-vdot` | `build/base_release/bin/llama-vdot` | 21.3 KB | `b92fcd1e015478e5` | ✅ |
 | `llama-ui-embed` | `build/base_release/tools/ui/llama-ui-embed` | 73.7 KB | `70a4f24195fea097` | ✅ |
+| `CMakeDetermineCompilerABI_C.bin` | `build/telemetry_release/CMakeFiles/4.2.3/CMakeDetermineCompilerABI_C.bin` | 15.6 KB | `c6ec47bb5780897f` | ✅ |
+| `CMakeDetermineCompilerABI_CXX.bin` | `build/telemetry_release/CMakeFiles/4.2.3/CMakeDetermineCompilerABI_CXX.bin` | 15.7 KB | `7aad0854c05cc22f` | ✅ |
+| `a.out` | `build/telemetry_release/CMakeFiles/4.2.3/CompilerIdC/a.out` | 15.7 KB | `7a1142938e504e0b` | ✅ |
+| `a.out` | `build/telemetry_release/CMakeFiles/4.2.3/CompilerIdCXX/a.out` | 15.7 KB | `a761a1ebb40e916e` | ✅ |
 
 ---
 
-### B. 📦 Shared Libraries & Compiled Artifacts (1711 Files)
+### B. 📦 Shared Libraries & Compiled Artifacts (2080 Files)
 
 | Artifact Name | Relative File Path | File Size | Category |
 | :--- | :--- | :--- | :--- |
@@ -120,56 +174,97 @@ This manifest provides both **Concise (TL;DR)** and **Verbose (Architectural)** 
 | `llama-version.cmake` | `build/base_debug/llama-version.cmake` | 2.7 KB | Build Artifact |
 | `CTestTestfile.cmake` | `build/base_debug/tools/CTestTestfile.cmake` | 0.7 KB | Build Artifact |
 | `cmake_install.cmake` | `build/base_debug/tools/cmake_install.cmake` | 4.8 KB | Build Artifact |
-| `CMakeDirectoryInformation.cmake` | `build/base_debug/tools/completion/CMakeFiles/CMakeDirectoryInformation.cmake` | 0.7 KB | Build Artifact |
-| `DependInfo.cmake` | `build/base_debug/tools/completion/CMakeFiles/llama-completion-impl.dir/DependInfo.cmake` | 0.9 KB | Build Artifact |
-| `cmake_clean.cmake` | `build/base_debug/tools/completion/CMakeFiles/llama-completion-impl.dir/cmake_clean.cmake` | 0.4 KB | Build Artifact |
-| `link.txt` | `build/base_debug/tools/completion/CMakeFiles/llama-completion-impl.dir/link.txt` | 0.5 KB | Build Artifact |
-| `DependInfo.cmake` | `build/base_debug/tools/completion/CMakeFiles/llama-completion.dir/DependInfo.cmake` | 0.9 KB | Build Artifact |
-| `cmake_clean.cmake` | `build/base_debug/tools/completion/CMakeFiles/llama-completion.dir/cmake_clean.cmake` | 0.4 KB | Build Artifact |
-| `link.txt` | `build/base_debug/tools/completion/CMakeFiles/llama-completion.dir/link.txt` | 0.4 KB | Build Artifact |
-| `CTestTestfile.cmake` | `build/base_debug/tools/completion/CTestTestfile.cmake` | 0.3 KB | Build Artifact |
-| `cmake_install.cmake` | `build/base_debug/tools/completion/cmake_install.cmake` | 3.7 KB | Build Artifact |
-| `CMakeDirectoryInformation.cmake` | `build/base_debug/tools/llama-bench/CMakeFiles/CMakeDirectoryInformation.cmake` | 0.7 KB | Build Artifact |
-| `DependInfo.cmake` | `build/base_debug/tools/llama-bench/CMakeFiles/llama-bench-impl.dir/DependInfo.cmake` | 0.9 KB | Build Artifact |
-| `cmake_clean.cmake` | `build/base_debug/tools/llama-bench/CMakeFiles/llama-bench-impl.dir/cmake_clean.cmake` | 0.4 KB | Build Artifact |
-| `link.txt` | `build/base_debug/tools/llama-bench/CMakeFiles/llama-bench-impl.dir/link.txt` | 0.5 KB | Build Artifact |
-| `DependInfo.cmake` | `build/base_debug/tools/llama-bench/CMakeFiles/llama-bench.dir/DependInfo.cmake` | 0.9 KB | Build Artifact |
-| `cmake_clean.cmake` | `build/base_debug/tools/llama-bench/CMakeFiles/llama-bench.dir/cmake_clean.cmake` | 0.4 KB | Build Artifact |
-| `link.txt` | `build/base_debug/tools/llama-bench/CMakeFiles/llama-bench.dir/link.txt` | 0.4 KB | Build Artifact |
-| `CTestTestfile.cmake` | `build/base_debug/tools/llama-bench/CTestTestfile.cmake` | 0.3 KB | Build Artifact |
-| `cmake_install.cmake` | `build/base_debug/tools/llama-bench/cmake_install.cmake` | 3.6 KB | Build Artifact |
-| `CMakeDirectoryInformation.cmake` | `build/base_debug/tools/perplexity/CMakeFiles/CMakeDirectoryInformation.cmake` | 0.7 KB | Build Artifact |
-| `DependInfo.cmake` | `build/base_debug/tools/perplexity/CMakeFiles/llama-perplexity-impl.dir/DependInfo.cmake` | 0.9 KB | Build Artifact |
-| `cmake_clean.cmake` | `build/base_debug/tools/perplexity/CMakeFiles/llama-perplexity-impl.dir/cmake_clean.cmake` | 0.4 KB | Build Artifact |
-| `link.txt` | `build/base_debug/tools/perplexity/CMakeFiles/llama-perplexity-impl.dir/link.txt` | 0.5 KB | Build Artifact |
-| `DependInfo.cmake` | `build/base_debug/tools/perplexity/CMakeFiles/llama-perplexity.dir/DependInfo.cmake` | 0.9 KB | Build Artifact |
-| `cmake_clean.cmake` | `build/base_debug/tools/perplexity/CMakeFiles/llama-perplexity.dir/cmake_clean.cmake` | 0.4 KB | Build Artifact |
-| `link.txt` | `build/base_debug/tools/perplexity/CMakeFiles/llama-perplexity.dir/link.txt` | 0.4 KB | Build Artifact |
-| `CTestTestfile.cmake` | `build/base_debug/tools/perplexity/CTestTestfile.cmake` | 0.3 KB | Build Artifact |
-| `cmake_install.cmake` | `build/base_debug/tools/perplexity/cmake_install.cmake` | 3.7 KB | Build Artifact |
-| `CMakeDirectoryInformation.cmake` | `build/base_debug/tools/tokenize/CMakeFiles/CMakeDirectoryInformation.cmake` | 0.7 KB | Build Artifact |
-| `link.txt` | `build/base_debug/tools/tokenize/CMakeFiles/llama-tokenize.dir/link.txt` | 0.4 KB | Build Artifact |
-| `CTestTestfile.cmake` | `build/base_debug/tools/tokenize/CTestTestfile.cmake` | 0.3 KB | Build Artifact |
-| `cmake_install.cmake` | `build/base_debug/tools/tokenize/cmake_install.cmake` | 2.5 KB | Build Artifact |
 | `CMakeDirectoryInformation.cmake` | `build/base_debug/tools/ui/CMakeFiles/CMakeDirectoryInformation.cmake` | 0.7 KB | Build Artifact |
-| `DependInfo.cmake` | `build/base_debug/tools/ui/CMakeFiles/llama-ui-assets.dir/DependInfo.cmake` | 0.6 KB | Build Artifact |
-| `cmake_clean.cmake` | `build/base_debug/tools/ui/CMakeFiles/llama-ui-assets.dir/cmake_clean.cmake` | 0.2 KB | Build Artifact |
-| `DependInfo.cmake` | `build/base_debug/tools/ui/CMakeFiles/llama-ui-embed.dir/DependInfo.cmake` | 0.8 KB | Build Artifact |
-| `cmake_clean.cmake` | `build/base_debug/tools/ui/CMakeFiles/llama-ui-embed.dir/cmake_clean.cmake` | 0.4 KB | Build Artifact |
-| `link.txt` | `build/base_debug/tools/ui/CMakeFiles/llama-ui-embed.dir/link.txt` | 0.1 KB | Build Artifact |
-| `DependInfo.cmake` | `build/base_debug/tools/ui/CMakeFiles/llama-ui.dir/DependInfo.cmake` | 0.7 KB | Build Artifact |
-| `cmake_clean.cmake` | `build/base_debug/tools/ui/CMakeFiles/llama-ui.dir/cmake_clean.cmake` | 0.3 KB | Build Artifact |
-| `cmake_clean_target.cmake` | `build/base_debug/tools/ui/CMakeFiles/llama-ui.dir/cmake_clean_target.cmake` | 0.0 KB | Build Artifact |
-| `link.txt` | `build/base_debug/tools/ui/CMakeFiles/llama-ui.dir/link.txt` | 0.1 KB | Build Artifact |
 | `CTestTestfile.cmake` | `build/base_debug/tools/ui/CTestTestfile.cmake` | 0.3 KB | Build Artifact |
 | `cmake_install.cmake` | `build/base_debug/tools/ui/cmake_install.cmake` | 1.5 KB | Build Artifact |
+| `libllama-ui.a` | `build/base_debug/tools/ui/libllama-ui.a` | 2.80 MB | Build Artifact |
+| `CMakeLists.txt` | `build/base_debug/tools/ui/ui-src/CMakeLists.txt` | 4.2 KB | Build Artifact |
+| `LICENSE.txt` | `build/base_debug/tools/ui/ui-src/node_modules/@bcoe/v8-coverage/LICENSE.txt` | 0.7 KB | Build Artifact |
+| `LICENSE.txt` | `build/base_debug/tools/ui/ui-src/node_modules/@chevrotain/types/LICENSE.txt` | 11.1 KB | Build Artifact |
+| `license.txt` | `build/base_debug/tools/ui/ui-src/node_modules/@iconify/types/license.txt` | 1.1 KB | Build Artifact |
+| `license.txt` | `build/base_debug/tools/ui/ui-src/node_modules/@iconify/utils/license.txt` | 1.1 KB | Build Artifact |
+| `LICENSE-3RD-PARTY.txt` | `build/base_debug/tools/ui/ui-src/node_modules/axe-core/LICENSE-3RD-PARTY.txt` | 3.7 KB | Build Artifact |
+| `LICENSE.txt` | `build/base_debug/tools/ui/ui-src/node_modules/baseline-browser-mapping/LICENSE.txt` | 11.1 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/css.escape/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/cssesc/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `license.txt` | `build/base_debug/tools/ui/ui-src/node_modules/deepmerge/license.txt` | 1.1 KB | Build Artifact |
+| `usage.txt` | `build/base_debug/tools/ui/ui-src/node_modules/ejs/usage.txt` | 1.6 KB | Build Artifact |
+| `license.txt` | `build/base_debug/tools/ui/ui-src/node_modules/esquery/license.txt` | 1.5 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/he/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `LICENSE.txt` | `build/base_debug/tools/ui/ui-src/node_modules/html-encoding-sniffer/LICENSE.txt` | 1.0 KB | Build Artifact |
+| `LICENSE.txt` | `build/base_debug/tools/ui/ui-src/node_modules/html-escaper/LICENSE.txt` | 1.1 KB | Build Artifact |
+| `usage.txt` | `build/base_debug/tools/ui/ui-src/node_modules/jake/usage.txt` | 1.0 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/jsesc/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `LICENSE.txt` | `build/base_debug/tools/ui/ui-src/node_modules/opener/LICENSE.txt` | 1.8 KB | Build Artifact |
+| `ThirdPartyNotices.txt` | `build/base_debug/tools/ui/ui-src/node_modules/playwright-core/ThirdPartyNotices.txt` | 68.6 KB | Build Artifact |
+| `ThirdPartyNotices.txt` | `build/base_debug/tools/ui/ui-src/node_modules/playwright/ThirdPartyNotices.txt` | 319.9 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/punycode/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/regenerate-unicode-properties/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/regenerate/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/regexpu-core/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/regjsgen/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `utf8.txt` | `build/base_debug/tools/ui/ui-src/node_modules/rw/test/utf8.txt` | 0.0 KB | Build Artifact |
+| `LICENSE.txt` | `build/base_debug/tools/ui/ui-src/node_modules/signal-exit/LICENSE.txt` | 0.8 KB | Build Artifact |
+| `CopyrightNotice.txt` | `build/base_debug/tools/ui/ui-src/node_modules/tslib/CopyrightNotice.txt` | 0.8 KB | Build Artifact |
+| `LICENSE.txt` | `build/base_debug/tools/ui/ui-src/node_modules/tslib/LICENSE.txt` | 0.6 KB | Build Artifact |
+| `LICENSE.txt` | `build/base_debug/tools/ui/ui-src/node_modules/typescript/LICENSE.txt` | 9.0 KB | Build Artifact |
+| `ThirdPartyNoticeText.txt` | `build/base_debug/tools/ui/ui-src/node_modules/typescript/ThirdPartyNoticeText.txt` | 36.9 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/unicode-canonical-property-names-ecmascript/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/unicode-match-property-ecmascript/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/unicode-match-property-value-ecmascript/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `LICENSE-MIT.txt` | `build/base_debug/tools/ui/ui-src/node_modules/unicode-property-aliases-ecmascript/LICENSE-MIT.txt` | 1.1 KB | Build Artifact |
+| `some-file.txt` | `build/base_debug/tools/ui/ui-src/node_modules/union/test/fixtures/static/some-file.txt` | 0.0 KB | Build Artifact |
+| `LICENSE.txt` | `build/base_debug/tools/ui/ui-src/node_modules/whatwg-encoding/LICENSE.txt` | 1.0 KB | Build Artifact |
+| `LICENSE.txt` | `build/base_debug/tools/ui/ui-src/node_modules/whatwg-url/LICENSE.txt` | 1.1 KB | Build Artifact |
+| `sources.cmake` | `build/base_debug/tools/ui/ui-src/sources.cmake` | 0.3 KB | Build Artifact |
 
 ---
 
-### C. 🧪 Test Executables & Unit Test Suite (41 Files)
+### C. 🧪 Test Executables & Unit Test Suite (82 Files)
 
 | Test Binary | Relative File Path | File Size | Target Status |
 | :--- | :--- | :--- | :--- |
+| `test-alloc` | `build/base_debug/bin/test-alloc` | 249.6 KB | Discovered / Ready |
+| `test-arg-parser` | `build/base_debug/bin/test-arg-parser` | 1012.7 KB | Discovered / Ready |
+| `test-autorelease` | `build/base_debug/bin/test-autorelease` | 77.9 KB | Discovered / Ready |
+| `test-backend-ops` | `build/base_debug/bin/test-backend-ops` | 4.91 MB | Discovered / Ready |
+| `test-backend-sampler` | `build/base_debug/bin/test-backend-sampler` | 836.9 KB | Discovered / Ready |
+| `test-barrier` | `build/base_debug/bin/test-barrier` | 99.7 KB | Discovered / Ready |
+| `test-c` | `build/base_debug/bin/test-c` | 17.0 KB | Discovered / Ready |
+| `test-chat` | `build/base_debug/bin/test-chat` | 11.99 MB | Discovered / Ready |
+| `test-chat-auto-parser` | `build/base_debug/bin/test-chat-auto-parser` | 10.39 MB | Discovered / Ready |
+| `test-chat-peg-parser` | `build/base_debug/bin/test-chat-peg-parser` | 11.77 MB | Discovered / Ready |
+| `test-chat-template` | `build/base_debug/bin/test-chat-template` | 4.11 MB | Discovered / Ready |
+| `test-col2im-1d` | `build/base_debug/bin/test-col2im-1d` | 76.0 KB | Discovered / Ready |
+| `test-gbnf-validator` | `build/base_debug/bin/test-gbnf-validator` | 285.7 KB | Discovered / Ready |
+| `test-gguf` | `build/base_debug/bin/test-gguf` | 570.2 KB | Discovered / Ready |
+| `test-gguf-model-data` | `build/base_debug/bin/test-gguf-model-data` | 3.24 MB | Discovered / Ready |
+| `test-grammar-integration` | `build/base_debug/bin/test-grammar-integration` | 2.70 MB | Discovered / Ready |
+| `test-grammar-parser` | `build/base_debug/bin/test-grammar-parser` | 472.8 KB | Discovered / Ready |
+| `test-jinja` | `build/base_debug/bin/test-jinja` | 6.42 MB | Discovered / Ready |
+| `test-json-schema-to-grammar` | `build/base_debug/bin/test-json-schema-to-grammar` | 4.24 MB | Discovered / Ready |
+| `test-llama-archs` | `build/base_debug/bin/test-llama-archs` | 631.9 KB | Discovered / Ready |
+| `test-llama-grammar` | `build/base_debug/bin/test-llama-grammar` | 707.6 KB | Discovered / Ready |
+| `test-log` | `build/base_debug/bin/test-log` | 74.3 KB | Discovered / Ready |
+| `test-model-load-cancel` | `build/base_debug/bin/test-model-load-cancel` | 28.7 KB | Discovered / Ready |
+| `test-mtmd-c-api` | `build/base_debug/bin/test-mtmd-c-api` | 31.5 KB | Discovered / Ready |
+| `test-opt` | `build/base_debug/bin/test-opt` | 463.6 KB | Discovered / Ready |
+| `test-peg-parser` | `build/base_debug/bin/test-peg-parser` | 13.77 MB | Discovered / Ready |
+| `test-quant-type-selection` | `build/base_debug/bin/test-quant-type-selection` | 3.61 MB | Discovered / Ready |
+| `test-quantize-fns` | `build/base_debug/bin/test-quantize-fns` | 171.3 KB | Discovered / Ready |
+| `test-quantize-perf` | `build/base_debug/bin/test-quantize-perf` | 344.8 KB | Discovered / Ready |
+| `test-quantize-stats` | `build/base_debug/bin/test-quantize-stats` | 2.11 MB | Discovered / Ready |
+| `test-reasoning-budget` | `build/base_debug/bin/test-reasoning-budget` | 201.9 KB | Discovered / Ready |
+| `test-recurrent-state-rollback` | `build/base_debug/bin/test-recurrent-state-rollback` | 717.6 KB | Discovered / Ready |
+| `test-regex-partial` | `build/base_debug/bin/test-regex-partial` | 371.4 KB | Discovered / Ready |
+| `test-rope` | `build/base_debug/bin/test-rope` | 79.4 KB | Discovered / Ready |
+| `test-sampling` | `build/base_debug/bin/test-sampling` | 333.9 KB | Discovered / Ready |
+| `test-save-load-state` | `build/base_debug/bin/test-save-load-state` | 814.1 KB | Discovered / Ready |
+| `test-state-restore-fragmented` | `build/base_debug/bin/test-state-restore-fragmented` | 699.7 KB | Discovered / Ready |
+| `test-thread-safety` | `build/base_debug/bin/test-thread-safety` | 903.4 KB | Discovered / Ready |
+| `test-tokenizer-0` | `build/base_debug/bin/test-tokenizer-0` | 504.1 KB | Discovered / Ready |
+| `test-tokenizer-1-bpe` | `build/base_debug/bin/test-tokenizer-1-bpe` | 236.9 KB | Discovered / Ready |
+| `test-tokenizer-1-spm` | `build/base_debug/bin/test-tokenizer-1-spm` | 221.4 KB | Discovered / Ready |
 | `test-alloc` | `build/base_release/bin/test-alloc` | 49.1 KB | Discovered / Ready |
 | `test-arg-parser` | `build/base_release/bin/test-arg-parser` | 54.5 KB | Discovered / Ready |
 | `test-autorelease` | `build/base_release/bin/test-autorelease` | 17.8 KB | Discovered / Ready |
@@ -218,7 +313,7 @@ This manifest provides both **Concise (TL;DR)** and **Verbose (Architectural)** 
 
 | Log File Name | Subsystem Path | File Size | Format |
 | :--- | :--- | :--- | :--- |
-| `build_debug_260720_0932_001.log` | `logs/debug/build_debug_260720_0932_001.log` | 9.0 KB | Build Log |
+| `build_debug_260720_0932_001.log` | `logs/debug/build_debug_260720_0932_001.log` | 50.2 KB | Build Log |
 | `telemetry_260720_0843_001.csv` | `logs/telemetry_260720_0843_001.csv` | 0.5 KB | CSV Telemetry |
 | `telemetry_260720_0843_001.jsonl` | `logs/telemetry_260720_0843_001.jsonl` | 1.3 KB | JSONL Session |
 | `test_results_260720_0934_001.csv` | `logs/tests/test_results_260720_0934_001.csv` | 4.2 KB | CSV Telemetry |
