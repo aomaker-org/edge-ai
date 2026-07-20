@@ -42,6 +42,12 @@
 ### Rule 6: No Superficial Error Masking
 - Never swallow exceptions, return dummy null values, or comment out failing assertions to make tests pass. Trace errors to their root cause.
 
+### Rule 7: Strict Prohibition of Un-documented `/dev/null` Redirections
+- **NO piping or redirecting output to `/dev/null`** (`> /dev/null`, `2> /dev/null`, `> /dev/null 2>&1`) unless strictly necessary (e.g. silent command existence checks).
+- **Mandatory Inline Comment**: Any necessary `/dev/null` redirection **MUST** include an inline code comment explicitly explaining why the redirection is required.
+- **Mandatory Documentation**: Every necessary `/dev/null` redirection **MUST** be registered in [docs/PIPE_TO_NULL_EXCEPTIONS.md](file:///home/fekerr/src/edge-ai/docs/PIPE_TO_NULL_EXCEPTIONS.md).
+- **Flagging & Logging**: When any un-documented `/dev/null` redirection is discovered, it must be flagged and appended to [TODO.md](file:///home/fekerr/src/edge-ai/TODO.md) (append-only).
+
 ---
 
 ## 3. Recommended Workflow for AI Agents
