@@ -36,6 +36,7 @@ Per **Rule 7** in [AI.md](file:///home/fekerr/src/edge-ai/AI.md):
 | `EXC-015` | `tools/tree_log_watcher.sh` | L44 | Mute output stream of `inotifywait` to trigger clean UI re-render | Approved | fekerr / AGY |
 | `EXC-016` | `tools/tree_log_watcher.sh` | L20 | Mute stdout/stderr for `python3` binary existence probe | Approved | fekerr / AGY |
 | `EXC-017` | `infra/make/base.mk` | L96 | Suppress stderr when querying find fallback for binary logs | Approved | fekerr / AGY |
+| `EXC-018` | `devices/android/common/scripts/build_and_deploy.sh` | L40 | Suppress output during `adb` CLI tool existence probe | Approved | fekerr / AGY |
 
 ---
 

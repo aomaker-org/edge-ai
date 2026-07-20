@@ -24,8 +24,9 @@ include infra/make/litert.mk
 include infra/make/openvino.mk
 include infra/make/sycl.mk
 include infra/make/vulkan.mk
+include infra/make/android.mk
 
-.PHONY: all help clean distclean agy-sync agy-status agy-launch agy-next new-agy test build build-debug build-telemetry build-matrix
+.PHONY: all help clean distclean agy-sync agy-status agy-launch agy-next new-agy test build build-debug build-telemetry build-matrix devices-build devices-test pixel6a-build pixel10-build clean-devices
 
 
 all: help
