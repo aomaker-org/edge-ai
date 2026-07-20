@@ -48,6 +48,11 @@
 - **Mandatory Documentation**: Every necessary `/dev/null` redirection **MUST** be registered in [docs/PIPE_TO_NULL_EXCEPTIONS.md](file:///home/fekerr/src/edge-ai/docs/PIPE_TO_NULL_EXCEPTIONS.md).
 - **Flagging & Logging**: When any un-documented `/dev/null` redirection is discovered, it must be flagged and appended to [TODO.md](file:///home/fekerr/src/edge-ai/TODO.md) (append-only).
 
+### Rule 8: Mandatory `YYMMDD_HHMM_NNN` Timestamp Standard
+- All generated session logs, build output journals, artifact archives, and timestamped ledger entries **MUST** follow the `YYMMDD_HHMM_NNN` (or `YYYYMMDD_HHMM_NNN`) format specified in [docs/TIMESTAMPING_STANDARD.md](file:///home/fekerr/src/edge-ai/docs/TIMESTAMPING_STANDARD.md).
+- The 3-digit sequence counter `NNN` starts at `001` for new session/time boundaries and increments (`001`, `002`, `003`...).
+- A human agent may explicitly specify a custom `NNN` sequence starting point.
+
 ---
 
 ## 3. Recommended Workflow for AI Agents

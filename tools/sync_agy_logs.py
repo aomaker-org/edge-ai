@@ -84,7 +84,11 @@ def parse_transcript(transcript_path: Path):
 
     return cid, entries
 
-def sync_logs(workspace_root: Path, custom_brain_dir=None):
+def format_timestamp(seq: int = 1) -> str:
+    now = datetime.now()
+    return f"{now.strftime('%y%m%d_%H%M')}_{seq:03d}"
+
+def sync_logs(workspace_root: Path, custom_brain_dir=None, sequence_start: int = 1):
     agy_dir = workspace_root / "agy"
     sessions_dir = agy_dir / "sessions"
     prompts_file = agy_dir / "prompts.jsonl"
@@ -97,6 +101,7 @@ def sync_logs(workspace_root: Path, custom_brain_dir=None):
 
     new_entries_count = 0
     sessions_updated = set()
+    seq_counter = sequence_start
 
     for sdir in search_dirs:
         if not sdir.exists():
@@ -119,16 +124,19 @@ def sync_logs(workspace_root: Path, custom_brain_dir=None):
                 
                 sessions_updated.add(cid)
                 
-                # Write / Update session summary markdown
-                session_md = sessions_dir / f"session_{cid[:8]}.md"
+                # Write / Update session summary markdown using YYMMDD_HHMM_NNN format
+                ts_prefix = format_timestamp(seq_counter)
+                session_md = sessions_dir / f"{ts_prefix}_session_{cid[:8]}.md"
                 mode = "a" if session_md.exists() else "w"
                 with open(session_md, mode, encoding="utf-8") as sm:
                     if mode == "w":
                         sm.write(f"# AGY Session Record: `{cid}`\n\n")
+                        sm.write(f"Timestamp ID: `{ts_prefix}`\n")
                         sm.write(f"Created: {datetime.now().isoformat()}\n\n---\n\n")
                     for entry in new_for_cid:
                         sm.write(f"### Step {entry['step_index']} [{entry['type']}]\n")
                         sm.write(f"```text\n{entry['content']}\n```\n\n")
+                seq_counter += 1
 
     print(f"[agy-sync] Synced {new_entries_count} new telemetry entries across {len(sessions_updated)} sessions.")
     print(f"[agy-sync] Total unique entries tracked: {len(existing_hashes)}")
@@ -158,13 +166,14 @@ def main():
     parser = argparse.ArgumentParser(description="AGY Log Sync Utility")
     parser.add_argument("--workspace", type=Path, default=Path.cwd(), help="Workspace root path")
     parser.add_argument("--brain-dir", type=Path, default=None, help="Custom brain/transcript directory")
+    parser.add_argument("--seq-start", type=int, default=1, help="Starting sequence number (nnn, default=1)")
     parser.add_argument("--status", action="store_true", help="Print telemetry status")
     args = parser.parse_args()
 
     if args.status:
         print_status(args.workspace)
     else:
-        sync_logs(args.workspace, args.brain_dir)
+        sync_logs(args.workspace, args.brain_dir, sequence_start=args.seq_start)
 
 if __name__ == "__main__":
     main()
