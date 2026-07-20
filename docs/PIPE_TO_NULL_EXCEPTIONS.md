@@ -19,12 +19,12 @@ Per **Rule 7** in [AI.md](file:///home/fekerr/src/edge-ai/AI.md):
 
 | ID | File Path | Line Range | Purpose / Rationale | Status | Approved By |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `EXC-001` | `infra/make/base.mk` | L18 | Silent fallback on systems lacking `nproc` binary | Approved | fekerr / AGY |
-| `EXC-002` | `infra/make/base.mk` | L19 | Suppress stderr when querying Linux sysfs P-core topology | Approved | fekerr / AGY |
-| `EXC-003` | `infra/make/base.mk` | L20 | Suppress stderr when querying Linux sysfs E-core topology | Approved | fekerr / AGY |
-| `EXC-004` | `infra/make/base.mk` | L23 | Suppress stderr when reading `/proc/meminfo` memory data | Approved | fekerr / AGY |
-| `EXC-005` | `infra/make/base.mk` | L95 | Suppress output during `tree` command existence check | Approved | fekerr / AGY |
-| `EXC-006` | `infra/make/litert.mk` | L33 | Suppress output during `bazel` build tool existence probe | Approved | fekerr / AGY |
+| `EXC-001` | `infra/make/base.mk` | L21 | Silent fallback on systems lacking `nproc` binary | Approved | fekerr / AGY |
+| `EXC-002` | `infra/make/base.mk` | L22 | Suppress stderr when querying Linux sysfs P-core topology | Approved | fekerr / AGY |
+| `EXC-003` | `infra/make/base.mk` | L23 | Suppress stderr when querying Linux sysfs E-core topology | Approved | fekerr / AGY |
+| `EXC-004` | `infra/make/base.mk` | L26 | Suppress stderr when reading `/proc/meminfo` memory data | Approved | fekerr / AGY |
+| `EXC-005` | `infra/make/base.mk` | L93 | Suppress output during `tree` command existence check | Approved | fekerr / AGY |
+| `EXC-006` | `infra/make/litert.mk` | L40 | Suppress output during `bazel` build tool existence probe | Approved | fekerr / AGY |
 | `EXC-007` | `tools/provision.sh` | L35 | Mute raw binary cryptographic GPG dearmor output | Approved | fekerr / AGY |
 | `EXC-008` | `tools/provision.sh` | L61 | Suppress stderr when querying Win32_Processor across non-WSL boundary | Approved | fekerr / AGY |
 | `EXC-009` | `tools/provision.sh` | L83 | Mute stdout/stderr during silent `uv` binary existence probe | Approved | fekerr / AGY |
