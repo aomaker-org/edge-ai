@@ -1,0 +1,7 @@
+[2026-07-20 08:10:01.050] [info] [pid=2048] Starting build sequence for edge-ai engine target: openvino_relwithdebinfo
+[2026-07-20 08:10:01.100] [info] [pid=2048] Host architecture verified: x86_64 / WSL2 Ubuntu 26.04
+[2026-07-20 08:10:01.180] [info] [pid=2048] Initializing CMake toolchain generator at /tmp/build_dir_002
+[2026-07-20 08:10:02.110] [info] [pid=2048] Compiling src/engine/openvino_backend.cpp -> memory 0x7fff9001
+[2026-07-20 08:10:02.400] [error] [pid=2048] OpenVINO SDK header missing: intel_gpu_driver.h not found in include path
+[2026-07-20 08:10:02.450] [fatal] [pid=2048] Compilation failed on target openvino_backend.cpp with exit code 2.
+[2026-07-20 08:10:02.500] [error] [pid=2048] Build aborted due to fatal compilation failure.

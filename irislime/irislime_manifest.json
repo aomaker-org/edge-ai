@@ -1,0 +1,2419 @@
+{
+  "metadata": {
+    "source_repo": "/home/fekerr/src/irislime",
+    "generated_at": "2026-07-20T08:12:26.697451",
+    "timestamp_id": "260720_0812_001",
+    "format_version": "1.0.0"
+  },
+  "summary": {
+    "total_files": 391,
+    "total_bytes": 17395039,
+    "counts": {
+      "source_files": 243,
+      "built_files": 15,
+      "log_files": 140
+    },
+    "bytes": {
+      "source_files": 1362250,
+      "built_files": 166459,
+      "log_files": 15866330
+    }
+  },
+  "files": [
+    {
+      "path": "llama.cpp/",
+      "category": "source_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-20T08:12:26.697617",
+      "note": "Directory pruned for manifest indexing (llama.cpp)"
+    },
+    {
+      "path": ".git/",
+      "category": "source_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-20T08:12:26.697645",
+      "note": "Directory pruned for manifest indexing (.git)"
+    },
+    {
+      "path": ".venv/",
+      "category": "built_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-20T08:12:26.697773",
+      "note": "Directory pruned for manifest indexing (.venv)"
+    },
+    {
+      "path": "build/",
+      "category": "built_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-20T08:12:26.697784",
+      "note": "Directory pruned for manifest indexing (build)"
+    },
+    {
+      "path": "deps/",
+      "category": "source_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-20T08:12:26.697795",
+      "note": "Directory pruned for manifest indexing (deps)"
+    },
+    {
+      "path": "todo.md",
+      "category": "source_files",
+      "size_bytes": 7360,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "irislime.sh",
+      "category": "source_files",
+      "size_bytes": 289,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "Makefile",
+      "category": "source_files",
+      "size_bytes": 2907,
+      "modified_at": "2026-07-18T19:39:18.146213"
+    },
+    {
+      "path": "TODO_CONSOLIDATED.md",
+      "category": "source_files",
+      "size_bytes": 5669,
+      "modified_at": "2026-07-18T19:51:26.941376"
+    },
+    {
+      "path": ".irislime_heartbeat",
+      "category": "log_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-11T20:29:23.706645"
+    },
+    {
+      "path": "getting_started.md",
+      "category": "source_files",
+      "size_bytes": 3456,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "config_win11",
+      "category": "source_files",
+      "size_bytes": 8954,
+      "modified_at": "2026-07-18T19:39:18.148515"
+    },
+    {
+      "path": "config_win_promptwork",
+      "category": "source_files",
+      "size_bytes": 2036,
+      "modified_at": "2026-07-18T19:39:18.148515"
+    },
+    {
+      "path": "AI.md",
+      "category": "source_files",
+      "size_bytes": 2696,
+      "modified_at": "2026-07-18T19:39:18.146213"
+    },
+    {
+      "path": "scratch_20260717_gemini.md",
+      "category": "log_files",
+      "size_bytes": 2439,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "temp_work_script",
+      "category": "source_files",
+      "size_bytes": 807,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "20260718_logs_core12_1003.zip",
+      "category": "log_files",
+      "size_bytes": 6812,
+      "modified_at": "2026-07-18T19:42:00.426510"
+    },
+    {
+      "path": "pyproject.toml",
+      "category": "source_files",
+      "size_bytes": 272,
+      "modified_at": "2026-07-18T19:39:18.183683"
+    },
+    {
+      "path": "TODO_CONSOLIDATED.txt",
+      "category": "source_files",
+      "size_bytes": 5174,
+      "modified_at": "2026-07-18T19:39:18.146213"
+    },
+    {
+      "path": "AI_next_work.md",
+      "category": "source_files",
+      "size_bytes": 4629,
+      "modified_at": "2026-07-18T19:39:18.146213"
+    },
+    {
+      "path": "matrix_control.md",
+      "category": "source_files",
+      "size_bytes": 2890,
+      "modified_at": "2026-07-08T15:18:45.543244"
+    },
+    {
+      "path": "config_prefs.sh",
+      "category": "source_files",
+      "size_bytes": 490,
+      "modified_at": "2026-07-18T19:39:26.095682"
+    },
+    {
+      "path": ".gitattributes",
+      "category": "source_files",
+      "size_bytes": 428,
+      "modified_at": "2026-07-08T15:18:45.532714"
+    },
+    {
+      "path": "telemetry_builds.csv",
+      "category": "log_files",
+      "size_bytes": 355,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "matrix_control.json",
+      "category": "source_files",
+      "size_bytes": 3799,
+      "modified_at": "2026-07-18T19:39:18.183683"
+    },
+    {
+      "path": ".gitmodules",
+      "category": "source_files",
+      "size_bytes": 681,
+      "modified_at": "2026-07-18T19:39:18.146213"
+    },
+    {
+      "path": "uv.lock",
+      "category": "built_files",
+      "size_bytes": 143535,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "model_selector.json",
+      "category": "source_files",
+      "size_bytes": 3531,
+      "modified_at": "2026-07-08T15:18:45.543244"
+    },
+    {
+      "path": ".vsconfig",
+      "category": "source_files",
+      "size_bytes": 214,
+      "modified_at": "2026-07-18T19:39:18.146213"
+    },
+    {
+      "path": "rclone_20260714_1240p_metadata.sh",
+      "category": "source_files",
+      "size_bytes": 1437,
+      "modified_at": "2026-07-18T19:39:26.104699"
+    },
+    {
+      "path": "config_env",
+      "category": "source_files",
+      "size_bytes": 10516,
+      "modified_at": "2026-07-18T19:59:55.007581"
+    },
+    {
+      "path": ".gitignore",
+      "category": "source_files",
+      "size_bytes": 1269,
+      "modified_at": "2026-07-18T19:39:28.455682"
+    },
+    {
+      "path": "AI_next.md",
+      "category": "source_files",
+      "size_bytes": 2595,
+      "modified_at": "2026-07-08T15:18:45.534652"
+    },
+    {
+      "path": "README.md",
+      "category": "source_files",
+      "size_bytes": 4179,
+      "modified_at": "2026-07-18T19:39:18.146213"
+    },
+    {
+      "path": "test_controller.json",
+      "category": "source_files",
+      "size_bytes": 1072,
+      "modified_at": "2026-07-08T15:18:45.555718"
+    },
+    {
+      "path": "gemini_next.md",
+      "category": "source_files",
+      "size_bytes": 6176,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "quick_start.md",
+      "category": "source_files",
+      "size_bytes": 1802,
+      "modified_at": "2026-07-08T15:18:45.543244"
+    },
+    {
+      "path": "tools/__pycache__/",
+      "category": "source_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-20T08:12:26.698379",
+      "note": "Directory pruned for manifest indexing (__pycache__)"
+    },
+    {
+      "path": "tools/mtfdash_node_manager.py",
+      "category": "source_files",
+      "size_bytes": 21584,
+      "modified_at": "2026-07-18T19:56:07.650744"
+    },
+    {
+      "path": "tools/llamacpp_mtfdash_bridge.py",
+      "category": "source_files",
+      "size_bytes": 6385,
+      "modified_at": "2026-07-18T19:39:18.192171"
+    },
+    {
+      "path": "tools/hardware_probe.py",
+      "category": "source_files",
+      "size_bytes": 3163,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/run_matrix_tests.py",
+      "category": "source_files",
+      "size_bytes": 12652,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/run_demo_20260620-batch.sh",
+      "category": "source_files",
+      "size_bytes": 2252,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/run_demo_20260620-batch_new.sh",
+      "category": "source_files",
+      "size_bytes": 1127,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/chrono_audit.py",
+      "category": "source_files",
+      "size_bytes": 4980,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/test_rerun_menu.py",
+      "category": "source_files",
+      "size_bytes": 3854,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/setup_learning_submodules.sh",
+      "category": "source_files",
+      "size_bytes": 3248,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/patch_io.py",
+      "category": "source_files",
+      "size_bytes": 1570,
+      "modified_at": "2026-07-18T19:39:18.192171"
+    },
+    {
+      "path": "tools/record_demo.sh",
+      "category": "source_files",
+      "size_bytes": 436,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/aio_monitor.py",
+      "category": "source_files",
+      "size_bytes": 4680,
+      "modified_at": "2026-07-18T19:39:26.104699"
+    },
+    {
+      "path": "tools/compiler_watch",
+      "category": "source_files",
+      "size_bytes": 2444,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "tools/__init__.py",
+      "category": "source_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/verify_archive_status.py",
+      "category": "source_files",
+      "size_bytes": 2605,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/test_runner.py",
+      "category": "source_files",
+      "size_bytes": 19907,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/view_repo_info.sh",
+      "category": "source_files",
+      "size_bytes": 259,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/tree_scan.py",
+      "category": "source_files",
+      "size_bytes": 1138,
+      "modified_at": "2026-07-18T19:39:26.104699"
+    },
+    {
+      "path": "tools/bbptests_runner.py",
+      "category": "source_files",
+      "size_bytes": 12457,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "tools/distclean.py",
+      "category": "source_files",
+      "size_bytes": 2998,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/hardware.py",
+      "category": "source_files",
+      "size_bytes": 312,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/build_runner.py",
+      "category": "source_files",
+      "size_bytes": 11890,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "tools/archive_logs_rclone.py",
+      "category": "source_files",
+      "size_bytes": 13146,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "tools/token_throttle_guard.py",
+      "category": "source_files",
+      "size_bytes": 4111,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/run_matrix_tests-defensive-snippet.txt",
+      "category": "source_files",
+      "size_bytes": 3641,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/wsl_rclone_bridge.py",
+      "category": "source_files",
+      "size_bytes": 2544,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/builder.py",
+      "category": "source_files",
+      "size_bytes": 1569,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/openvino_healthcheck.sh",
+      "category": "source_files",
+      "size_bytes": 2369,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/run_llama_multi_capture.sh",
+      "category": "source_files",
+      "size_bytes": 3785,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/provision.sh",
+      "category": "source_files",
+      "size_bytes": 11847,
+      "modified_at": "2026-07-18T19:39:18.192171"
+    },
+    {
+      "path": "tools/archive_win11_executables.py",
+      "category": "source_files",
+      "size_bytes": 3072,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "tools/record.sh",
+      "category": "source_files",
+      "size_bytes": 1044,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/puppy_chow_003.sh",
+      "category": "source_files",
+      "size_bytes": 2380,
+      "modified_at": "2026-07-18T19:39:18.192171"
+    },
+    {
+      "path": "tools/windows_rclone_manifest.json",
+      "category": "source_files",
+      "size_bytes": 543,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/xfer.py",
+      "category": "source_files",
+      "size_bytes": 11134,
+      "modified_at": "2026-07-18T19:39:26.104699"
+    },
+    {
+      "path": "tools/clip2files",
+      "category": "source_files",
+      "size_bytes": 3512,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "tools/bazel_gated_build.sh",
+      "category": "source_files",
+      "size_bytes": 2864,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/bootstrap_test_matrix.py",
+      "category": "source_files",
+      "size_bytes": 4414,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/run_demo_20260620.sh",
+      "category": "source_files",
+      "size_bytes": 870,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/patch_apply.py",
+      "category": "source_files",
+      "size_bytes": 1758,
+      "modified_at": "2026-07-18T19:39:18.192171"
+    },
+    {
+      "path": "tools/quick_test_litert.py",
+      "category": "source_files",
+      "size_bytes": 4179,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/tests_runner.py",
+      "category": "source_files",
+      "size_bytes": 8190,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/extract_telemetry.py",
+      "category": "log_files",
+      "size_bytes": 8127,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/run_tiny_q2_cpu_safe.sh",
+      "category": "source_files",
+      "size_bytes": 2285,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/archive_logs_rclone.sh",
+      "category": "source_files",
+      "size_bytes": 312,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "tools/model_manager.py",
+      "category": "source_files",
+      "size_bytes": 6081,
+      "modified_at": "2026-07-18T19:39:18.192171"
+    },
+    {
+      "path": "tools/discover_and_rclone_models.py",
+      "category": "source_files",
+      "size_bytes": 8908,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "tools/track_profile.py",
+      "category": "source_files",
+      "size_bytes": 6374,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/windows_rclone_sync.bat",
+      "category": "source_files",
+      "size_bytes": 2668,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/ascii2md.py",
+      "category": "source_files",
+      "size_bytes": 4218,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "tools/puppy_chow_004.sh",
+      "category": "source_files",
+      "size_bytes": 2200,
+      "modified_at": "2026-07-18T19:39:18.192171"
+    },
+    {
+      "path": "tools/README.md",
+      "category": "source_files",
+      "size_bytes": 2424,
+      "modified_at": "2026-07-08T15:18:45.559183"
+    },
+    {
+      "path": "tools/sync_litert_deps.sh",
+      "category": "source_files",
+      "size_bytes": 1110,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/puppy_chow_001.sh",
+      "category": "source_files",
+      "size_bytes": 240,
+      "modified_at": "2026-07-18T19:39:18.192171"
+    },
+    {
+      "path": "tools/puppy_chow_002.sh",
+      "category": "source_files",
+      "size_bytes": 532,
+      "modified_at": "2026-07-18T19:39:18.192171"
+    },
+    {
+      "path": "tools/generate_windows_rclone_manifest.py",
+      "category": "source_files",
+      "size_bytes": 8934,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "tools/TESTING_README.md",
+      "category": "source_files",
+      "size_bytes": 10093,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/clip_helper.py",
+      "category": "source_files",
+      "size_bytes": 2496,
+      "modified_at": "2026-07-18T19:39:26.104699"
+    },
+    {
+      "path": "tools/run_demo_20260620-interact.sh",
+      "category": "source_files",
+      "size_bytes": 1249,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/windows_rclone_sync.ps1",
+      "category": "source_files",
+      "size_bytes": 3389,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/context_breakpoint.sh",
+      "category": "source_files",
+      "size_bytes": 804,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/agy_mtfdash_bridge.py",
+      "category": "source_files",
+      "size_bytes": 4942,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "tools/windows_rclone_receipt.json",
+      "category": "source_files",
+      "size_bytes": 271,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/multicap_runner.py",
+      "category": "source_files",
+      "size_bytes": 8576,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/debug-llama.sh",
+      "category": "source_files",
+      "size_bytes": 644,
+      "modified_at": "2026-07-08T15:18:45.559689"
+    },
+    {
+      "path": "tools/files2clip",
+      "category": "source_files",
+      "size_bytes": 9296,
+      "modified_at": "2026-07-18T19:39:36.179682"
+    },
+    {
+      "path": "tools/runner/__init__.py",
+      "category": "source_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-18T19:39:18.192171"
+    },
+    {
+      "path": "tools/runner/smoke.py",
+      "category": "source_files",
+      "size_bytes": 717,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/runner/matrix_control.py",
+      "category": "source_files",
+      "size_bytes": 4656,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/runner/subcommands/__init__.py",
+      "category": "source_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-18T19:39:18.194010"
+    },
+    {
+      "path": "tools/host/provision_ps7.ps1",
+      "category": "source_files",
+      "size_bytes": 3806,
+      "modified_at": "2026-07-18T19:39:18.192171"
+    },
+    {
+      "path": "tools/host/README.md",
+      "category": "source_files",
+      "size_bytes": 773,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "infra/setup_filters.sh",
+      "category": "source_files",
+      "size_bytes": 3480,
+      "modified_at": "2026-07-08T15:18:45.541381"
+    },
+    {
+      "path": "infra/cache/hardware_profile.json",
+      "category": "source_files",
+      "size_bytes": 310,
+      "modified_at": "2026-07-08T15:18:45.539776"
+    },
+    {
+      "path": "infra/include/CL/opencl.hpp",
+      "category": "source_files",
+      "size_bytes": 422783,
+      "modified_at": "2026-07-08T15:18:45.540108"
+    },
+    {
+      "path": "infra/include/CL/cl2.hpp",
+      "category": "source_files",
+      "size_bytes": 791,
+      "modified_at": "2026-07-08T15:18:45.540041"
+    },
+    {
+      "path": "infra/make/sycl.mk",
+      "category": "source_files",
+      "size_bytes": 2844,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "infra/make/vulkan.mk",
+      "category": "source_files",
+      "size_bytes": 1858,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "infra/make/litert.mk",
+      "category": "source_files",
+      "size_bytes": 1806,
+      "modified_at": "2026-07-08T15:18:45.541381"
+    },
+    {
+      "path": "infra/make/base.mk",
+      "category": "source_files",
+      "size_bytes": 5009,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "infra/make/openvino.mk",
+      "category": "source_files",
+      "size_bytes": 4222,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "multi_model_crawler/multi_model_eval_eng.py",
+      "category": "source_files",
+      "size_bytes": 1356,
+      "modified_at": "2026-07-18T19:39:26.104699"
+    },
+    {
+      "path": "multi_model_crawler/gemini_001.md",
+      "category": "source_files",
+      "size_bytes": 7544,
+      "modified_at": "2026-07-18T19:39:26.104699"
+    },
+    {
+      "path": "multi_model_crawler/filesystem_crawler.py",
+      "category": "source_files",
+      "size_bytes": 1873,
+      "modified_at": "2026-07-18T19:39:26.099682"
+    },
+    {
+      "path": "docs/DASH_WSL_AND_AGY_INTEGRATION_NOTES.md",
+      "category": "source_files",
+      "size_bytes": 3731,
+      "modified_at": "2026-07-18T19:59:56.847581"
+    },
+    {
+      "path": "docs/ARCHITECTURAL_REVIEW_AND_BEST_PRACTICES.md",
+      "category": "source_files",
+      "size_bytes": 2795,
+      "modified_at": "2026-07-18T19:39:18.148515"
+    },
+    {
+      "path": "docs/sed_utilities.md",
+      "category": "source_files",
+      "size_bytes": 3473,
+      "modified_at": "2026-07-08T15:18:45.536597"
+    },
+    {
+      "path": "docs/trampoline_shbangs.md",
+      "category": "source_files",
+      "size_bytes": 7037,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/git_submodule_notes.md",
+      "category": "source_files",
+      "size_bytes": 4903,
+      "modified_at": "2026-07-08T15:18:45.535919"
+    },
+    {
+      "path": "docs/dirs.md",
+      "category": "source_files",
+      "size_bytes": 2847,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/path_translation.txt",
+      "category": "source_files",
+      "size_bytes": 1188,
+      "modified_at": "2026-07-18T19:39:26.095682"
+    },
+    {
+      "path": "docs/AI_AGENT_REQUIREMENTS.md",
+      "category": "source_files",
+      "size_bytes": 3290,
+      "modified_at": "2026-07-18T19:39:18.148515"
+    },
+    {
+      "path": "docs/ARCHITECTURAL_REVIEW_AND_BEST_PRACTICES.txt",
+      "category": "source_files",
+      "size_bytes": 3072,
+      "modified_at": "2026-07-18T19:39:18.148515"
+    },
+    {
+      "path": "docs/infra_make_matrix_telemetry_20260718.md",
+      "category": "log_files",
+      "size_bytes": 3242,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/text_md.txt",
+      "category": "source_files",
+      "size_bytes": 1468,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/backlog_tasks.txt",
+      "category": "source_files",
+      "size_bytes": 836,
+      "modified_at": "2026-07-18T19:39:26.095682"
+    },
+    {
+      "path": "docs/gemini_20260626.md",
+      "category": "source_files",
+      "size_bytes": 9022,
+      "modified_at": "2026-07-08T15:18:45.535919"
+    },
+    {
+      "path": "docs/thermal_watchdog_design.md",
+      "category": "source_files",
+      "size_bytes": 2226,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/infra_terminal.md",
+      "category": "source_files",
+      "size_bytes": 1215,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/wsl_cloud_backup_system.md",
+      "category": "source_files",
+      "size_bytes": 4283,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/DASH_WSL_AND_AGY_INTEGRATION_NOTES.txt",
+      "category": "source_files",
+      "size_bytes": 3992,
+      "modified_at": "2026-07-18T19:39:18.148515"
+    },
+    {
+      "path": "docs/quick_uv_install.md",
+      "category": "source_files",
+      "size_bytes": 226,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/MTFDASH_USER_AND_INTEROP_GUIDE.md",
+      "category": "source_files",
+      "size_bytes": 9096,
+      "modified_at": "2026-07-18T19:59:24.067594"
+    },
+    {
+      "path": "docs/INTERPROCESS_COMMUNICATION_TOPOLOGY.md",
+      "category": "source_files",
+      "size_bytes": 5425,
+      "modified_at": "2026-07-18T19:39:18.148515"
+    },
+    {
+      "path": "docs/AI_AGENT_REQUIREMENTS.txt",
+      "category": "source_files",
+      "size_bytes": 3567,
+      "modified_at": "2026-07-18T19:39:18.148515"
+    },
+    {
+      "path": "docs/log_archive_20260718_core12_1003.md",
+      "category": "source_files",
+      "size_bytes": 1743,
+      "modified_at": "2026-07-18T19:42:06.606989"
+    },
+    {
+      "path": "docs/design_decisions.md",
+      "category": "source_files",
+      "size_bytes": 14982,
+      "modified_at": "2026-07-08T15:18:45.535919"
+    },
+    {
+      "path": "docs/fekerr_dev_integration.md",
+      "category": "source_files",
+      "size_bytes": 3792,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/config_env.md",
+      "category": "source_files",
+      "size_bytes": 3910,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/archive_example.txt",
+      "category": "source_files",
+      "size_bytes": 440,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/xfer.txt",
+      "category": "source_files",
+      "size_bytes": 1100,
+      "modified_at": "2026-07-18T19:39:26.095682"
+    },
+    {
+      "path": "docs/git_infrastructure.md",
+      "category": "source_files",
+      "size_bytes": 3637,
+      "modified_at": "2026-07-08T15:18:45.535919"
+    },
+    {
+      "path": "docs/trust_model.md",
+      "category": "source_files",
+      "size_bytes": 946,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/windows_rclone_transfer_guide.md",
+      "category": "source_files",
+      "size_bytes": 3171,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/archive/archival_notes_260718_bulk.txt",
+      "category": "source_files",
+      "size_bytes": 3612,
+      "modified_at": "2026-07-18T19:39:18.149788"
+    },
+    {
+      "path": "docs/archive/archival_notes_260718_bulk.md",
+      "category": "source_files",
+      "size_bytes": 3335,
+      "modified_at": "2026-07-18T19:39:18.148515"
+    },
+    {
+      "path": "docs/archive/todo_backlog_archive/todo_legacy_master.md",
+      "category": "source_files",
+      "size_bytes": 7360,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/archive/todo_backlog_archive/todo_270705_001.md",
+      "category": "source_files",
+      "size_bytes": 5172,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/archive/todo_backlog_archive/todo_260704_002.md",
+      "category": "source_files",
+      "size_bytes": 1877,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/archive/todo_backlog_archive/todo_260704_001.md",
+      "category": "source_files",
+      "size_bytes": 1215,
+      "modified_at": "2026-07-18T19:39:18.149788"
+    },
+    {
+      "path": "docs/archive/todo_backlog_archive/todo_deep-seek-tangent.md",
+      "category": "source_files",
+      "size_bytes": 4869,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/archive/todo_backlog_archive/todo_260704_003.md",
+      "category": "source_files",
+      "size_bytes": 814,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/archive/todo_backlog_archive/todo_infra.md",
+      "category": "source_files",
+      "size_bytes": 2702,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/telemetry/aggressive_telemetry_report_20260716.md",
+      "category": "log_files",
+      "size_bytes": 1199,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "docs/laboratory/run_test_002.md",
+      "category": "source_files",
+      "size_bytes": 773,
+      "modified_at": "2026-07-08T15:18:45.536597"
+    },
+    {
+      "path": "docs/laboratory/test_suite_ledger.md",
+      "category": "source_files",
+      "size_bytes": 886,
+      "modified_at": "2026-07-08T15:18:45.536597"
+    },
+    {
+      "path": "docs/laboratory/run_test_003.md",
+      "category": "source_files",
+      "size_bytes": 608,
+      "modified_at": "2026-07-08T15:18:45.536597"
+    },
+    {
+      "path": "docs/laboratory/verify_deployment.md",
+      "category": "source_files",
+      "size_bytes": 449,
+      "modified_at": "2026-07-08T15:18:45.536597"
+    },
+    {
+      "path": "docs/laboratory/git_forensics.md",
+      "category": "source_files",
+      "size_bytes": 714,
+      "modified_at": "2026-07-08T15:18:45.536597"
+    },
+    {
+      "path": "docs/laboratory/run_test_000.md",
+      "category": "source_files",
+      "size_bytes": 714,
+      "modified_at": "2026-07-08T15:18:45.536597"
+    },
+    {
+      "path": "docs/laboratory/build_perf_ledger.md",
+      "category": "source_files",
+      "size_bytes": 201,
+      "modified_at": "2026-07-08T15:18:45.535919"
+    },
+    {
+      "path": "docs/sessions/gemini__013.md",
+      "category": "source_files",
+      "size_bytes": 3960,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini_002.md",
+      "category": "source_files",
+      "size_bytes": 12640,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini260630_003.md",
+      "category": "source_files",
+      "size_bytes": 6292,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/wonky_status_report.md",
+      "category": "source_files",
+      "size_bytes": 6117,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini__011.md",
+      "category": "source_files",
+      "size_bytes": 5321,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini__15.md",
+      "category": "source_files",
+      "size_bytes": 6728,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini_prior_0741a.md",
+      "category": "source_files",
+      "size_bytes": 18190,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini__012.md",
+      "category": "source_files",
+      "size_bytes": 6160,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini260630_010.md",
+      "category": "source_files",
+      "size_bytes": 3647,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini260630_008.md",
+      "category": "source_files",
+      "size_bytes": 6445,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini260630_004.md",
+      "category": "source_files",
+      "size_bytes": 6790,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini260630_009.md",
+      "category": "source_files",
+      "size_bytes": 4758,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini_016.md",
+      "category": "source_files",
+      "size_bytes": 4542,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/remote_branches_audit.md",
+      "category": "source_files",
+      "size_bytes": 1119,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini_001.md",
+      "category": "source_files",
+      "size_bytes": 13785,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini_013.md",
+      "category": "source_files",
+      "size_bytes": 6063,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini260630_007.md",
+      "category": "source_files",
+      "size_bytes": 8368,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini_016a.md",
+      "category": "source_files",
+      "size_bytes": 8409,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini_016b.md",
+      "category": "source_files",
+      "size_bytes": 4680,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini260630_002.md",
+      "category": "source_files",
+      "size_bytes": 11116,
+      "modified_at": "2026-07-08T15:18:45.536597"
+    },
+    {
+      "path": "docs/sessions/gemini_0741a.md",
+      "category": "source_files",
+      "size_bytes": 2965,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "docs/sessions/gemini__16.md",
+      "category": "source_files",
+      "size_bytes": 8951,
+      "modified_at": "2026-07-08T15:18:45.537201"
+    },
+    {
+      "path": "fekerr-dev/git_commands.txt",
+      "category": "source_files",
+      "size_bytes": 559,
+      "modified_at": "2026-07-18T19:39:18.152428"
+    },
+    {
+      "path": "fekerr-dev/pyproject.toml",
+      "category": "source_files",
+      "size_bytes": 93,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/TODO_CONSOLIDATED.txt",
+      "category": "source_files",
+      "size_bytes": 5174,
+      "modified_at": "2026-07-18T19:39:18.151806"
+    },
+    {
+      "path": "fekerr-dev/.gitignore",
+      "category": "source_files",
+      "size_bytes": 75,
+      "modified_at": "2026-07-18T19:39:18.149925"
+    },
+    {
+      "path": "fekerr-dev/README.md",
+      "category": "source_files",
+      "size_bytes": 2373,
+      "modified_at": "2026-07-18T19:39:18.151806"
+    },
+    {
+      "path": "fekerr-dev/bootstrap_env",
+      "category": "source_files",
+      "size_bytes": 11281,
+      "modified_at": "2026-07-18T19:39:18.151806"
+    },
+    {
+      "path": "fekerr-dev/irislime_ubu26_init/provision_user.sh",
+      "category": "source_files",
+      "size_bytes": 3619,
+      "modified_at": "2026-07-18T19:39:18.152653"
+    },
+    {
+      "path": "fekerr-dev/irislime_ubu26_init/bootstrap_ubu26_root.sh",
+      "category": "source_files",
+      "size_bytes": 3859,
+      "modified_at": "2026-07-18T19:39:18.152653"
+    },
+    {
+      "path": "fekerr-dev/irislime_ubu26_init/provision_ubuntu26_init.agy",
+      "category": "source_files",
+      "size_bytes": 2065,
+      "modified_at": "2026-07-18T19:39:18.152653"
+    },
+    {
+      "path": "fekerr-dev/irislime_ubu26_init/AGY_INGEST.agy",
+      "category": "source_files",
+      "size_bytes": 1654,
+      "modified_at": "2026-07-18T19:39:18.152428"
+    },
+    {
+      "path": "fekerr-dev/tools/idle_sync.toml",
+      "category": "source_files",
+      "size_bytes": 298,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "fekerr-dev/tools/pipe2clip.py",
+      "category": "source_files",
+      "size_bytes": 6083,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "fekerr-dev/tools/token_throttle_guard.py",
+      "category": "source_files",
+      "size_bytes": 4111,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "fekerr-dev/tools/archive_win11_executables.py",
+      "category": "source_files",
+      "size_bytes": 3072,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/tools/hash_signer.py",
+      "category": "source_files",
+      "size_bytes": 7004,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "fekerr-dev/tools/files2clip.toml",
+      "category": "source_files",
+      "size_bytes": 828,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "fekerr-dev/tools/discover_and_rclone_models.py",
+      "category": "source_files",
+      "size_bytes": 8908,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "fekerr-dev/tools/ascii2md.py",
+      "category": "source_files",
+      "size_bytes": 4218,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "fekerr-dev/tools/files2clip.py",
+      "category": "source_files",
+      "size_bytes": 8285,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "fekerr-dev/tools/rclone_finder.py",
+      "category": "source_files",
+      "size_bytes": 2162,
+      "modified_at": "2026-07-18T19:39:18.153526"
+    },
+    {
+      "path": "fekerr-dev/docs/provision_ub26_0715_555.txt",
+      "category": "source_files",
+      "size_bytes": 1305,
+      "modified_at": "2026-07-18T19:39:18.152428"
+    },
+    {
+      "path": "fekerr-dev/docs/irislime_review.txt",
+      "category": "source_files",
+      "size_bytes": 4858,
+      "modified_at": "2026-07-18T19:39:18.152428"
+    },
+    {
+      "path": "fekerr-dev/docs/archival_notes_260718_bulk.txt",
+      "category": "source_files",
+      "size_bytes": 3612,
+      "modified_at": "2026-07-18T19:39:18.152052"
+    },
+    {
+      "path": "fekerr-dev/docs/ARCHITECTURAL_REVIEW_AND_BEST_PRACTICES.txt",
+      "category": "source_files",
+      "size_bytes": 3072,
+      "modified_at": "2026-07-18T19:39:18.152052"
+    },
+    {
+      "path": "fekerr-dev/docs/DASH_WSL_AND_AGY_INTEGRATION_NOTES.txt",
+      "category": "source_files",
+      "size_bytes": 3992,
+      "modified_at": "2026-07-18T19:39:18.152052"
+    },
+    {
+      "path": "fekerr-dev/docs/OPERATIONAL_RULES.txt",
+      "category": "source_files",
+      "size_bytes": 2755,
+      "modified_at": "2026-07-18T19:39:18.152052"
+    },
+    {
+      "path": "fekerr-dev/docs/agy_review_irislime.txt",
+      "category": "source_files",
+      "size_bytes": 6334,
+      "modified_at": "2026-07-18T19:39:18.152052"
+    },
+    {
+      "path": "fekerr-dev/docs/AI_AGENT_REQUIREMENTS.txt",
+      "category": "source_files",
+      "size_bytes": 3567,
+      "modified_at": "2026-07-18T19:39:18.151806"
+    },
+    {
+      "path": "fekerr-dev/docs/SESSION_RECONSTRUCTION.txt",
+      "category": "source_files",
+      "size_bytes": 7747,
+      "modified_at": "2026-07-18T19:39:18.152052"
+    },
+    {
+      "path": "fekerr-dev/docs/LARGE_FILES_RCLONED_260718.txt",
+      "category": "source_files",
+      "size_bytes": 865,
+      "modified_at": "2026-07-18T19:39:18.152052"
+    },
+    {
+      "path": "fekerr-dev/docs/archive/personal_receipts/LARGE_FILES_RCLONED_260718.md",
+      "category": "source_files",
+      "size_bytes": 650,
+      "modified_at": "2026-07-18T19:39:18.152380"
+    },
+    {
+      "path": "fekerr-dev/docs/archive/personal_receipts/discovery_notes_260718_models.txt",
+      "category": "source_files",
+      "size_bytes": 1194,
+      "modified_at": "2026-07-18T19:39:18.152428"
+    },
+    {
+      "path": "fekerr-dev/docs/archive/personal_receipts/discovery_notes_260718_models.md",
+      "category": "source_files",
+      "size_bytes": 917,
+      "modified_at": "2026-07-18T19:39:18.152428"
+    },
+    {
+      "path": "fekerr-dev/docs/archive/personal_receipts/LARGE_FILES_RCLONED_260718.txt",
+      "category": "source_files",
+      "size_bytes": 865,
+      "modified_at": "2026-07-18T19:39:18.152428"
+    },
+    {
+      "path": "fekerr-dev/ps7/Out-TraceClip.ps1",
+      "category": "source_files",
+      "size_bytes": 3070,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/files2clip.ps1",
+      "category": "source_files",
+      "size_bytes": 1988,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/Get-TarArchiveCache.ps1",
+      "category": "source_files",
+      "size_bytes": 6642,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/Get-WorkspaceMetadata.ps1",
+      "category": "source_files",
+      "size_bytes": 4295,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/Get-TerminalDashboard.ps1",
+      "category": "source_files",
+      "size_bytes": 13754,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/provision_container.ps1",
+      "category": "source_files",
+      "size_bytes": 5836,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/Find-LargeFilesWithProgress.ps1",
+      "category": "source_files",
+      "size_bytes": 3450,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/Find-CloudFile.ps1",
+      "category": "source_files",
+      "size_bytes": 1994,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/Sync-CloudCache.ps1",
+      "category": "source_files",
+      "size_bytes": 2590,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/Get-UncoveredFiles.ps1",
+      "category": "source_files",
+      "size_bytes": 5518,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/Backup-AndVerifyTars.ps1",
+      "category": "source_files",
+      "size_bytes": 6292,
+      "modified_at": "2026-07-18T19:39:18.152653"
+    },
+    {
+      "path": "fekerr-dev/ps7/pipe2clip.ps1",
+      "category": "source_files",
+      "size_bytes": 2291,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/get-mtfterminaldashboard.ps1",
+      "category": "source_files",
+      "size_bytes": 312,
+      "modified_at": "2026-07-18T19:59:02.463596"
+    },
+    {
+      "path": "fekerr-dev/ps7/Sync-CloudLogs.ps1",
+      "category": "source_files",
+      "size_bytes": 3983,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/pipe2log.ps1",
+      "category": "source_files",
+      "size_bytes": 4060,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/Record-Session.ps1",
+      "category": "source_files",
+      "size_bytes": 2594,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": "fekerr-dev/ps7/Protect-FileIntegrity.ps1",
+      "category": "source_files",
+      "size_bytes": 2280,
+      "modified_at": "2026-07-18T19:39:18.152919"
+    },
+    {
+      "path": ".local/diff_1000.txt",
+      "category": "built_files",
+      "size_bytes": 1894,
+      "modified_at": "2026-07-09T10:00:10.003578"
+    },
+    {
+      "path": ".local/config_env_help_wip.md",
+      "category": "built_files",
+      "size_bytes": 2016,
+      "modified_at": "2026-07-10T01:46:47.849351"
+    },
+    {
+      "path": ".local/diff_924p.txt",
+      "category": "built_files",
+      "size_bytes": 3959,
+      "modified_at": "2026-07-09T21:24:14.819823"
+    },
+    {
+      "path": ".local/0710_0424a.sh",
+      "category": "built_files",
+      "size_bytes": 190,
+      "modified_at": "2026-07-10T04:24:32.942601"
+    },
+    {
+      "path": ".local/diff_260709_0917.txt",
+      "category": "built_files",
+      "size_bytes": 1739,
+      "modified_at": "2026-07-09T09:17:43.259285"
+    },
+    {
+      "path": ".local/provision-sh_0937.txt",
+      "category": "built_files",
+      "size_bytes": 7847,
+      "modified_at": "2026-07-09T09:37:27.552175"
+    },
+    {
+      "path": ".local/diff.txt",
+      "category": "built_files",
+      "size_bytes": 3617,
+      "modified_at": "2026-07-09T21:20:05.915189"
+    },
+    {
+      "path": ".local/260709_2040.txt",
+      "category": "built_files",
+      "size_bytes": 179,
+      "modified_at": "2026-07-09T20:40:14.075088"
+    },
+    {
+      "path": ".local/0710_503a.sh",
+      "category": "built_files",
+      "size_bytes": 66,
+      "modified_at": "2026-07-10T05:04:01.617057"
+    },
+    {
+      "path": ".local/woof.txt",
+      "category": "built_files",
+      "size_bytes": 3,
+      "modified_at": "2026-07-09T20:40:35.444938"
+    },
+    {
+      "path": ".local/config_env_2_wip.md",
+      "category": "built_files",
+      "size_bytes": 1222,
+      "modified_at": "2026-07-10T01:50:12.531016"
+    },
+    {
+      "path": ".local/0710_0400a.sh",
+      "category": "built_files",
+      "size_bytes": 192,
+      "modified_at": "2026-07-10T04:16:45.851829"
+    },
+    {
+      "path": "scratch/sycl_fix.patch",
+      "category": "log_files",
+      "size_bytes": 1005,
+      "modified_at": "2026-07-18T19:39:18.183683"
+    },
+    {
+      "path": "scratch/brain_dump_20260711.py",
+      "category": "log_files",
+      "size_bytes": 11951,
+      "modified_at": "2026-07-18T19:39:18.183683"
+    },
+    {
+      "path": "scratch/sycl_fix_001.patch",
+      "category": "log_files",
+      "size_bytes": 986,
+      "modified_at": "2026-07-18T19:39:18.183683"
+    },
+    {
+      "path": "scratch/probe_sycl.sh",
+      "category": "log_files",
+      "size_bytes": 2602,
+      "modified_at": "2026-07-18T19:39:18.183683"
+    },
+    {
+      "path": "scratch/sycl_fix_002.patch",
+      "category": "log_files",
+      "size_bytes": 1080,
+      "modified_at": "2026-07-18T19:39:18.183683"
+    },
+    {
+      "path": "scratch/traces/strace_012.txt",
+      "category": "log_files",
+      "size_bytes": 188340,
+      "modified_at": "2026-07-08T15:18:45.550294"
+    },
+    {
+      "path": "scratch/traces/ingest_001_ls-rtla-root.txt",
+      "category": "log_files",
+      "size_bytes": 3803,
+      "modified_at": "2026-07-08T15:18:45.550294"
+    },
+    {
+      "path": "scratch/traces/ingest_002_ls-rtla-scratch.txt",
+      "category": "log_files",
+      "size_bytes": 1958,
+      "modified_at": "2026-07-08T15:18:45.550294"
+    },
+    {
+      "path": "scratch/traces/run_test_003.txt",
+      "category": "log_files",
+      "size_bytes": 16051,
+      "modified_at": "2026-07-08T15:18:45.550294"
+    },
+    {
+      "path": "scratch/traces/strace_260630_0119.txt",
+      "category": "log_files",
+      "size_bytes": 173269,
+      "modified_at": "2026-07-08T15:18:45.555718"
+    },
+    {
+      "path": "scratch/traces/strace_012_001.txt",
+      "category": "log_files",
+      "size_bytes": 3848865,
+      "modified_at": "2026-07-08T15:18:45.555718"
+    },
+    {
+      "path": "scratch/traces/20260627-work-in-progress.txt",
+      "category": "log_files",
+      "size_bytes": 4225,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/ai_io/wip_260713_657a_slug_work_is_good.txt",
+      "category": "log_files",
+      "size_bytes": 249,
+      "modified_at": "2026-07-13T06:57:46.601674"
+    },
+    {
+      "path": "scratch/ai_io/gemini_response_before_658a.txt",
+      "category": "log_files",
+      "size_bytes": 7246,
+      "modified_at": "2026-07-13T06:58:45.065672"
+    },
+    {
+      "path": "scratch/ai_io/gemini_713a.txt",
+      "category": "log_files",
+      "size_bytes": 2322,
+      "modified_at": "2026-07-13T07:14:02.093638"
+    },
+    {
+      "path": "scratch/prototypes/run_test000.sh",
+      "category": "log_files",
+      "size_bytes": 2223,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/audit_all_status.sh",
+      "category": "log_files",
+      "size_bytes": 3676,
+      "modified_at": "2026-07-08T15:18:45.543718"
+    },
+    {
+      "path": "scratch/prototypes/verify_submodule.sh",
+      "category": "log_files",
+      "size_bytes": 359,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/publish_audit.sh",
+      "category": "log_files",
+      "size_bytes": 1101,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/config_env_001",
+      "category": "log_files",
+      "size_bytes": 1571,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/sycl_run_test_13b.sh",
+      "category": "log_files",
+      "size_bytes": 233,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/boot.sh",
+      "category": "log_files",
+      "size_bytes": 125,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/doit.sh",
+      "category": "log_files",
+      "size_bytes": 96,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/test_run_sycl_13a.sh",
+      "category": "log_files",
+      "size_bytes": 202,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/clip2file.legacy",
+      "category": "log_files",
+      "size_bytes": 3556,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/sync_patches.sh",
+      "category": "log_files",
+      "size_bytes": 909,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/sycl_run_test_013.sh",
+      "category": "log_files",
+      "size_bytes": 218,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/run_test002.sh",
+      "category": "log_files",
+      "size_bytes": 3636,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/sycl_run_test.sh",
+      "category": "log_files",
+      "size_bytes": 212,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/run_test.sh",
+      "category": "log_files",
+      "size_bytes": 2968,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/sweep_20260630.sh",
+      "category": "log_files",
+      "size_bytes": 1083,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/gather_snapshot.sh",
+      "category": "log_files",
+      "size_bytes": 2619,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/forensic_time.sh",
+      "category": "log_files",
+      "size_bytes": 2274,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/publish_workspace.sh",
+      "category": "log_files",
+      "size_bytes": 1164,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/config_env_002",
+      "category": "log_files",
+      "size_bytes": 1640,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/run_gdb.sh",
+      "category": "log_files",
+      "size_bytes": 1296,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/prototypes/run_test003.sh",
+      "category": "log_files",
+      "size_bytes": 5661,
+      "modified_at": "2026-07-08T15:18:45.548529"
+    },
+    {
+      "path": "scratch/test_gen/Makefile",
+      "category": "log_files",
+      "size_bytes": 4097,
+      "modified_at": "2026-07-18T19:39:18.190237"
+    },
+    {
+      "path": "scratch/test_gen/CMakeLists.txt",
+      "category": "log_files",
+      "size_bytes": 268,
+      "modified_at": "2026-07-18T19:39:18.183683"
+    },
+    {
+      "path": "scratch/aio/.git/",
+      "category": "source_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-20T08:12:26.704086",
+      "note": "Directory pruned for manifest indexing (.git)"
+    },
+    {
+      "path": "scratch/aio/gemini_20260713_0825_001_ui_capture.txt",
+      "category": "log_files",
+      "size_bytes": 6340,
+      "modified_at": "2026-07-13T08:25:53.511159"
+    },
+    {
+      "path": "scratch/aio/gemini_20260713_0829_001_ui_capture.txt",
+      "category": "log_files",
+      "size_bytes": 2401,
+      "modified_at": "2026-07-13T08:29:05.362785"
+    },
+    {
+      "path": "scratch/aio/gemini_20260713_0914_001_ui_capture.txt",
+      "category": "log_files",
+      "size_bytes": 8511,
+      "modified_at": "2026-07-13T09:14:12.809464"
+    },
+    {
+      "path": "scratch/aio/xfer_status.txt",
+      "category": "log_files",
+      "size_bytes": 530,
+      "modified_at": "2026-07-13T08:27:14.305497"
+    },
+    {
+      "path": "scratch/aio/gemini_20260713_0906_001_ui_capture.txt",
+      "category": "log_files",
+      "size_bytes": 8512,
+      "modified_at": "2026-07-13T09:06:54.314042"
+    },
+    {
+      "path": "scratch/aio/AI_status_2026-714_927a.txt",
+      "category": "log_files",
+      "size_bytes": 1436,
+      "modified_at": "2026-07-14T10:06:05.093415"
+    },
+    {
+      "path": "scratch/aio/gemini_20260713_1125_001_ui_capture.txt",
+      "category": "log_files",
+      "size_bytes": 9961,
+      "modified_at": "2026-07-13T11:25:16.922168"
+    },
+    {
+      "path": "scratch/aio/gemini_744a.txt",
+      "category": "log_files",
+      "size_bytes": 2889,
+      "modified_at": "2026-07-13T07:44:36.121581"
+    },
+    {
+      "path": "scratch/aio/gemini_20260713_0828_session_break_snapshot.txt",
+      "category": "log_files",
+      "size_bytes": 1845,
+      "modified_at": "2026-07-13T08:28:57.951335"
+    },
+    {
+      "path": "scratch/aio/.gitignore",
+      "category": "log_files",
+      "size_bytes": 7,
+      "modified_at": "2026-07-14T07:43:26.545048"
+    },
+    {
+      "path": "scratch/aio/wip/xfer001_archive.txt",
+      "category": "log_files",
+      "size_bytes": 5732,
+      "modified_at": "2026-07-13T07:47:48.290220"
+    },
+    {
+      "path": "scratch/aio/wip/xfer_archive.txt",
+      "category": "log_files",
+      "size_bytes": 4224,
+      "modified_at": "2026-07-13T07:47:48.283067"
+    },
+    {
+      "path": "scratch/aio/blobs/6e09a3a7c892b5812ea107c5a5a12b957788faee874e24b93a25f00d4dc640da.txt",
+      "category": "log_files",
+      "size_bytes": 1877,
+      "modified_at": "2026-07-14T08:27:17.364629"
+    },
+    {
+      "path": "scratch/aio/blobs/ee3b63856668ada2edeef68030888e84d62733cb361606fe06bc8ce2decc486c.txt",
+      "category": "log_files",
+      "size_bytes": 1591,
+      "modified_at": "2026-07-14T08:10:20.744758"
+    },
+    {
+      "path": "scratch/aio/blobs/c258f1c0f8fe2dbd67673d414ac4d9ad90d6ca9124135aa0debea010b81b6094.txt",
+      "category": "log_files",
+      "size_bytes": 6717,
+      "modified_at": "2026-07-14T08:27:17.358031"
+    },
+    {
+      "path": "scratch/aio/blobs/b374141875efcec1ef8e0b3b40160161206e03e48b6dde9ae7ca3b9e879638a4.txt",
+      "category": "log_files",
+      "size_bytes": 4457,
+      "modified_at": "2026-07-14T08:27:17.377908"
+    },
+    {
+      "path": "scratch/aio/blobs/4570836823bc736a6a632e9b7bc9af8ff1eccf1c08c237ed46d3109737a8bbb7.txt",
+      "category": "log_files",
+      "size_bytes": 600,
+      "modified_at": "2026-07-14T08:12:07.561751"
+    },
+    {
+      "path": "scratch/aio/blobs/bd6c2681e4618019a508c8c17c7ade466235d89e5dfcb9be681f5fe3ac3e1699.txt",
+      "category": "log_files",
+      "size_bytes": 3664,
+      "modified_at": "2026-07-14T08:10:20.755822"
+    },
+    {
+      "path": "scratch/aio/blobs/964e005840ea65f7b6d4656ce11a983e8dcd2df97b48cb010acc533f77e23fc1.txt",
+      "category": "log_files",
+      "size_bytes": 9087,
+      "modified_at": "2026-07-14T08:11:18.045920"
+    },
+    {
+      "path": "scratch/aio/blobs/b9a14add611e99584d071542fd36491bd5f41b4ef6e5c774a3beabee7998d9e0.txt",
+      "category": "log_files",
+      "size_bytes": 814,
+      "modified_at": "2026-07-14T08:27:17.376363"
+    },
+    {
+      "path": "scratch/aio/blobs/f504a9948b1ea9f9fb606e38117bd83536a0fa0417556f21aff8ec1a159cb745.txt",
+      "category": "log_files",
+      "size_bytes": 24,
+      "modified_at": "2026-07-14T08:42:05.745323"
+    },
+    {
+      "path": "scratch/aio/blobs/a522109993a07399129dd48a6d78124c090c0c2c9059f1bc1449b577645cdcad.txt",
+      "category": "log_files",
+      "size_bytes": 1499,
+      "modified_at": "2026-07-14T08:27:17.387320"
+    },
+    {
+      "path": "scratch/aio/blobs/2b135c94713d4c15c0225fbaa33a6679b586aba6a6343e79c589f1d8c4c52359.txt",
+      "category": "log_files",
+      "size_bytes": 4869,
+      "modified_at": "2026-07-14T08:27:17.370265"
+    },
+    {
+      "path": "scratch/aio/blobs/fa9d9d74730cfe280e65612ccb7edb2fad57927ac261ab2d6229550fafad1f45.txt",
+      "category": "log_files",
+      "size_bytes": 12478,
+      "modified_at": "2026-07-18T19:30:55.798707"
+    },
+    {
+      "path": "scratch/aio/blobs/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+      "category": "log_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-18T19:30:55.819131"
+    },
+    {
+      "path": "scratch/aio/blobs/25d54ab0c96c77d593a3a60e77977043d6b261e795e5f688cfcc1831c5c51206.txt",
+      "category": "log_files",
+      "size_bytes": 8653,
+      "modified_at": "2026-07-14T08:00:57.935761"
+    },
+    {
+      "path": "scratch/aio/blobs/8cc6b9edb5ab6e2047d55438f2bca6013dcb30d8c5ecb25236633f548848cf7e.txt",
+      "category": "log_files",
+      "size_bytes": 5172,
+      "modified_at": "2026-07-14T08:27:17.354922"
+    },
+    {
+      "path": "scratch/aio/blobs/c16019c5ddb604484d4d3f8f5c1a38ade89d3d608c0e7e3f4d988587ce777f7f.txt",
+      "category": "log_files",
+      "size_bytes": 24,
+      "modified_at": "2026-07-14T08:00:57.352919"
+    },
+    {
+      "path": "scratch/aio/blobs/78011b60f01b64a0312945e8b67e570f5de7c727a89e985712718e9c11ae6e62.txt",
+      "category": "log_files",
+      "size_bytes": 1531,
+      "modified_at": "2026-07-14T08:27:17.374703"
+    },
+    {
+      "path": "scratch/aio/blobs/b9a9f0e707fa973d71cfeae1073b346397d4f70279f4f06faaeaf390a0e7e786.txt",
+      "category": "log_files",
+      "size_bytes": 24,
+      "modified_at": "2026-07-14T08:57:49.347128"
+    },
+    {
+      "path": "scratch/aio/blobs/0a6bd54f3f31217ec9bd6be144c246e82fe34a715b03d34b922352ea888514fc.txt",
+      "category": "log_files",
+      "size_bytes": 1215,
+      "modified_at": "2026-07-14T08:27:17.367033"
+    },
+    {
+      "path": "scratch/aio/blobs/d86058e4a70507403888cb40ff9192f5e03ddf03008907bbf6bfe58296afc03f.txt",
+      "category": "log_files",
+      "size_bytes": 4517,
+      "modified_at": "2026-07-14T08:27:17.382132"
+    },
+    {
+      "path": "scratch/aio/blobs/ab4549038d964b1af05dea36a7e1e2b0e23c942d19f5579ef7e26867f679ff01.txt",
+      "category": "log_files",
+      "size_bytes": 61,
+      "modified_at": "2026-07-14T07:43:26.535556"
+    },
+    {
+      "path": "scratch/aio/blobs/ac14de5b1c84e1dc0edab57d1ad424d3da802fa6062b16b95fac7b2f9f42a5f6.txt",
+      "category": "log_files",
+      "size_bytes": 12764,
+      "modified_at": "2026-07-14T07:43:32.034813"
+    },
+    {
+      "path": "scratch/aio/blobs/cc688f66c3ce60cd7fc7fc94ddafb289d86dd445cb8e68bb3e0d30f24be2842f.txt",
+      "category": "log_files",
+      "size_bytes": 3147,
+      "modified_at": "2026-07-18T19:30:55.834764"
+    },
+    {
+      "path": "scratch/aio/blobs/175cc0c817bc09ba031d779189753a542f801f48fb7f09189cb212df56d5d564.txt",
+      "category": "log_files",
+      "size_bytes": 3701,
+      "modified_at": "2026-07-14T08:27:17.361483"
+    },
+    {
+      "path": "scratch/aio/blobs/e80fa84ee1dd1d2978073fbd9f49522b737d360804f92696c1708f3cd5164b0f.txt",
+      "category": "log_files",
+      "size_bytes": 24,
+      "modified_at": "2026-07-14T08:11:17.403824"
+    },
+    {
+      "path": "scratch/aio/blobs/51d4e97b1dfdd3054a461d3742c1f4890963fabdc9968fc7865c51c6f1c858da.txt",
+      "category": "log_files",
+      "size_bytes": 2702,
+      "modified_at": "2026-07-14T08:27:17.384485"
+    },
+    {
+      "path": "scratch/aio/blobs/74ad682260b9928d7d1b2947f80f4e61b79956f2863e3a45f93f25684f5fe8b0.txt",
+      "category": "log_files",
+      "size_bytes": 915,
+      "modified_at": "2026-07-14T08:10:20.741511"
+    },
+    {
+      "path": "scratch/aio/blobs/78df82db6a6cd167e00bb1d87e8939de45d2b4aa8a23366d0bfa9bfbc0021ce6.txt",
+      "category": "log_files",
+      "size_bytes": 7968,
+      "modified_at": "2026-07-14T08:27:17.372522"
+    },
+    {
+      "path": "scratch/aio/blobs/befd99cf47875933190976c62d4a0e030050719599d3777ba313b5fe60fb3465.txt",
+      "category": "log_files",
+      "size_bytes": 10206,
+      "modified_at": "2026-07-14T08:27:17.379540"
+    },
+    {
+      "path": "scratch/aio/blobs/014fec50b3ed1eab8091abefe39d174e0389deab8ec3b76540121375dd1e7928.txt",
+      "category": "log_files",
+      "size_bytes": 11197,
+      "modified_at": "2026-07-14T08:42:06.468257"
+    },
+    {
+      "path": "scratch/aio/blobs/3f7f4cfbdbeb79d41a90b63d488ed1eb751f6a178a5badcac815c2137ce4736d.txt",
+      "category": "log_files",
+      "size_bytes": 969,
+      "modified_at": "2026-07-14T08:10:20.736303"
+    },
+    {
+      "path": "scratch/aio/blobs/76975633ce24d269f68965c0370fdb8ca534019d8ed93186f812d182d0f561e9.txt",
+      "category": "log_files",
+      "size_bytes": 1906,
+      "modified_at": "2026-07-14T08:10:20.748147"
+    },
+    {
+      "path": "scratch/aio/blobs/55e8e59fe6f7f7c0894f249fd3848212c31f1a1df897f12fadb173eabe504e45.txt",
+      "category": "log_files",
+      "size_bytes": 24,
+      "modified_at": "2026-07-14T07:55:53.738384"
+    },
+    {
+      "path": "scratch/aio/blobs/01d48fe5f411f3cb29ae24b5ea69bc34b160b6314a613be5235fa0422be789f8.txt",
+      "category": "log_files",
+      "size_bytes": 42452,
+      "modified_at": "2026-07-14T08:10:20.752253"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_082717_swept_file.txt",
+      "category": "log_files",
+      "size_bytes": 756,
+      "modified_at": "2026-07-14T08:27:17.389206"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_084205_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 758,
+      "modified_at": "2026-07-14T08:42:05.747216"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_081206_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 758,
+      "modified_at": "2026-07-14T08:12:06.988889"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_074326_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 736,
+      "modified_at": "2026-07-14T07:43:26.536890"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_085819_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 758,
+      "modified_at": "2026-07-14T08:58:19.257409"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_080341_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 735,
+      "modified_at": "2026-07-14T08:03:41.423621"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_085816_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 758,
+      "modified_at": "2026-07-14T08:58:16.803866"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_085749_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 758,
+      "modified_at": "2026-07-14T08:57:49.348711"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_081117_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 758,
+      "modified_at": "2026-07-14T08:11:17.405890"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_074332_clipboard_ingest.txt",
+      "category": "log_files",
+      "size_bytes": 747,
+      "modified_at": "2026-07-14T07:43:32.039037"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_080057_clipboard_ingest.txt",
+      "category": "log_files",
+      "size_bytes": 745,
+      "modified_at": "2026-07-14T08:00:57.937915"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260713_112502_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 706,
+      "modified_at": "2026-07-13T11:25:02.275949"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260713_112516_clipboard_ingest.txt",
+      "category": "log_files",
+      "size_bytes": 750,
+      "modified_at": "2026-07-13T11:25:16.925372"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260718_193055_swept_file.txt",
+      "category": "log_files",
+      "size_bytes": 756,
+      "modified_at": "2026-07-18T19:30:55.846884"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_102756_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 758,
+      "modified_at": "2026-07-14T10:27:56.346050"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_075553_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 735,
+      "modified_at": "2026-07-14T07:55:53.740466"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_081207_clipboard_ingest.txt",
+      "category": "log_files",
+      "size_bytes": 767,
+      "modified_at": "2026-07-14T08:12:07.566121"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_084633_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 758,
+      "modified_at": "2026-07-14T08:46:33.704731"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_081118_clipboard_ingest.txt",
+      "category": "log_files",
+      "size_bytes": 768,
+      "modified_at": "2026-07-14T08:11:18.049127"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_081020_swept_file.txt",
+      "category": "log_files",
+      "size_bytes": 756,
+      "modified_at": "2026-07-14T08:10:20.757656"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_090744_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 758,
+      "modified_at": "2026-07-14T09:07:44.632096"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_102330_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 758,
+      "modified_at": "2026-07-14T10:23:30.731926"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_084206_clipboard_ingest.txt",
+      "category": "log_files",
+      "size_bytes": 769,
+      "modified_at": "2026-07-14T08:42:06.472542"
+    },
+    {
+      "path": "scratch/aio/transactions/tx_20260714_080057_status_probe.txt",
+      "category": "log_files",
+      "size_bytes": 735,
+      "modified_at": "2026-07-14T08:00:57.354711"
+    },
+    {
+      "path": "scratch/init_md_wip/init_docs.md",
+      "category": "log_files",
+      "size_bytes": 9615,
+      "modified_at": "2026-07-18T19:39:18.183683"
+    },
+    {
+      "path": ".vscode/tasks.json",
+      "category": "source_files",
+      "size_bytes": 1536,
+      "modified_at": "2026-07-08T15:18:45.534652"
+    },
+    {
+      "path": ".github/copilot-instructions.md",
+      "category": "source_files",
+      "size_bytes": 1395,
+      "modified_at": "2026-07-08T15:18:45.534101"
+    },
+    {
+      "path": ".github/agents/senior-systems-validator.agent.md",
+      "category": "source_files",
+      "size_bytes": 7696,
+      "modified_at": "2026-07-08T15:18:45.534101"
+    },
+    {
+      "path": ".github/instructions/smoke-test-conventions.instructions.md",
+      "category": "source_files",
+      "size_bytes": 1247,
+      "modified_at": "2026-07-08T15:18:45.534652"
+    },
+    {
+      "path": ".github/instructions/cpp-backend-patches.instructions.md",
+      "category": "source_files",
+      "size_bytes": 1510,
+      "modified_at": "2026-07-08T15:18:45.534101"
+    },
+    {
+      "path": "aggressive_telemetry_builder/__init__.py",
+      "category": "log_files",
+      "size_bytes": 38,
+      "modified_at": "2026-07-18T19:39:18.146213"
+    },
+    {
+      "path": "aggressive_telemetry_builder/builder.py",
+      "category": "log_files",
+      "size_bytes": 12435,
+      "modified_at": "2026-07-18T19:39:18.148210"
+    },
+    {
+      "path": "ai_io/ai_io.py",
+      "category": "source_files",
+      "size_bytes": 4979,
+      "modified_at": "2026-07-18T19:39:26.095682"
+    },
+    {
+      "path": "config_audit/config_win11_002_33b6bda",
+      "category": "source_files",
+      "size_bytes": 2351,
+      "modified_at": "2026-07-18T19:39:18.148515"
+    },
+    {
+      "path": "config_audit/config_win11_001_e76656a",
+      "category": "source_files",
+      "size_bytes": 6327,
+      "modified_at": "2026-07-18T19:39:18.148210"
+    },
+    {
+      "path": "tests/openvino/test_smoke_latency.py",
+      "category": "source_files",
+      "size_bytes": 2532,
+      "modified_at": "2026-07-08T15:18:45.559183"
+    },
+    {
+      "path": "tests/litert/test_identity_load.py",
+      "category": "source_files",
+      "size_bytes": 399,
+      "modified_at": "2026-07-08T15:18:45.559183"
+    },
+    {
+      "path": "logs/intel_setvars.log",
+      "category": "log_files",
+      "size_bytes": 332,
+      "modified_at": "2026-07-18T20:03:41.091563"
+    },
+    {
+      "path": "logs/session_journal.md",
+      "category": "log_files",
+      "size_bytes": 10732,
+      "modified_at": "2026-07-08T15:18:45.542204"
+    },
+    {
+      "path": "logs/nodes/node_agy_core_sandbox_18.json",
+      "category": "log_files",
+      "size_bytes": 466,
+      "modified_at": "2026-07-18T19:43:29.157379"
+    },
+    {
+      "path": "logs/nodes/node_llamacpp_sandbox_25.json",
+      "category": "log_files",
+      "size_bytes": 495,
+      "modified_at": "2026-07-18T20:01:09.210753"
+    },
+    {
+      "path": "logs/nodes/node_wsl_ubuntu_sandbox_17.json",
+      "category": "log_files",
+      "size_bytes": 492,
+      "modified_at": "2026-07-18T19:43:35.412086"
+    },
+    {
+      "path": "logs/nodes/node_wsl_ubuntu_sandbox_604.json",
+      "category": "log_files",
+      "size_bytes": 856,
+      "modified_at": "2026-07-18T20:01:09.211898"
+    },
+    {
+      "path": "logs/nodes/node_wsl_ubuntu_sandbox_607.json",
+      "category": "log_files",
+      "size_bytes": 856,
+      "modified_at": "2026-07-18T20:01:09.212823"
+    },
+    {
+      "path": "logs/nodes/node_wsl_ubuntu_sandbox_20.json",
+      "category": "log_files",
+      "size_bytes": 849,
+      "modified_at": "2026-07-18T20:01:09.213646"
+    },
+    {
+      "path": "logs/nodes/node_wsl_ubuntu_sandbox_18.json",
+      "category": "log_files",
+      "size_bytes": 493,
+      "modified_at": "2026-07-18T19:43:04.644737"
+    },
+    {
+      "path": "logs/nodes/node_agy_core_sandbox_17.json",
+      "category": "log_files",
+      "size_bytes": 456,
+      "modified_at": "2026-07-18T19:43:32.067903"
+    },
+    {
+      "path": "logs/nodes/node_wsl_ubuntu_laptop_ajpe53sg_7532.json",
+      "category": "log_files",
+      "size_bytes": 867,
+      "modified_at": "2026-07-18T19:56:27.518476"
+    },
+    {
+      "path": "logs/nodes/node_wsl_ubuntu_laptop_ajpe53sg_12110.json",
+      "category": "log_files",
+      "size_bytes": 869,
+      "modified_at": "2026-07-18T20:03:42.170518"
+    },
+    {
+      "path": "logs/nodes/node_agy_core_sandbox_24.json",
+      "category": "log_files",
+      "size_bytes": 471,
+      "modified_at": "2026-07-18T20:01:09.214485"
+    },
+    {
+      "path": "logs/builds/.gitkeep",
+      "category": "log_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-18T19:42:06.606989"
+    },
+    {
+      "path": "logs/tests/smoke_help_20260710_071328.json",
+      "category": "log_files",
+      "size_bytes": 9738758,
+      "modified_at": "2026-07-18T19:39:18.179683"
+    },
+    {
+      "path": "logs/tests/test_run_20260711_203018.json",
+      "category": "log_files",
+      "size_bytes": 501514,
+      "modified_at": "2026-07-18T19:39:26.099682"
+    },
+    {
+      "path": "logs/tests/.gitkeep",
+      "category": "log_files",
+      "size_bytes": 0,
+      "modified_at": "2026-07-18T19:42:06.606989"
+    },
+    {
+      "path": "logs/tests/test_run_20260710_061121.json",
+      "category": "log_files",
+      "size_bytes": 504246,
+      "modified_at": "2026-07-18T19:39:18.179683"
+    },
+    {
+      "path": "logs/tests/test_run_20260710_065449.json",
+      "category": "log_files",
+      "size_bytes": 514208,
+      "modified_at": "2026-07-18T19:39:18.183683"
+    },
+    {
+      "path": "logs/test/pre_merge_snapshot_20260627_102356.md",
+      "category": "log_files",
+      "size_bytes": 1303,
+      "modified_at": "2026-07-08T15:18:45.542204"
+    },
+    {
+      "path": "logs/test/pre_merge_snapshot_20260627_164441.md",
+      "category": "log_files",
+      "size_bytes": 1388,
+      "modified_at": "2026-07-08T15:18:45.542929"
+    }
+  ]
+}

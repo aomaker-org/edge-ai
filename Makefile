@@ -39,6 +39,16 @@ agy-sync: ## Idempotently sync AI agent prompt & response history into agy/
 agy-status: ## Display statistics of captured AI session telemetry
 	@$(PYTHON) tools/sync_agy_logs.py --status --workspace "$(PROJECT_ROOT)"
 
+manifest-gen: ## Regenerate irislime full file manifest (JSON & Markdown)
+	@$(PYTHON) tools/generate_irislime_manifest.py
+
+ai-log-diff-demo: ## Execute AI semantic log diff demonstration
+	@$(PYTHON) ai-log-diff/tools/semantic_log_differ.py \
+		--log-a ai-log-diff/examples/build_pass_001.log \
+		--log-b ai-log-diff/examples/build_fail_001.log \
+		--md-out $(BUILD_DIR)/log_diff_demo_report.md
+	@echo "[ai-log-diff-demo] Report generated at $(BUILD_DIR)/log_diff_demo_report.md"
+
 build: ## Build project targets (out-of-tree in build/)
 	@mkdir -p $(BUILD_DIR)
 	@echo "[build] Build directory ready at $(BUILD_DIR)"
