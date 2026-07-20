@@ -1,0 +1,46 @@
+# ==============================================================================
+# Path:        tools/log_watcher.toml
+# Purpose:     Configuration specification for edge-ai log watcher & telemetry monitor.
+# Architecture: TOML section definitions, rate limits, and auto-discovered assets.
+# Standard:    Rule 8 (YYMMDD_HHMM_NNN Timestamping) & Anti-Flicker 1Hz Max Refresh Rate
+# ==============================================================================
+
+[general]
+max_refresh_hz = 1.0
+scan_interval_sec = 1.0
+auto_discover = true
+timestamp_format = "%y%m%d_%H%M_%S"
+
+[sections.telemetry]
+name = "Hardware & Inference Telemetry Logs"
+paths = ["logs"]
+patterns = ["*.jsonl", "*.csv"]
+enabled = true
+
+[sections.build_logs]
+name = "Out-of-Tree Build & Compiler Logs"
+paths = ["build"]
+patterns = ["*.log"]
+enabled = true
+
+[sections.agy_sessions]
+name = "AI Agent Telemetry Sessions"
+paths = ["agy"]
+patterns = ["*.jsonl", "*.md"]
+enabled = true
+
+[discovered_files]
+logs = [
+    "logs/telemetry_260720_0843_001.csv",
+    "logs/telemetry_260720_0843_001.jsonl"
+]
+build_reports = [
+    "build/log_diff_demo_report.md"
+]
+agy_telemetry = [
+    "agy/prompts.jsonl"
+]
+
+# Auto-discovered in auto_discover at 260720_0931_001
+# "logs/telemetry_260720_0843_001.csv"
+# "logs/telemetry_260720_0843_001.jsonl"
