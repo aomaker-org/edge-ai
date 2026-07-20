@@ -248,6 +248,7 @@ class LogWatcher:
 
 def main():
     parser = argparse.ArgumentParser(description="edge-ai Extended Log Watcher")
+    parser.add_argument("target_path", nargs="?", default=None, help="Optional target directory path to watch")
     parser.add_argument("--config", type=str, default="tools/log_watcher.toml", help="Path to TOML config file")
     parser.add_argument("--section", type=str, default=None, help="Filter to specific section (telemetry, build_logs, agy_sessions)")
     parser.add_argument("--add-path", type=str, action="append", help="Dynamically add path to watch")
@@ -255,10 +256,14 @@ def main():
 
     args = parser.parse_args()
 
+    add_paths = args.add_path or []
+    if args.target_path:
+        add_paths.append(args.target_path)
+
     watcher = LogWatcher(
         config_path=args.config,
         target_section=args.section,
-        add_paths=args.add_path,
+        add_paths=add_paths,
         remove_paths=args.remove_path,
     )
 
