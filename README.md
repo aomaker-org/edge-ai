@@ -35,6 +35,14 @@ edge-ai/
 ├── agy/                   # Captured AI agent session telemetry (append-only)
 │   ├── prompts.jsonl      # SHA256-deduplicated append-only event stream
 │   └── sessions/          # Session summary records in Markdown
+├── deps/                  # Core engine submodules (llama.cpp, LiteRT-LM)
+│   ├── llama.cpp          # Fork of llama.cpp (aomaker-org/llama.cpp)
+│   └── litert-lm          # Fork of LiteRT-LM (aomaker-org/LiteRT-LM)
+├── learning/              # Educational & SLM learning submodules
+│   ├── cs249r_book        # TinyML & Edge AI course material
+│   ├── minitorch          # Educational PyTorch implementation
+│   ├── build-nanogpt      # NanoGPT implementation guide
+│   └── micrograd          # Autograd engine implementation
 ├── irislime/              # Header domain for components derived from irislime
 │   ├── README.md          # Provenance and rules for irislime baseline assets
 │   └── derived_components/ # Ported engine code, make files, and diagnostic wrappers
@@ -58,10 +66,10 @@ edge-ai/
 
 ## 📥 Repository Cloning
 
-Clone the repository directly:
+Clone the repository with submodules:
 
 ```bash
-git clone git@github.com:aomaker-org/edge-ai.git
+git clone --recursive git@github.com:aomaker-org/edge-ai.git
 cd edge-ai
 ```
 

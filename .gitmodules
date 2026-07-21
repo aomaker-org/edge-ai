@@ -1,0 +1,18 @@
+[submodule "deps/llama.cpp"]
+	path = deps/llama.cpp
+	url = git@github.com:aomaker-org/llama.cpp.git
+[submodule "deps/litert-lm"]
+	path = deps/litert-lm
+	url = git@github.com:aomaker-org/LiteRT-LM.git
+[submodule "learning/cs249r_book"]
+	path = learning/cs249r_book
+	url = https://github.com/aomaker-org/cs249r_book
+[submodule "learning/minitorch"]
+	path = learning/minitorch
+	url = https://github.com/aomaker-org/minitorch
+[submodule "learning/build-nanogpt"]
+	path = learning/build-nanogpt
+	url = https://github.com/aomaker-org/build-nanogpt
+[submodule "learning/micrograd"]
+	path = learning/micrograd
+	url = https://github.com/aomaker-org/micrograd
