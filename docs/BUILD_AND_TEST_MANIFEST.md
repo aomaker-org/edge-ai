@@ -2,8 +2,8 @@
 
 This manifest provides both **Concise (TL;DR)** and **Verbose (Architectural)** asset tracking for all compiled executables, shared libraries, test binaries, and separated telemetry log files across `edge-ai`.
 
-- **Generated Timestamp**: `2026-07-20T09:52:38.623631`
-- **Rule 8 Timestamp Tag**: `260720_0952_001`
+- **Generated Timestamp**: `2026-07-20T14:09:05.561651`
+- **Rule 8 Timestamp Tag**: `260720_1409_001`
 - **Project Root**: `/home/fekerr/src/edge-ai`
 
 ---
@@ -15,7 +15,7 @@ This manifest provides both **Concise (TL;DR)** and **Verbose (Architectural)** 
 | 🚀 **Built Executables** | **207** binaries | `build/base_release/bin/`, `build/*/bin/` | **Validated** |
 | 📦 **Shared Libraries & Artifacts** | **3132** libraries/objects | `build/*/bin/`, `build/*/` | **Validated** |
 | 🧪 **Test Executables** | **123** unit test binaries | `build/*/bin/` | **Validated** |
-| 📝 **Separated Log & Telemetry Files** | **6** log files | `logs/`, `logs/tests/`, `logs/debug/`, `agy/` | **Separated & Active** |
+| 📝 **Separated Log & Telemetry Files** | **28** log files | `logs/`, `logs/tests/`, `logs/debug/`, `agy/` | **Separated & Active** |
 
 ---
 
@@ -422,14 +422,36 @@ This manifest provides both **Concise (TL;DR)** and **Verbose (Architectural)** 
 
 ---
 
-### D. 📝 Separated Log & Telemetry Files (6 Files)
+### D. 📝 Separated Log & Telemetry Files (28 Files)
 
 | Log File Name | Subsystem Path | File Size | Format |
 | :--- | :--- | :--- | :--- |
+| `prompts.jsonl` | `agy/prompts.jsonl` | 470.6 KB | JSONL Session |
+| `260720_1408_001_session_.system_.md` | `agy/sessions/260720_1408_001_session_.system_.md` | 21.3 KB | Build Log |
+| `260720_1408_002_session_.system_.md` | `agy/sessions/260720_1408_002_session_.system_.md` | 1.4 KB | Build Log |
+| `260720_1408_003_session_.system_.md` | `agy/sessions/260720_1408_003_session_.system_.md` | 45.9 KB | Build Log |
+| `260720_1408_004_session_.system_.md` | `agy/sessions/260720_1408_004_session_.system_.md` | 1.1 KB | Build Log |
+| `260720_1408_005_session_.system_.md` | `agy/sessions/260720_1408_005_session_.system_.md` | 16.9 KB | Build Log |
+| `260720_1408_006_session_.system_.md` | `agy/sessions/260720_1408_006_session_.system_.md` | 1.1 KB | Build Log |
+| `260720_1408_007_session_.system_.md` | `agy/sessions/260720_1408_007_session_.system_.md` | 22.2 KB | Build Log |
+| `260720_1408_008_session_.system_.md` | `agy/sessions/260720_1408_008_session_.system_.md` | 1.7 KB | Build Log |
+| `260720_1408_009_session_.system_.md` | `agy/sessions/260720_1408_009_session_.system_.md` | 15.5 KB | Build Log |
+| `260720_1408_010_session_.system_.md` | `agy/sessions/260720_1408_010_session_.system_.md` | 10.4 KB | Build Log |
+| `260720_1408_011_session_.system_.md` | `agy/sessions/260720_1408_011_session_.system_.md` | 3.8 KB | Build Log |
+| `260720_1408_012_session_.system_.md` | `agy/sessions/260720_1408_012_session_.system_.md` | 11.2 KB | Build Log |
+| `260720_1408_013_session_.system_.md` | `agy/sessions/260720_1408_013_session_.system_.md` | 82.3 KB | Build Log |
+| `260720_1408_014_session_.system_.md` | `agy/sessions/260720_1408_014_session_.system_.md` | 40.9 KB | Build Log |
+| `260720_1408_015_session_.system_.md` | `agy/sessions/260720_1408_015_session_.system_.md` | 6.4 KB | Build Log |
+| `260720_1408_016_session_.system_.md` | `agy/sessions/260720_1408_016_session_.system_.md` | 1.4 KB | Build Log |
+| `260720_1408_017_session_.system_.md` | `agy/sessions/260720_1408_017_session_.system_.md` | 14.9 KB | Build Log |
+| `260720_1408_018_session_.system_.md` | `agy/sessions/260720_1408_018_session_.system_.md` | 7.0 KB | Build Log |
+| `260720_1408_019_session_.system_.md` | `agy/sessions/260720_1408_019_session_.system_.md` | 6.4 KB | Build Log |
 | `build_debug_260720_0932_001.log` | `logs/debug/build_debug_260720_0932_001.log` | 50.2 KB | Build Log |
 | `build_telemetry_260720_0948_001.log` | `logs/telemetry/build_telemetry_260720_0948_001.log` | 50.2 KB | Build Log |
 | `telemetry_260720_0843_001.csv` | `logs/telemetry_260720_0843_001.csv` | 0.5 KB | CSV Telemetry |
 | `telemetry_260720_0843_001.jsonl` | `logs/telemetry_260720_0843_001.jsonl` | 1.3 KB | JSONL Session |
+| `telemetry_260720_1408_001.csv` | `logs/telemetry_260720_1408_001.csv` | 0.6 KB | CSV Telemetry |
+| `telemetry_260720_1408_001.jsonl` | `logs/telemetry_260720_1408_001.jsonl` | 1.3 KB | JSONL Session |
 | `test_results_260720_0934_001.csv` | `logs/tests/test_results_260720_0934_001.csv` | 4.2 KB | CSV Telemetry |
 | `test_run_260720_0934_001.log` | `logs/tests/test_run_260720_0934_001.log` | 26.1 KB | Build Log |
 

@@ -35,6 +35,14 @@ edge-ai/
 ├── agy/                   # Captured AI agent session telemetry (append-only)
 │   ├── prompts.jsonl      # SHA256-deduplicated append-only event stream
 │   └── sessions/          # Session summary records in Markdown
+├── deps/                  # Core engine submodules (llama.cpp, LiteRT-LM)
+│   ├── llama.cpp          # Fork of llama.cpp (aomaker-org/llama.cpp)
+│   └── litert-lm          # Fork of LiteRT-LM (aomaker-org/LiteRT-LM)
+├── learning/              # Educational & SLM learning submodules
+│   ├── cs249r_book        # TinyML & Edge AI course material
+│   ├── minitorch          # Educational PyTorch implementation
+│   ├── build-nanogpt      # NanoGPT implementation guide
+│   └── micrograd          # Autograd engine implementation
 ├── irislime/              # Header domain for components derived from irislime
 │   ├── README.md          # Provenance and rules for irislime baseline assets
 │   └── derived_components/ # Ported engine code, make files, and diagnostic wrappers
@@ -56,20 +64,13 @@ edge-ai/
 
 ---
 
-## 📥 Repository Cloning & Submodule Initialization
+## 📥 Repository Cloning
 
-Because GitHub's web interface only suggests the standard `git clone` command line without submodules, use one of the following commands:
+Clone the repository with submodules:
 
-### Single-Step Clone with Submodules (Recommended)
 ```bash
-git clone --recurse-submodules git@github.com:aomaker-org/edge-ai.git
-```
-
-### Standard Clone + Manual Submodule Sync
-```bash
-git clone git@github.com:aomaker-org/edge-ai.git
+git clone --recursive git@github.com:aomaker-org/edge-ai.git
 cd edge-ai
-git submodule update --init --recursive
 ```
 
 ---

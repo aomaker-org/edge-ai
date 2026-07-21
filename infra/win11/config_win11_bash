@@ -1,0 +1,258 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# Filename:     config_win11_bash
+# Purpose:      Consolidated Windows 11 Git Bash Environment Loader for edge-ai
+# Type:         Sourced (source config_win11_bash)
+# Attribution:  fekerr & Antigravity (20260720 / Consolidated Win11 Stack)
+# ==============================================================================
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    echo "[!] ERROR: You must SOURCE this file, not execute it." >&2
+    echo "    Usage: source config_win11_bash [force|unset|<tag>]" >&2
+    exit 1
+fi
+
+_ACTION=""
+_TAG=""
+if [ "${1:-}" == "force" ] || [ "${1:-}" == "--force" ]; then
+    _ACTION="force"
+    _TAG="${2:-}"
+elif [ "${1:-}" == "unset" ] || [ "${1:-}" == "--unset" ]; then
+    _ACTION="unset"
+elif [ -n "${1:-}" ]; then
+    _TAG="${1}"
+fi
+
+if [ "${_ACTION}" == "unset" ]; then
+    echo "[!] Unsetting edge-ai Git Bash host environment..."
+    unset EDGEAI_READY
+    unset EDGEAI_ROOT
+    unset PROJECT_ROOT
+    unset PYTHON_VENV_EXE
+    unset EDGEAI_PLATFORM
+    unset EDGEAI_BUILD_DIR
+    unset EDGEAI_LOGS_DIR
+    unset INTEL_OPENVINO_DIR
+    unset OpenVINO_DIR
+    unset OPENSSL_ROOT_DIR
+    unset ONEAPI_DEVICE_SELECTOR
+    unset ZES_ENABLE_SYSMAN
+    unset TCM_ENABLE
+    unset EDGEAI_MODELS_DIR
+    unset EDGEAI_TEST_MODEL
+    unset EDGEAI_PROMPT_TAG
+    
+    unset -f ps7 edgeai_cmake edgeai_build edgeai_clean show_edgeai_status set_edgeai_prompt 2>/dev/null
+    unalias edgeai_cmake edgeai_build edgeai_clean 2>/dev/null
+    
+    if command -v deactivate >/dev/null 2>&1; then
+        deactivate
+        echo "[+] Virtual environment deactivated."
+    fi
+    echo "[+] edge-ai Git Bash environment unset."
+    unset _ACTION _TAG
+    return 0
+fi
+
+if [ "${_ACTION}" == "force" ]; then
+    echo "[!] Force reload detected. Cycling host environment state..."
+    unset EDGEAI_READY
+    if [ -n "${_TAG}" ]; then
+        export EDGEAI_PROMPT_TAG="${_TAG}"
+    else
+        export EDGEAI_PROMPT_TAG="default"
+    fi
+elif [ -n "${_TAG}" ]; then
+    export EDGEAI_PROMPT_TAG="${_TAG}"
+fi
+
+if [ -n "${EDGEAI_READY:-}" ]; then
+    echo "[!] edge-ai environment is already loaded. Use 'source config_win11_bash force' to re-verify."
+    unset _ACTION _TAG
+    return 0
+fi
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+if [ -f "${SCRIPT_DIR}/infra/win11/config_win11_bash" ]; then
+    export EDGEAI_ROOT="${SCRIPT_DIR}"
+elif [ -f "${SCRIPT_DIR}/config_win11_bash" ] && [ -d "${SCRIPT_DIR}/../../infra" ]; then
+    export EDGEAI_ROOT="$( cd "${SCRIPT_DIR}/../.." && pwd )"
+else
+    export EDGEAI_ROOT="${SCRIPT_DIR}"
+fi
+export PROJECT_ROOT="${EDGEAI_ROOT}"
+
+echo "[+] PROJECT_ROOT anchored to: ${PROJECT_ROOT}"
+
+if ! command -v cl.exe &> /dev/null; then
+    if [ -f "${PROJECT_ROOT}/.edgeai_env.sh" ]; then
+        echo "[*] Injected cached MSVC build environment from .edgeai_env.sh..."
+        source "${PROJECT_ROOT}/.edgeai_env.sh"
+    elif [ -f "${PROJECT_ROOT}/infra/win11/capture_env.py" ] && command -v python &> /dev/null; then
+        echo "[*] Auto-running environment capture script (capture_env.py)..."
+        python "${PROJECT_ROOT}/infra/win11/capture_env.py" --output-dir "${PROJECT_ROOT}" >/dev/null 2>&1
+        if [ -f "${PROJECT_ROOT}/.edgeai_env.sh" ]; then
+            source "${PROJECT_ROOT}/.edgeai_env.sh"
+        fi
+    fi
+fi
+
+if command -v cl.exe &> /dev/null; then
+    echo "[+] Validated: Microsoft C/C++ Compiler (cl.exe) is active."
+else
+    echo "[-] Warning: cl.exe not detected in PATH." >&2
+fi
+
+if [ -n "${ONEAPI_ROOT:-}" ] || [ -n "${MKLROOT:-}" ]; then
+    echo "[+] Validated: Intel oneAPI environment variables active in session memory."
+else
+    echo "[i] Info: Intel oneAPI environment variables absent."
+fi
+
+export EDGEAI_PLATFORM="win11_native_bash"
+export EDGEAI_BUILD_DIR="${PROJECT_ROOT}/build"
+export EDGEAI_LOGS_DIR="${PROJECT_ROOT}/logs"
+
+export INTEL_OPENVINO_DIR="C:/Program Files/WindowsApps/IntelCorporation.OpenVINOToolkit.2026.2.0_2026.2.0.0_x64__aqcv7fbxf4wm4"
+export OpenVINO_DIR="${INTEL_OPENVINO_DIR}/runtime/cmake"
+export OPENSSL_ROOT_DIR="C:/Program Files/OpenSSL-Win64"
+
+export ONEAPI_DEVICE_SELECTOR="opencl:1"
+export ZES_ENABLE_SYSMAN=1
+export TCM_ENABLE=1
+
+export EDGEAI_MODELS_DIR="${PROJECT_ROOT}/../models"
+export EDGEAI_TEST_MODEL="${EDGEAI_TEST_MODEL:-$EDGEAI_MODELS_DIR/tinyllama-1.1b-chat-v1.0.Q4_0.gguf}"
+
+if [ -f "${PROJECT_ROOT}/config_local.sh" ]; then
+    source "${PROJECT_ROOT}/config_local.sh"
+fi
+
+OPENVINO_BIN_POS="/c/Program Files/WindowsApps/IntelCorporation.OpenVINOToolkit.2026.2.0_2026.2.0.0_x64__aqcv7fbxf4wm4/runtime/bin/intel64/Release"
+OPENVINO_ALT_POS="/c/Program Files/WindowsApps/IntelCorporation.OpenVINOToolkit.2026.2.0_2026.2.0.0_x64__aqcv7fbxf4wm4/runtime/bin"
+OPENSSL_BIN_POS="/c/Program Files/OpenSSL-Win64/bin"
+INTEL_COMPILER_BIN="/c/Program Files (x86)/Intel/oneAPI/compiler/latest/windows/bin"
+
+export PATH="${INTEL_COMPILER_BIN}:${OPENVINO_BIN_POS}:${OPENVINO_ALT_POS}:${OPENSSL_BIN_POS}:${PATH}"
+
+mkdir -p "${EDGEAI_BUILD_DIR}" "${EDGEAI_LOGS_DIR}"
+
+ps7() {
+    if [ -f "/c/Program Files/PowerShell/7/pwsh.exe" ]; then
+        "/c/Program Files/PowerShell/7/pwsh.exe" "$@"
+    else
+        powershell.exe "$@"
+    fi
+}
+
+edgeai_cmake() {
+    local preset="${1:-default}"
+    local build_type="${2:-RelWithDebInfo}"
+    shift 2 2>/dev/null || true
+    local target_dir="${EDGEAI_BUILD_DIR}/${preset}"
+    echo "[cmake] Configuring preset '${preset}' in ${target_dir}..."
+    cmake -S "${PROJECT_ROOT}" -B "${target_dir}" -G "Ninja" -DCMAKE_BUILD_TYPE="${build_type}" "$@"
+}
+
+edgeai_build() {
+    local preset="${1:-default}"
+    local build_type="${2:-RelWithDebInfo}"
+    local target_dir="${EDGEAI_BUILD_DIR}/${preset}"
+    if [ ! -f "${target_dir}/CMakeCache.txt" ]; then
+        echo "[!] No CMake cache found in ${target_dir}. Run edgeai_cmake first." >&2
+        return 1
+    fi
+    echo "[build] Building preset '${preset}'..."
+    cmake --build "${target_dir}" --config "${build_type}" "$@"
+}
+
+edgeai_clean() {
+    local preset="${1:-default}"
+    local target_dir="${EDGEAI_BUILD_DIR}/${preset}"
+    if [ -d "${target_dir}" ]; then
+        rm -rf "${target_dir}"
+        echo "[clean] Removed: ${target_dir}"
+    else
+        echo "[clean] Nothing to clean: ${target_dir} does not exist."
+    fi
+}
+
+show_edgeai_status() {
+    echo ""
+    echo "=================================================================="
+    echo " edge-ai Environment Status (Git Bash)"
+    echo "=================================================================="
+    echo "  PROJECT_ROOT: ${PROJECT_ROOT}"
+    echo "  Platform:     ${EDGEAI_PLATFORM}"
+    echo "  Build Dir:    ${EDGEAI_BUILD_DIR}"
+    echo "  Logs Dir:     ${EDGEAI_LOGS_DIR}"
+    echo "  Models Dir:   ${EDGEAI_MODELS_DIR}"
+    echo "  Prompt Tag:   ${EDGEAI_PROMPT_TAG:-default}"
+    echo "------------------------------------------------------------------"
+    if [ -d "${EDGEAI_BUILD_DIR}" ]; then
+        echo "  Active Presets:"
+        for d in "${EDGEAI_BUILD_DIR}"/*; do
+            if [ -d "$d" ]; then
+                local bname=$(basename "$d")
+                if [ -f "$d/CMakeCache.txt" ]; then
+                    echo "    - ${bname} [configured]"
+                else
+                    echo "    - ${bname} [empty]"
+                fi
+            fi
+        done
+    fi
+    echo "=================================================================="
+    echo ""
+}
+
+set_edgeai_prompt() {
+    local exit_code=$?
+    local short_host=${HOSTNAME%%.*}
+    local tag="${EDGEAI_PROMPT_TAG:-default}"
+    local ts=$(date +"%y%m_%H%M_%S")
+    
+    local c_reset="\[\e[0m\]"
+    local c_user="\[\e[36m\]"
+    local c_host="\[\e[94m\]"
+    local c_tag="\[\e[35m\]"
+    local c_time="\[\e[90m\]"
+    local c_path="\[\e[33m\]"
+    local c_green="\[\e[32m\]"
+    local c_red="\[\e[31m\]"
+    
+    local status_symbol=""
+    if [ $exit_code -eq 0 ]; then
+        status_symbol="${c_green}✓${c_reset}"
+    else
+        status_symbol="${c_red}✗ (exit: ${exit_code})${c_reset}"
+    fi
+    
+    local git_info=$(type __git_ps1 >/dev/null 2>&1 && __git_ps1 ' (%s)')
+    if [ -n "${git_info}" ]; then
+        git_info="${c_green}${git_info}${c_reset}"
+    fi
+
+    local host_part="${c_user}${USER}${c_reset}@${c_host}${short_host}${c_reset}"
+    local tag_part="[${c_tag}${tag}${c_reset}]"
+    local path_part="${c_path}\w${c_reset}"
+    local time_part="${c_time}${ts}${c_reset}"
+
+    PS1="\n${host_part} ${tag_part} - ${time_part} [${status_symbol}]\n${path_part}${git_info}\n\n; "
+}
+PROMPT_COMMAND=set_edgeai_prompt
+
+export EDGEAI_READY=1
+unset _ACTION _TAG
+
+echo ""
+echo "=================================================================="
+echo " edge-ai Windows 11 Git Bash Environment Ready"
+echo "  Root:     ${PROJECT_ROOT}"
+echo "  Build:    ${EDGEAI_BUILD_DIR}"
+echo "  Platform: ${EDGEAI_PLATFORM}"
+echo "  Tag:      ${EDGEAI_PROMPT_TAG:-default}"
+echo ""
+echo "  Commands: edgeai_cmake | edgeai_build | edgeai_clean | show_edgeai_status"
+echo "=================================================================="
+echo ""

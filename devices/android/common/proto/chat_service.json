@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PixelAIChatServiceProtocol",
+  "type": "object",
+  "description": "ADB RPC Protocol for On-Device Chatbot Inference on Pixel 6a and Pixel 10 Pro XL",
+  "properties": {
+    "request": {
+      "type": "object",
+      "properties": {
+        "request_id": { "type": "string" },
+        "device_target": { "type": "string", "enum": ["Pixel6a", "Pixel10ProXL", "Auto"] },
+        "prompt": { "type": "string" },
+        "system_instruction": { "type": "string" },
+        "max_tokens": { "type": "integer", "default": 256 },
+        "temperature": { "type": "number", "default": 0.7 },
+        "use_npu": { "type": "boolean", "default": true },
+        "stream": { "type": "boolean", "default": false }
+      },
+      "required": ["request_id", "prompt"]
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "request_id": { "type": "string" },
+        "device_target": { "type": "string" },
+        "generated_text": { "type": "string" },
+        "status_ok": { "type": "boolean" },
+        "error_message": { "type": "string" },
+        "time_to_first_token_ms": { "type": "number" },
+        "tokens_per_second": { "type": "number" },
+        "generated_tokens": { "type": "integer" },
+        "backend_name": { "type": "string" }
+      },
+      "required": ["request_id", "generated_text", "status_ok"]
+    }
+  }
+}

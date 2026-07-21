@@ -8,18 +8,9 @@ This recipe provides a friction-free sequence to get `edge-ai` set up and verifi
 
 ### 1. Clone & Enter Repository
 
-**Option A (Recommended Single-Step Clone with Submodules):**
-```bash
-git clone --recurse-submodules git@github.com:aomaker-org/edge-ai.git
-cd edge-ai
-```
-
-**Option B (Standard Clone + Post-Clone Submodule Initialization):**
-*(Note: GitHub UI only provides the standard clone URL; run `git submodule update` to fetch nested dependencies)*
 ```bash
 git clone git@github.com:aomaker-org/edge-ai.git
 cd edge-ai
-git submodule update --init --recursive
 ```
 
 ### 2. Inspect & Verify Root Make Matrix

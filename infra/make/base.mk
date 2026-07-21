@@ -49,7 +49,7 @@ endif
 NUM_BUILD_JOBS ?= $(CALIBRATED_BUILD_JOBS)
 
 # --- SHARED CONFIGURATION MATRIX ---
-ENGINE_DIR    ?= $(PROJECT_ROOT)/irislime/irislime/llama.cpp
+ENGINE_DIR    ?= $(PROJECT_ROOT)/deps/llama.cpp
 BUILD_DIR     ?= $(PROJECT_ROOT)/build
 LOGS_DIR      ?= $(PROJECT_ROOT)/logs
 AGY_DIR       ?= $(PROJECT_ROOT)/agy
