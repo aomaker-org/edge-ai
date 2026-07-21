@@ -1,0 +1,67 @@
+// ==============================================================================
+// Filename:     infra/win11/settings_profiles.jsonc
+// Purpose:      Windows Terminal Profile Configurations for edge-ai
+// Attribution:  fekerr & Antigravity (20260720 / Windows Terminal Native Profiles)
+// ==============================================================================
+[
+    {
+        "guid": "{e83a9120-1122-4a7b-830a-edgeai000001}",
+        "name": "edge-ai: Simple Git Bash",
+        "commandline": "\"C:\\Program Files\\Git\\bin\\bash.exe\" --login -i",
+        "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+        "startingDirectory": "%USERPROFILE%\\src\\edge-ai",
+        "hidden": false,
+        "bellStyle": "none",
+        "closeOnExit": "graceful"
+    },
+    {
+        "guid": "{e83a9120-1122-4a7b-830a-edgeai000002}",
+        "name": "edge-ai: Simple PowerShell 7",
+        "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -NoExit",
+        "icon": "C:\\Program Files\\PowerShell\\7\\pwsh.ico",
+        "startingDirectory": "%USERPROFILE%\\src\\edge-ai",
+        "hidden": false,
+        "bellStyle": "none",
+        "closeOnExit": "graceful"
+    },
+    {
+        "guid": "{e83a9120-1122-4a7b-830a-edgeai000003}",
+        "name": "edge-ai: Simple Developer CMD",
+        "commandline": "cmd.exe /k \"\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\" -arch=amd64\"",
+        "icon": "%ProgramFiles%\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\Assets\\VisualStudio.ico",
+        "startingDirectory": "%USERPROFILE%\\src\\edge-ai",
+        "hidden": false,
+        "bellStyle": "none",
+        "closeOnExit": "graceful"
+    },
+    {
+        "guid": "{b6b47c92-7f14-4c54-809b-8ed65a51c9ea}",
+        "name": "win11 irislime Git Bash VS2022 + oneAPI",
+        "commandline": "cmd.exe /s /c \"\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\" -arch=amd64 && \"C:\\Program Files (x86)\\Intel\\oneAPI\\setvars.bat\" && \"C:\\Program Files\\Git\\bin\\bash.exe\" --login -i\"",
+        "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+        "startingDirectory": "%USERPROFILE%\\src\\edge-ai",
+        "hidden": false,
+        "bellStyle": "none",
+        "closeOnExit": "never"
+    },
+    {
+        "guid": "{a6b47c92-7f14-4c54-809b-8ed65a51c9ea}",
+        "name": "Developer Git Bash (VS 2022)",
+        "commandline": "cmd.exe /c \"\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\" -arch=amd64 && \"C:\\Program Files\\Git\\bin\\bash.exe\" --login -i\"",
+        "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+        "startingDirectory": "%USERPROFILE%\\src\\edge-ai",
+        "hidden": false,
+        "bellStyle": "none",
+        "closeOnExit": "never"
+    },
+    {
+        "guid": "{c7c58d03-8e25-5b65-910c-edgeai000004}",
+        "name": "Developer PowerShell 7 (VS 2022 + oneAPI)",
+        "commandline": "cmd.exe /s /c \"\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\" -arch=amd64 && \"C:\\Program Files (x86)\\Intel\\oneAPI\\setvars.bat\" && \"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"\"",
+        "icon": "C:\\Program Files\\PowerShell\\7\\pwsh.ico",
+        "startingDirectory": "%USERPROFILE%\\src\\edge-ai",
+        "hidden": false,
+        "bellStyle": "none",
+        "closeOnExit": "never"
+    }
+]
