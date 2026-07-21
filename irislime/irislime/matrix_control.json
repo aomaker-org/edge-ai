@@ -1,0 +1,149 @@
+{
+  "global_settings": {
+    "min_required_disk_space_gb": 5.0,
+    "test_model": "../models/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "hardware_db_path": "infra/cache/hardware_profile.json"
+  },
+  "backend_overrides": {
+    "openvino": {
+      "enabled": true,
+      "parallel_jobs": 1,
+      "inactivity_timeout_seconds": 1800,
+      "fail_fast": false,
+      "ordered_profiles": [
+        {
+          "name": "Debug",
+          "suffix": "debug",
+          "track_telemetry": true
+        },
+        {
+          "name": "RelWithDebInfo",
+          "suffix": "relwithdebinfo",
+          "track_telemetry": true
+        },
+        {
+          "name": "Release",
+          "suffix": "release",
+          "track_telemetry": true
+        }
+      ],
+      "test_matrix_parameters": {
+        "context_sizes": [128, 512, 2048],
+        "batch_sizes": [16, 64, 128],
+        "gpu_layers_offload": [-1, 0]
+      },
+      "env_vars": {
+        "GGML_OPENVINO_DEVICE": "CPU",
+        "ONEAPI_DEVICE_SELECTOR": "opencl:1",
+        "ZES_ENABLE_SYSMAN": "1",
+        "TCM_ENABLE": "1"
+      }
+    },
+    "sycl": {
+      "enabled": true,
+      "parallel_jobs": 1,
+      "inactivity_timeout_seconds": 1800,
+      "fail_fast": false,
+      "ordered_profiles": [
+        {
+          "name": "Debug",
+          "suffix": "debug",
+          "track_telemetry": true
+        },
+        {
+          "name": "RelWithDebInfo",
+          "suffix": "relwithdebinfo",
+          "track_telemetry": true
+        },
+        {
+          "name": "Release",
+          "suffix": "release",
+          "track_telemetry": true
+        }
+      ],
+      "test_matrix_parameters": {
+        "context_sizes": [128, 512, 2048],
+        "batch_sizes": [16, 64, 128],
+        "gpu_layers_offload": [-1, 0]
+      },
+      "env_vars": {
+        "CC": "C:/Program Files (x86)/Intel/oneAPI/compiler/latest/windows/bin/icx.exe",
+        "CXX": "C:/Program Files (x86)/Intel/oneAPI/compiler/latest/windows/bin/icx.exe",
+        "ONEAPI_DEVICE_SELECTOR": "level0:gpu",
+        "ZES_ENABLE_SYSMAN": "1",
+        "SYCL_CACHE_PERSISTENT": "1"
+      }
+    },
+    "vulkan": {
+      "enabled": true,
+      "parallel_jobs": 4,
+      "inactivity_timeout_seconds": 300,
+      "fail_fast": false,
+      "ordered_profiles": [
+        {
+          "name": "Debug",
+          "suffix": "debug",
+          "track_telemetry": true
+        },
+        {
+          "name": "Release",
+          "suffix": "release",
+          "track_telemetry": true
+        }
+      ],
+      "test_matrix_parameters": {
+        "context_sizes": [128, 512],
+        "batch_sizes": [16, 64],
+        "gpu_layers_offload": [-1, 0]
+      },
+      "env_vars": {
+        "GGML_VULKAN_DEVICE": "0"
+      }
+    },
+    "litert": {
+      "enabled": true,
+      "parallel_jobs": 4,
+      "inactivity_timeout_seconds": 120,
+      "fail_fast": true,
+      "ordered_profiles": [
+        {
+          "name": "Debug",
+          "suffix": "debug",
+          "track_telemetry": true
+        },
+        {
+          "name": "Release",
+          "suffix": "release",
+          "track_telemetry": false
+        }
+      ],
+      "test_matrix_parameters": {
+        "context_sizes": [128, 512],
+        "batch_sizes": [16, 32],
+        "gpu_layers_offload": [0]
+      },
+      "env_vars": {
+        "IRISLIME_ACTIVE_BACKEND": "litert"
+      }
+    },
+    "base": {
+      "enabled": true,
+      "parallel_jobs": 4,
+      "inactivity_timeout_seconds": 120,
+      "fail_fast": false,
+      "ordered_profiles": [
+        {
+          "name": "Release",
+          "suffix": "release",
+          "track_telemetry": true
+        }
+      ],
+      "test_matrix_parameters": {
+        "context_sizes": [128, 512],
+        "batch_sizes": [16, 32],
+        "gpu_layers_offload": [0]
+      },
+      "env_vars": {}
+    }
+  }
+}
