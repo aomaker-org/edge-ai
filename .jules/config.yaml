@@ -1,0 +1,26 @@
+# ==============================================================================
+# Google Jules Agent Platform Configuration (jules.google.com)
+# Project: edge-ai
+# ==============================================================================
+project_name: edge-ai
+workspace_root: /home/fekerr/src/edge-ai
+primary_language: c++ / python
+build_system: make
+rules_file: docs/JULES_AGENT_INTEGRATION.md
+
+environment:
+  python_version: "3.12"
+  os: ubuntu-24.04
+  out_of_tree_build: true
+
+task_sharing:
+  copilot_interop: true
+  telemetry_sync_command: "make agy-sync"
+  manifest_command: "make manifest-build"
+  test_command: "make test-all"
+
+guardrails:
+  enforce_root_hygiene: true
+  dev_null_prohibition: true
+  timestamp_format: "YYMMDD_HHMM_NNN"
+  hardware_throttle_limit_cpu: 50.0

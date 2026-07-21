@@ -1,0 +1,177 @@
+# ==============================================================================
+# Path:        tools/log_watcher.toml
+# Purpose:     Configuration specification for edge-ai log watcher & telemetry monitor.
+# Architecture: TOML section definitions, rate limits, and auto-discovered assets.
+# Standard:    Rule 8 (YYMMDD_HHMM_NNN Timestamping) & Anti-Flicker 1Hz Max Refresh Rate
+# ==============================================================================
+
+[general]
+max_refresh_hz = 1.0
+scan_interval_sec = 1.0
+auto_discover = true
+timestamp_format = "%y%m%d_%H%M_%S"
+
+[sections.telemetry]
+name = "Hardware & Inference Telemetry Logs"
+paths = ["logs", "logs/telemetry"]
+patterns = ["*.jsonl", "*.csv", "*.log"]
+enabled = true
+
+[sections.debug_builds]
+name = "Isolated Debug Build & Compiler Logs"
+paths = ["build/base_debug", "logs/debug"]
+patterns = ["*.log", "*.txt"]
+enabled = true
+
+[sections.telemetry_builds]
+name = "Instrumented Telemetry Build Logs"
+paths = ["build/telemetry_release", "logs/telemetry"]
+patterns = ["*.log", "*.jsonl"]
+enabled = true
+
+[sections.build_logs]
+name = "Out-of-Tree Master Build Logs"
+paths = ["build"]
+patterns = ["*.log"]
+enabled = true
+
+[sections.agy_sessions]
+name = "AI Agent Telemetry Sessions"
+paths = ["agy"]
+patterns = ["*.jsonl", "*.md"]
+enabled = true
+
+[discovered_files]
+logs = [
+    "logs/telemetry_260720_0843_001.csv",
+    "logs/telemetry_260720_0843_001.jsonl"
+]
+build_reports = [
+    "build/log_diff_demo_report.md"
+]
+agy_telemetry = [
+    "agy/prompts.jsonl"
+]
+
+# Auto-discovered in auto_discover at 260720_0939_001
+# "logs/telemetry_260720_0843_001.csv"
+# "logs/telemetry_260720_0843_001.jsonl"
+# "logs/debug/build_debug_260720_0932_001.log"
+# "logs/tests/test_run_260720_0934_001.log"
+# "logs/tests/test_results_260720_0934_001.csv"
+# "build/base_debug/CMakeCache.txt"
+# "build/base_debug/tools/ui/CMakeFiles/llama-ui-embed.dir/link.txt"
+# "build/base_debug/tools/ui/CMakeFiles/llama-ui.dir/link.txt"
+# "build/base_debug/tools/completion/CMakeFiles/llama-completion.dir/link.txt"
+# "build/base_debug/tools/completion/CMakeFiles/llama-completion-impl.dir/link.txt"
+# "build/base_debug/tools/llama-bench/CMakeFiles/llama-bench-impl.dir/link.txt"
+# "build/base_debug/tools/llama-bench/CMakeFiles/llama-bench.dir/link.txt"
+# "build/base_debug/tools/perplexity/CMakeFiles/llama-perplexity.dir/link.txt"
+# "build/base_debug/tools/perplexity/CMakeFiles/llama-perplexity-impl.dir/link.txt"
+# "build/base_debug/tools/tokenize/CMakeFiles/llama-tokenize.dir/link.txt"
+# "build/base_debug/tools/gguf-split/CMakeFiles/llama-gguf-split.dir/link.txt"
+# "build/base_debug/tools/quantize/CMakeFiles/llama-quantize.dir/link.txt"
+# "build/base_debug/tools/quantize/CMakeFiles/llama-quantize-impl.dir/link.txt"
+# "build/base_debug/tools/imatrix/CMakeFiles/llama-imatrix.dir/link.txt"
+# "build/base_debug/tools/results/CMakeFiles/llama-results.dir/link.txt"
+# "build/base_debug/tools/server/CMakeFiles/llama-server-impl.dir/link.txt"
+# "build/base_debug/tools/server/CMakeFiles/server-context.dir/link.txt"
+# "build/base_debug/tools/server/CMakeFiles/llama-server.dir/link.txt"
+# "build/base_debug/tools/cli/CMakeFiles/llama-cli-impl.dir/link.txt"
+# "build/base_debug/tools/cli/CMakeFiles/llama-cli.dir/link.txt"
+# "build/base_debug/tools/cvector-generator/CMakeFiles/llama-cvector-generator.dir/link.txt"
+# "build/base_debug/tools/mtmd/CMakeFiles/llama-mtmd-debug.dir/link.txt"
+# "build/base_debug/tools/mtmd/CMakeFiles/llama-minicpmv-cli.dir/link.txt"
+# "build/base_debug/tools/mtmd/CMakeFiles/llama-qwen2vl-cli.dir/link.txt"
+# "build/base_debug/tools/mtmd/CMakeFiles/llama-gemma3-cli.dir/link.txt"
+# "build/base_debug/tools/mtmd/CMakeFiles/mtmd.dir/link.txt"
+# "build/base_debug/tools/mtmd/CMakeFiles/llama-mtmd-cli.dir/link.txt"
+# "build/base_debug/tools/mtmd/CMakeFiles/llama-llava-cli.dir/link.txt"
+# "build/base_debug/tools/batched-bench/CMakeFiles/llama-batched-bench.dir/link.txt"
+# "build/base_debug/tools/batched-bench/CMakeFiles/llama-batched-bench-impl.dir/link.txt"
+# "build/base_debug/tools/export-lora/CMakeFiles/llama-export-lora.dir/link.txt"
+# "build/base_debug/tools/parser/CMakeFiles/llama-template-analysis.dir/link.txt"
+# "build/base_debug/tools/parser/CMakeFiles/llama-debug-template-parser.dir/link.txt"
+# "build/base_debug/tools/tts/CMakeFiles/llama-tts.dir/link.txt"
+# "build/base_debug/tools/fit-params/CMakeFiles/llama-fit-params.dir/link.txt"
+# "build/base_debug/tools/fit-params/CMakeFiles/llama-fit-params-impl.dir/link.txt"
+# "build/base_debug/vendor/cpp-httplib/CMakeFiles/cpp-httplib.dir/link.txt"
+# "build/base_debug/CMakeFiles/CMakeRuleHashes.txt"
+# "build/base_debug/CMakeFiles/TargetDirectories.txt"
+# "build/base_debug/CMakeFiles/Progress/count.txt"
+# "build/base_debug/ggml/src/CMakeFiles/ggml.dir/link.txt"
+# "build/base_debug/ggml/src/CMakeFiles/ggml-base.dir/link.txt"
+# "build/base_debug/ggml/src/CMakeFiles/ggml-cpu.dir/link.txt"
+# "build/base_debug/app/CMakeFiles/llama-app.dir/link.txt"
+# "build/base_debug/examples/speculative/CMakeFiles/llama-speculative.dir/link.txt"
+# "build/base_debug/examples/gen-docs/CMakeFiles/llama-gen-docs.dir/link.txt"
+# "build/base_debug/examples/eval-callback/CMakeFiles/llama-eval-callback.dir/link.txt"
+# "build/base_debug/examples/lookahead/CMakeFiles/llama-lookahead.dir/link.txt"
+# "build/base_debug/examples/batched/CMakeFiles/llama-batched.dir/link.txt"
+# "build/base_debug/examples/training/CMakeFiles/llama-finetune.dir/link.txt"
+# "build/base_debug/examples/speculative-simple/CMakeFiles/llama-speculative-simple.dir/link.txt"
+# "build/base_debug/examples/diffusion/CMakeFiles/llama-diffusion.dir/link.txt"
+# "build/base_debug/examples/diffusion/CMakeFiles/llama-diffusion-cli.dir/link.txt"
+# "build/base_debug/examples/retrieval/CMakeFiles/llama-retrieval.dir/link.txt"
+# "build/base_debug/examples/simple-chat/CMakeFiles/llama-simple-chat.dir/link.txt"
+# "build/base_debug/examples/gguf-hash/CMakeFiles/llama-gguf-hash.dir/link.txt"
+# "build/base_debug/examples/embedding/CMakeFiles/llama-embedding.dir/link.txt"
+# "build/base_debug/examples/gguf/CMakeFiles/llama-gguf.dir/link.txt"
+# "build/base_debug/examples/lookup/CMakeFiles/llama-lookup-create.dir/link.txt"
+# "build/base_debug/examples/lookup/CMakeFiles/llama-lookup-merge.dir/link.txt"
+# "build/base_debug/examples/lookup/CMakeFiles/llama-lookup.dir/link.txt"
+# "build/base_debug/examples/lookup/CMakeFiles/llama-lookup-stats.dir/link.txt"
+# "build/base_debug/examples/debug/CMakeFiles/llama-debug.dir/link.txt"
+# "build/base_debug/examples/parallel/CMakeFiles/llama-parallel.dir/link.txt"
+# "build/base_debug/examples/simple/CMakeFiles/llama-simple.dir/link.txt"
+# "build/base_debug/examples/idle/CMakeFiles/llama-idle.dir/link.txt"
+# "build/base_debug/examples/convert-llama2c-to-ggml/CMakeFiles/llama-convert-llama2c-to-ggml.dir/link.txt"
+# "build/base_debug/examples/passkey/CMakeFiles/llama-passkey.dir/link.txt"
+# "build/base_debug/pocs/vdot/CMakeFiles/llama-q8dot.dir/link.txt"
+# "build/base_debug/pocs/vdot/CMakeFiles/llama-vdot.dir/link.txt"
+# "build/base_debug/src/CMakeFiles/llama.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-col2im-1d.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-chat-peg-parser.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-regex-partial.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/gguf-model-data.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-grammar-integration.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-tokenizer-0.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-chat.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-arg-parser.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-rope.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-quantize-fns.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-recurrent-state-rollback.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-backend-ops.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-alloc.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-opt.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/export-graph-ops.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-gbnf-validator.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-tokenizer-1-bpe.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-chat-template.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-reasoning-budget.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-model-load-cancel.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-llama-grammar.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-autorelease.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-quantize-perf.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-jinja.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-gguf.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-peg-parser.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-save-load-state.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-gguf-model-data.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-quant-type-selection.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-log.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-backend-sampler.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-chat-auto-parser.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-tokenizer-1-spm.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-json-schema-to-grammar.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-thread-safety.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-c.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-sampling.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-mtmd-c-api.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-quantize-stats.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-grammar-parser.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-state-restore-fragmented.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-llama-archs.dir/link.txt"
+# "build/base_debug/tests/CMakeFiles/test-barrier.dir/link.txt"
+# "build/base_debug/common/CMakeFiles/llama-common-base.dir/link.txt"
+# "build/base_debug/common/CMakeFiles/llama-common.dir/link.txt"

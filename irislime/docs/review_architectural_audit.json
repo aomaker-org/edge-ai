@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "source_submodule": "/home/fekerr/src/edge-ai/irislime/irislime",
+    "generated_at": "2026-07-20T08:23:39.741180",
+    "timestamp_id": "260720_0823_001"
+  },
+  "subsystems": {
+    "infra_make": {
+      "description": "Modular build matrix rules for Vulkan, SYCL, OpenVINO, and LiteRT",
+      "files": [
+        "infra/make/vulkan.mk",
+        "infra/make/sycl.mk",
+        "infra/make/openvino.mk",
+        "infra/make/litert.mk",
+        "infra/make/base.mk"
+      ],
+      "assessment": "Strong build modularity, but sub-makefiles lacked explicit PROJECT_ROOT dynamic anchoring."
+    },
+    "tools": {
+      "description": "Automation scripts for build execution, testing, telemetry, and ascii parsing",
+      "files": [
+        "tools/build_runner.py",
+        "tools/test_runner.py",
+        "tools/ascii2md.py",
+        "tools/model_manager.py",
+        "tools/extract_telemetry.py"
+      ],
+      "assessment": "Effective python wrappers using uv proxy; candidate for direct porting into edge-ai/tools/."
+    },
+    "fekerr_dev": {
+      "description": "PowerShell 7 host toolkit and container bootstrap stratum",
+      "files": [
+        "fekerr-dev/ps7/",
+        "fekerr-dev/irislime_ubu26_init/"
+      ],
+      "assessment": "Windows host environment bootstrapper; useful reference for WSL2 environment setup."
+    },
+    "ai_io": {
+      "description": "Input/output data processing layer for local model interaction",
+      "files": [
+        "ai_io/"
+      ],
+      "assessment": "Raw IO processing utilities."
+    },
+    "logs_and_telemetry": {
+      "description": "Persistent build journals and structured test metrics datastores",
+      "files": [
+        "logs/builds/",
+        "logs/tests/",
+        "telemetry_builds.csv"
+      ],
+      "assessment": "Rich historical dataset; non-standard timestamp format (`20260718_logs_core12_1003.zip`)."
+    }
+  }
+}

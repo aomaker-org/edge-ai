@@ -1,0 +1,11 @@
+.git/
+build/
+logs/
+agy/
+*.log
+*.tmp
+__pycache__/
+*.pyc
+.venv/
+.idea/
+.vscode/

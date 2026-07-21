@@ -8,18 +8,9 @@ This recipe provides a friction-free sequence to get `edge-ai` set up and verifi
 
 ### 1. Clone & Enter Repository
 
-**Option A (Recommended Single-Step Clone with Submodules):**
-```bash
-git clone --recurse-submodules git@github.com:aomaker-org/edge-ai.git
-cd edge-ai
-```
-
-**Option B (Standard Clone + Post-Clone Submodule Initialization):**
-*(Note: GitHub UI only provides the standard clone URL; run `git submodule update` to fetch nested dependencies)*
 ```bash
 git clone git@github.com:aomaker-org/edge-ai.git
 cd edge-ai
-git submodule update --init --recursive
 ```
 
 ### 2. Inspect & Verify Root Make Matrix
@@ -50,5 +41,7 @@ make agy-status
 
 ---
 
-For detailed environment options, see **[GETTING_STARTED.md](file:///home/fekerr/src/edge-ai/GETTING_STARTED.md)**.
+For detailed environment options, see **[GETTING_STARTED.md](file:///home/fekerr/src/edge-ai/GETTING_STARTED.md)** and **[PROVISIONING_NOTES.md](file:///home/fekerr/src/edge-ai/docs/PROVISIONING_NOTES.md)**.
+For hardware throttling & telemetry guidelines, see **[RESOURCE_THROTTLING_AND_TELEMETRY.md](file:///home/fekerr/src/edge-ai/docs/RESOURCE_THROTTLING_AND_TELEMETRY.md)**.
+For `aomaker-org/llama.cpp` patch necessity analysis, see **[LLAMA_CPP_FORK_AUDIT.md](file:///home/fekerr/src/edge-ai/docs/LLAMA_CPP_FORK_AUDIT.md)**.
 For AI agent engagement guardrails, see **[AI.md](file:///home/fekerr/src/edge-ai/AI.md)**.

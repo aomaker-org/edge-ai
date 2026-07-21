@@ -1,0 +1,14 @@
+[project]
+name = "edge-ai"
+version = "0.1.0"
+description = "Optimized platform for edge artificial intelligence development, model validation, and localized SLM runtime acceleration."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "psutil>=5.9.0",
+    "pytest>=7.4.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

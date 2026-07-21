@@ -15,22 +15,13 @@ Ensure your execution environment satisfies the following baseline requirements:
 
 ---
 
-## 2. Cloning the Repository & Submodule Initialization
+## 2. Cloning the Repository
 
-Because GitHub's default web interface only provides standard `git clone` URLs without submodules, choose one of the following methods when pulling down the workspace:
+Clone the repository:
 
-### Method A: Single-Step Clone with Submodules (Recommended)
-```bash
-git clone --recurse-submodules git@github.com:aomaker-org/edge-ai.git
-cd edge-ai
-```
-
-### Method B: Standard Clone + Manual Submodule Sync
-If you cloned the repository using GitHub's standard command line:
 ```bash
 git clone git@github.com:aomaker-org/edge-ai.git
 cd edge-ai
-git submodule update --init --recursive
 ```
 
 ---
@@ -94,5 +85,8 @@ When migrating or adapting components from `../irislime`:
 ## 5. Next Steps
 
 - Review **[QUICK_START.md](file:///home/fekerr/src/edge-ai/QUICK_START.md)** for rapid execution recipes.
+- Review **[PROVISIONING_NOTES.md](file:///home/fekerr/src/edge-ai/docs/PROVISIONING_NOTES.md)** for Win11 winget & WSL2 Ubuntu provisioning guides.
+- Review **[RESOURCE_THROTTLING_AND_TELEMETRY.md](file:///home/fekerr/src/edge-ai/docs/RESOURCE_THROTTLING_AND_TELEMETRY.md)** for <50% laptop thermal & load management guidelines.
+- Review **[LLAMA_CPP_FORK_AUDIT.md](file:///home/fekerr/src/edge-ai/docs/LLAMA_CPP_FORK_AUDIT.md)** for `aomaker-org/llama.cpp` patch audit and necessity analysis.
 - Review **[AI.md](file:///home/fekerr/src/edge-ai/AI.md)** for rules governing AI agent interactions.
 - Check **[TODO.md](file:///home/fekerr/src/edge-ai/TODO.md)** for active workspace tasks.
