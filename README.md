@@ -66,11 +66,17 @@ edge-ai/
 
 ## 📥 Repository Cloning
 
-Clone the repository with submodules:
+Clone the repository along with all nested submodules (`deps/llama.cpp`, `deps/litert-lm`, `learning/*`):
 
 ```bash
-git clone --recursive git@github.com:aomaker-org/edge-ai.git
+git clone --recurse-submodules git@github.com:aomaker-org/edge-ai.git
 cd edge-ai
+```
+
+If already cloned without submodules, initialize and fetch them via:
+
+```bash
+git submodule update --init --recursive
 ```
 
 ---
