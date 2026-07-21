@@ -56,20 +56,13 @@ edge-ai/
 
 ---
 
-## 📥 Repository Cloning & Submodule Initialization
+## 📥 Repository Cloning
 
-Because GitHub's web interface only suggests the standard `git clone` command line without submodules, use one of the following commands:
+Clone the repository directly:
 
-### Single-Step Clone with Submodules (Recommended)
-```bash
-git clone --recurse-submodules git@github.com:aomaker-org/edge-ai.git
-```
-
-### Standard Clone + Manual Submodule Sync
 ```bash
 git clone git@github.com:aomaker-org/edge-ai.git
 cd edge-ai
-git submodule update --init --recursive
 ```
 
 ---

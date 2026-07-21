@@ -15,22 +15,13 @@ Ensure your execution environment satisfies the following baseline requirements:
 
 ---
 
-## 2. Cloning the Repository & Submodule Initialization
+## 2. Cloning the Repository
 
-Because GitHub's default web interface only provides standard `git clone` URLs without submodules, choose one of the following methods when pulling down the workspace:
+Clone the repository:
 
-### Method A: Single-Step Clone with Submodules (Recommended)
-```bash
-git clone --recurse-submodules git@github.com:aomaker-org/edge-ai.git
-cd edge-ai
-```
-
-### Method B: Standard Clone + Manual Submodule Sync
-If you cloned the repository using GitHub's standard command line:
 ```bash
 git clone git@github.com:aomaker-org/edge-ai.git
 cd edge-ai
-git submodule update --init --recursive
 ```
 
 ---
