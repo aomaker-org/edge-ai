@@ -63,3 +63,10 @@ clean: ## Purge non-persistent build output directory (build/)
 distclean: clean ## Purge build outputs and temporary runtime logs
 	@echo "[distclean] Purging build artifacts and temporary logs"
 	rm -rf $(LOGS_DIR)/*.log
+
+win11-provision: ## Run Windows 11 toolchain provisioner and probe script
+	@pwsh -ExecutionPolicy Bypass -File provision_win11.ps1
+
+win11-capture: ## Snapshot Visual Studio & Intel oneAPI build environment variables
+	@python infra/win11/capture_env.py --output-dir .
+

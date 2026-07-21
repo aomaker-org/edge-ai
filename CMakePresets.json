@@ -1,0 +1,57 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "win11-msvc-debug",
+      "displayName": "Windows 11 MSVC x64 Debug",
+      "description": "Native MSVC 2022 Debug Build with Ninja",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/win11-msvc-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS": "/W4 /EHsc"
+      }
+    },
+    {
+      "name": "win11-msvc-release",
+      "displayName": "Windows 11 MSVC x64 Release",
+      "description": "Native MSVC 2022 Release Build with Ninja",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/win11-msvc-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_CXX_FLAGS": "/W4 /EHsc /O2"
+      }
+    },
+    {
+      "name": "win11-openvino",
+      "displayName": "Windows 11 MSVC + OpenVINO",
+      "description": "Build with Intel OpenVINO runtime acceleration",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/win11-openvino",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "OpenVINO_DIR": "C:/Program Files/WindowsApps/IntelCorporation.OpenVINOToolkit.2026.2.0_2026.2.0.0_x64__aqcv7fbxf4wm4/runtime/cmake"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "win11-msvc-debug",
+      "configurePreset": "win11-msvc-debug"
+    },
+    {
+      "name": "win11-msvc-release",
+      "configurePreset": "win11-msvc-release"
+    },
+    {
+      "name": "win11-openvino",
+      "configurePreset": "win11-openvino"
+    }
+  ]
+}
