@@ -1,0 +1,72 @@
+================================================================================
+FILENAME BEGIN: gemini/session_notes_001.txt
+================================================================================
+================================================================================
+EDGE-AI GEMINI SESSION NOTES #001
+Timestamp: 2026-07-22
+Host Scope: WSL2 Ubuntu (~/src/edge-ai)
+================================================================================
+
+1. SESSION OBJECTIVE & REPO IDENTITY
+--------------------------------------------------------------------------------
+- Repository: edge-ai (Derived from irislime, but given its own standalone 
+  identity for Edge/Local AI development, C++/Rust embedded runtimes, and 
+  educational portfolio work).
+- Dual Operating Modes:
+  * Human-Only CLI Mode: Zero API/token dependencies. Pure make/cmake/cargo/g++ 
+    workflows that run offline anywhere.
+  * AI-Heavy Mode: Automated payload routing, context packing, and session 
+    logging driven by agy / Gemini / Ollama / LiteRT.
+
+2. LOG HYGIENE & FORENSIC TELEMETRY ("PRECIOUS LOGS")
+--------------------------------------------------------------------------------
+- Principles: Build logs are first-class datasets for future ML diagnostic 
+  parsers.
+- Build Harness: gemini/tools/build_runner.py manages out-of-tree WSL builds in 
+  build/wsl_ubuntu/<target>/<config>/ and saves raw stdout/stderr logs alongside 
+  JSON metadata sidecars in logs/builds/YYYY-MM/.
+
+3. WORKSPACE ANCHORING & MODULAR MAKEFILES
+--------------------------------------------------------------------------------
+- Root Anchor: .edge-ai.root marker file and Makefile header marker 
+  [# MARKER: .edge-ai.metadata.ANCHOR("Makefile")] allow scripts to resolve 
+  repo root from any nested subdirectory.
+- GNU Make Modular Includes: Root Makefile uses optional includes (-include) to 
+  dynamically load target modules (e.g., gemini/edge-ai.mk).
+
+4. SUBMODULE & DISK SPACE MANAGEMENT (ANTI-BLOAT)
+--------------------------------------------------------------------------------
+- Laptop Disk Guard: Avoid heavy monorepo bloat. Core repo stays lightweight.
+- Submodule Toggling: gemini/tools/mod_toggle.py handles shallow cloning 
+  (--depth 1) for deps/llama.cpp and deps/litert-lm on demand, toggling 
+  edge-ai.mk-off <-> edge-ai.mk, and running `git submodule deinit` to reclaim 
+  disk space instantly.
+
+5. TEXT FORMATTING & ENCODING BOUNDARIES
+--------------------------------------------------------------------------------
+- ASCII Hygiene: Simple ASCII text preferred over non-standard Unicode.
+- Column Wrapping: Strict 80-120 column wrapping for maximum LLM readability 
+  and clean terminal display.
+- Guarded Payload Schema: Every file block uses standard FILENAME BEGIN and 
+  FILENAME END headers/footers.
+- Dual Mirroring: .md files maintain formatted plain text .txt mirrors for 
+  corruption-free clipboard handling and context window efficiency.
+- Windows Interop: Pipe WSL outputs to Windows clipboard using explicit UTF-16LE 
+  encoding: iconv -f UTF-8 -t UTF-16LE | clip.exe
+
+6. AUTOMATED INBOX PAYLOAD ROUTER
+--------------------------------------------------------------------------------
+- gemini/inbox.file & gemini/tools/process_inbox.py: Allows multi-file prompt 
+  responses to be pasted into inbox.file and routed to their target folder paths 
+  automatically with folder creation and .txt/.md mirror syncing.
+
+7. RUST LEARNING & TOOLS
+--------------------------------------------------------------------------------
+- Language Tiering: Shell for micro-wrappers (<50 lines) -> Python for logic 
+  and tooling -> Rust/C++ for performance binaries.
+- Rust Tool: src/tools/ascii_cat (Zero-dependency, heavily documented Rust CLI 
+  terminal text viewer).
+
+================================================================================
+FILENAME END: gemini/session_notes_001.txt
+================================================================================

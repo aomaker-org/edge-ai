@@ -1,0 +1,21 @@
++-------------------------------------------------------------------------+
+|                              SHELL (Bash)                               |
+|  * Scope: Micro-wrappers (< 50 lines), simple command chains.            |
+|  * Rule:  If it needs conditionals, loops, or JSON parsing -> Python.   |
++-------------------------------------------------------------------------+
+                                    |
+                                    v
++-------------------------------------------------------------------------+
+|                             PYTHON (3.11+)                              |
+|  * Scope: Build harnesses, telemetry parsing, text mirrors, AI tools.   |
+|  * Rule:  Managed via `uv`. If execution speed becomes a bottleneck   |
+|           or it needs bare-metal / binary performance -> Rust.          |
++-------------------------------------------------------------------------+
+                                    |
+                                    v
++-------------------------------------------------------------------------+
+|                              RUST / C++20                               |
+|  * Scope: High-performance CLI tools, kernels, model runtimes.          |
+|  * Rust Rule: Beginner-friendly. Explicit types, zero clever macros,    |
+|               dense internal line comments, clear external docs.        |
++-------------------------------------------------------------------------+

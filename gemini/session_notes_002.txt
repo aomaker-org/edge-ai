@@ -1,0 +1,69 @@
+================================================================================
+FILENAME BEGIN: gemini/session_notes_002.txt
+================================================================================
+================================================================================
+EDGE-AI GEMINI SESSION NOTES #002
+Timestamp: 2026-07-22 12:58 UTC
+Host Scope: WSL2 Ubuntu (~/src/edge-ai)
+================================================================================
+
+1. INFRASTRUCTURE & TOOL SUITE STATUS (100% VERIFIED)
+--------------------------------------------------------------------------------
+All 6 core tools in gemini/tools/ are active and executable:
+  - process_inbox.py : Parses gemini/inbox.file for guarded multi-file payloads,
+                       creates directories, writes files, and syncs .txt/.md twins.
+  - mod_toggle.py    : Manages lazy submodules (llama.cpp, litert-lm) with depth-1 
+                       cloning, .mk-off <-> .mk Makefile toggling, and deinit 
+                       space recovery.
+  - clip_logger.py   : Saves payloads to incrementing gemini/captures/ logs, 
+                       pipes UTF-16LE to clip.exe, and generates triple-clickable 
+                       terminal lines.
+  - clip_log.sh      : Executable bash wrapper for clip_logger.py.
+  - sync_session.py  : Performs automated audit of tools, permissions, and inbox 
+                       status; logs capture artifacts and loads clipboard.
+  - audit_scaffold.sh: Multi-repo git & folder tree snapshot tool (edge-ai, 
+                       irislime, fekerr-dev) outputting LATEST_SCAFFOLD.md.
+  - build_runner.py  : WSL2 out-of-tree build runner enforcing build/wsl_ubuntu/ 
+                       isolation and saving logs + JSON sidecars in logs/builds/.
+
+2. REPOSITORY ARCHITECTURE & DUAL OPERATING MODES
+--------------------------------------------------------------------------------
+- Standalone Identity: edge-ai is an isolated Edge/Local AI, C++/Rust embedded 
+  runtime, and educational portfolio repository.
+- Dual Operating Modes:
+  * Human-Only CLI Mode: Zero API/token reliance. Pure make, cmake, cargo, and 
+    g++ workflows running completely offline.
+  * AI-Heavy Mode: Automated payload routing, context packing, and session 
+    logging driven by agy / Gemini / Ollama.
+
+3. ASCII HYGIENE, ENCODING & TRIPLE-CLICK CLI CONVENTIONS
+--------------------------------------------------------------------------------
+- ASCII Standard: Simple ASCII text preferred over box-drawing characters to 
+  prevent terminal/clipboard encoding corruption (e.g., Γö£ΓöÇ).
+- Line Formatting: Strict 80-120 column width for maximum LLM context window 
+  efficiency and clean terminal display.
+- Guarded Payload Schema: Every code block uses FILENAME BEGIN/END headers.
+- Windows Interop: UTF-8 -> UTF-16LE conversion via iconv before piping to 
+  clip.exe prevents character mangling across the WSL boundary.
+- Triple-Click Convenience: Tool outputs print isolated, full-path terminal 
+  command lines allowing instant selection and execution via triple-click.
+
+4. SUBMODULE TOGGLING & DISK SPACE PROTECTION
+--------------------------------------------------------------------------------
+- Anti-Bloat Strategy: Core repo stays lightweight (<50 MB). Large model weights 
+  live in ~/.cache/edge-ai/models/.
+- Feature Toggle Pattern: Uses edge-ai.mk-off <-> edge-ai.mk file renaming. 
+  GNU Make includes wildcard *.mk files dynamically. When disabled, submodules 
+  are de-initialized (`git submodule deinit -f`) to reclaim NVMe storage.
+
+5. LANGUAGE HIERARCHY & RUST LEARNING
+--------------------------------------------------------------------------------
+- Shell (<50 lines): Micro-wrappers and simple execution chains.
+- Python 3.11+ (uv): Build harnesses, telemetry parsing, inbox routing, tools.
+- C++20 / Rust 2021: High-performance CLI tools and model runtimes.
+- Rust Sandbox: src/tools/ascii_cat (Zero-dependency, beginner-friendly terminal 
+  viewer styled after mdcat).
+
+================================================================================
+FILENAME END: gemini/session_notes_002.txt
+================================================================================
