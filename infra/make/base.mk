@@ -16,6 +16,15 @@ SHELL        := bash
 
 QUIET ?= 0
 
+# --- STRICT COMPILATION LEVEL OPTIONS ---
+STRICT ?= 0
+ifeq ($(STRICT),1)
+  STRICT_CMAKE_FLAGS := -DCMAKE_COMPILE_WARNING_AS_ERROR=ON -DCMAKE_CXX_FLAGS="-Wall -Wextra -Werror" -DCMAKE_C_FLAGS="-Wall -Wextra -Werror"
+else
+  STRICT_CMAKE_FLAGS :=
+endif
+
+
 # --- HARDWARE TOPOLOGY & MEMORY PARSER ---
 # Rule 7 Exceptions: EXC-001 to EXC-004 registered in docs/PIPE_TO_NULL_EXCEPTIONS.md
 TOTAL_THREADS := $(shell nproc 2>/dev/null || echo 4) # Rule 7 Exception: EXC-001 (silent nproc fallback)
@@ -109,7 +118,8 @@ build-base: verify-infra ## Compile base CPU inference target (out-of-tree in bu
 				-DGGML_EXCEPTIONS=ON \
 				-DLLAMA_BUILD_TESTS=ON \
 				-DCMAKE_C_COMPILER_LAUNCHER=ccache \
-				-DCMAKE_CXX_COMPILER_LAUNCHER=ccache; \
+				-DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+				$(STRICT_CMAKE_FLAGS); \
 		fi; \
 		cmake --build "$$TARGET_DIR" -j$(NUM_BUILD_JOBS); \
 	else \
@@ -119,3 +129,7 @@ build-base: verify-infra ## Compile base CPU inference target (out-of-tree in bu
 clean-base: ## Purge build/base_* out-of-tree build directories
 	@echo "[Clean] Removing $(BUILD_DIR)/base_* directories"
 	rm -rf $(BUILD_DIR)/base_*
+
+# ==============================================================================
+# Context Boundary: infra/make/base.mk_Complete
+# ==============================================================================

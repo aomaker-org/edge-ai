@@ -26,7 +26,8 @@ build-linux-gcc: verify-infra ## Build native Linux CPU target out-of-tree using
 				-DCMAKE_BUILD_TYPE="$$PROFILE_VAL" \
 				-DGGML_EXCEPTIONS=ON \
 				-DCMAKE_C_COMPILER=gcc \
-				-DCMAKE_CXX_COMPILER=g++; \
+				-DCMAKE_CXX_COMPILER=g++ \
+				$(STRICT_CMAKE_FLAGS); \
 		fi; \
 		cmake --build "$$TARGET_DIR" -j$(NUM_BUILD_JOBS); \
 	else \
@@ -46,7 +47,8 @@ build-linux-clang: verify-infra ## Build native Linux CPU target out-of-tree usi
 				-DCMAKE_BUILD_TYPE="$$PROFILE_VAL" \
 				-DGGML_EXCEPTIONS=ON \
 				-DCMAKE_C_COMPILER=clang \
-				-DCMAKE_CXX_COMPILER=clang++; \
+				-DCMAKE_CXX_COMPILER=clang++ \
+				$(STRICT_CMAKE_FLAGS); \
 		fi; \
 		cmake --build "$$TARGET_DIR" -j$(NUM_BUILD_JOBS); \
 	else \
@@ -63,3 +65,7 @@ test-inference: ## Execute isolated hardware inference test suite under throttle
 
 monitor-load: ## Execute real-time system resource load & thermal throttling monitor
 	@$(PYTHON) tools/monitor_system_load.py --duration 10 --interval 1.0 --out-dir logs
+
+# ==============================================================================
+# Context Boundary: infra/make/linux.mk_Complete
+# ==============================================================================

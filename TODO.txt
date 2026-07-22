@@ -1,0 +1,334 @@
+================================================================================
+PATH:        TODO.txt
+PURPOSE:     Mirrored Document: TODO
+TARGET:      Developers, AI Agents, Systems Engineering
+LINEAGE:     aomaker-org / edge-ai User Space
+UPDATED:     20260722_102626
+Integrity-Hash: 4cfdce5e8f9ee1f3bbf6a8f78bbc12682c6ec2cf9c4452ba34b0f3b3279170cb
+================================================================================
+SECTION: `EDGE-AI` TASK TRACKING LEDGER (`TODO.MD`)
+
+> **[!] OPERATIONAL POLICY FOR AI AGENTS:**  
+> This ledger operates under an **Append-Only** rule for automated/AI agents.  
+> - **AI Agents**: You may ONLY append new task sections or update task check
+states (`[ ]` -> `[x]`). You must NEVER delete, rewrite, or clear past task
+history.
+> - **Human Agents**: Human maintainers hold sole authority to reorganize, edit,
+or purge historical tasks.
+
+---
+
+📌 ACTIVE DEVELOPMENT MILESTONES:
+
+RULE: Milestone 1: Repository Foundation & Core Hygiene
+- [x] Initialized Git repository and set remote to `git@github.com:aomaker-
+  org/edge-ai.git`.
+- [x] Pushed baseline `main` branch to remote.
+- [x] Implemented root-anchored [Makefile](file:///home/fekerr/src/edge-
+  ai/Makefile) and [infra/make/base.mk](file:///home/fekerr/src/edge-
+  ai/infra/make/base.mk).
+- [x] Created `agy/` directory structure and idempotent log sync script
+  ([tools/sync_agy_logs.py](file:///home/fekerr/src/edge-
+  ai/tools/sync_agy_logs.py)).
+- [x] Established core workspace documentation
+  ([README.md](file:///home/fekerr/src/edge-ai/README.md),
+  [GETTING_STARTED.md](file:///home/fekerr/src/edge-ai/GETTING_STARTED.md),
+  [QUICK_START.md](file:///home/fekerr/src/edge-ai/QUICK_START.md),
+  [AI.md](file:///home/fekerr/src/edge-ai/AI.md),
+  [TODO.md](file:///home/fekerr/src/edge-ai/TODO.md)).
+- [x] Enforced Rule 7 (NO PIPE TO NULL unless necessary, commented, and
+  registered) in [AI.md](file:///home/fekerr/src/edge-ai/AI.md) and established
+  [docs/PIPE_TO_NULL_EXCEPTIONS.md](file:///home/fekerr/src/edge-
+  ai/docs/PIPE_TO_NULL_EXCEPTIONS.md).
+- [x] Defined and enforced Rule 8 (`YYMMDD_HHMM_NNN` timestamping standard) in
+  [docs/TIMESTAMPING_STANDARD.md](file:///home/fekerr/src/edge-
+  ai/docs/TIMESTAMPING_STANDARD.md) and updated
+  [tools/sync_agy_logs.py](file:///home/fekerr/src/edge-
+  ai/tools/sync_agy_logs.py).
+- [x] Created `irislime/derived_components/` header domain
+  ([irislime/README.md](file:///home/fekerr/src/edge-ai/irislime/README.md)) and
+  documented full `git clone --recurse-submodules` & `git submodule update
+  --init --recursive` commands in [README.md](file:///home/fekerr/src/edge-
+  ai/README.md), [GETTING_STARTED.md](file:///home/fekerr/src/edge-
+  ai/GETTING_STARTED.md), and [QUICK_START.md](file:///home/fekerr/src/edge-
+  ai/QUICK_START.md).
+- [x] Generated full file manifest of `irislime`
+  ([irislime/irislime_manifest.md](file:///home/fekerr/src/edge-
+  ai/irislime/irislime_manifest.md) &
+  [`irislime_manifest.json`](file:///home/fekerr/src/edge-
+  ai/irislime/irislime_manifest.json)) categorizing `source_files`,
+  `built_files`, and `log_files`.
+- [x] Created `ai-log-diff/` subproject ([ai-log-
+  diff/README.md](file:///home/fekerr/src/edge-ai/ai-log-diff/README.md)),
+  research paper ([ai-log-
+  diff/docs/RESEARCH_AND_SPECIFICATION.md](file:///home/fekerr/src/edge-ai/ai-
+  log-diff/docs/RESEARCH_AND_SPECIFICATION.md)), semantic log differ tool ([ai-
+  log-diff/tools/semantic_log_differ.py](file:///home/fekerr/src/edge-ai/ai-log-
+  diff/tools/semantic_log_differ.py)), and example logs.
+- [x] Established `edge-ai/web/` domain
+  ([web/README.md](file:///home/fekerr/src/edge-ai/web/README.md)) detailing
+  dashboard architecture via GitHub Pages/Actions/API
+  ([web/DASHBOARD_ARCHITECTURE.md](file:///home/fekerr/src/edge-
+  ai/web/DASHBOARD_ARCHITECTURE.md)), infrastructure & free-tier hosting
+  analysis ([web/INFRASTRUCTURE_AND_HOSTING.md](file:///home/fekerr/src/edge-
+  ai/web/INFRASTRUCTURE_AND_HOSTING.md)), WireGuard/Mosquitto telemetry pipeline
+  ([web/NETWORK_AND_TELEMETRY_PIPELINE.md](file:///home/fekerr/src/edge-
+  ai/web/NETWORK_AND_TELEMETRY_PIPELINE.md)), and `aomaker.org` / `jason-
+  lab.dev` integration plan
+  ([web/AOMAKER_INTEGRATION_PLAN.md](file:///home/fekerr/src/edge-
+  ai/web/AOMAKER_INTEGRATION_PLAN.md)).
+- [x] Added `irislime/irislime` as a Git submodule tracking
+  `git@github.com:aomaker-org/irislime.git` and generated deep review suite
+  ([irislime/docs/review_summary.md](file:///home/fekerr/src/edge-
+  ai/irislime/docs/review_summary.md)) auditing all 111 commits
+  ([review_commit_history.md](file:///home/fekerr/src/edge-
+  ai/irislime/docs/review_commit_history.md)), subsystem architecture
+  ([review_architectural_audit.md](file:///home/fekerr/src/edge-
+  ai/irislime/docs/review_architectural_audit.md)), and technical debt fixes
+  ([review_technical_debt_and_improvements.md](file:///home/fekerr/src/edge-
+  ai/irislime/docs/review_technical_debt_and_improvements.md)).
+- [x] Created high-autonomy launch script ([tools/agy-
+  run-20260720.sh](file:///home/fekerr/src/edge-ai/tools/agy-run-20260720.sh)),
+  root symlink `agy-run-20260720.sh`, and `make agy-launch` Makefile target.
+
+RULE: Milestone 2: Core Hardware & Subsystem Migration (Upcoming)
+- [x] Port C++ engine build modules from `irislime` into modular makefiles
+  (`infra/make/*.mk`).
+- [x] Establish isolated hardware inference validation targets (`make test`).
+- [x] Implement `uv` environment dependency management in `pyproject.toml`.
+- [x] Configure native Linux build targets and toolchain matrix (`gcc`/`clang`).
+- [x] Create GitHub Codespaces `.devcontainer/devcontainer.json` configuration.
+- [x] Build Docker containerization image (`Dockerfile`) for isolated edge-ai
+  execution.
+- [x] Implement real-time system load monitoring telemetry script to enforce
+  <50% laptop CPU/RAM load limit.
+
+---
+
+📜 HISTORICAL TASK LOG (APPEND-ONLY SECTION):
+
+*Timestamped log of completed tasks will be appended below as development
+progresses.*
+
+- `2026-07-20 08:00` - Initialized repository structure, dynamic Make anchor,
+  and `agy` telemetry pipeline.
+- `2026-07-20 08:04` - Created `docs/` directory and established `/dev/null`
+  redirection policy registry
+  ([docs/PIPE_TO_NULL_EXCEPTIONS.md](file:///home/fekerr/src/edge-
+  ai/docs/PIPE_TO_NULL_EXCEPTIONS.md)). Audited codebase (0 `/dev/null`
+  redirections currently present).
+- `260720_0806_001` - Established `YYMMDD_HHMM_NNN` timestamping standard
+  specification ([docs/TIMESTAMPING_STANDARD.md](file:///home/fekerr/src/edge-
+  ai/docs/TIMESTAMPING_STANDARD.md)) with sequence override support (`--seq-
+  start`).
+- `260720_0808_001` - Created `irislime/derived_components/` header domain and
+  updated [README.md](file:///home/fekerr/src/edge-ai/README.md),
+  [GETTING_STARTED.md](file:///home/fekerr/src/edge-ai/GETTING_STARTED.md), and
+  [QUICK_START.md](file:///home/fekerr/src/edge-ai/QUICK_START.md) with full Git
+  clone submodule command lines (`--recurse-submodules` and `git submodule
+  update --init --recursive`).
+- `260720_0812_001` - Generated `irislime_manifest.md` &
+  `irislime_manifest.json` classifying 391 files into `source_files`,
+  `built_files`, and `log_files`. Established `ai-log-diff/` subproject
+  framework, research specification, semantic differ tool, example logs, and
+  `make ai-log-diff-demo` target.
+- `260720_0818_001` - Created `edge-ai/web/` architecture domain detailing
+  GitHub Pages/Actions dashboard, OCI/GCP free tier hosting analysis, WireGuard
+  & Mosquitto MQTT network overlay, and `aomaker.org` / `jason-lab.dev`
+  integration plan.
+- `260720_0823_001` - Added `irislime/irislime` Git submodule and generated deep
+  review suite (`review_commit_history.md`, `review_architectural_audit.md`,
+  `review_technical_debt_and_improvements.md`, `review_summary.md`) auditing all
+  111 commits and technical debt resolutions.
+- `260720_0827_001` - Created executable launcher script `tools/agy-
+  run-20260720.sh`, root symlink `agy-run-20260720.sh`, and `make agy-launch`
+  target for high-autonomy AGY session startup.
+- `260720_0831_001` - Ported hardware acceleration make modules (`base.mk`,
+  `litert.mk`, `openvino.mk`, `sycl.mk`, `vulkan.mk`) from
+  `irislime/derived_components` into `infra/make/`, verified out-of-tree builds
+  with `make build`, enforced Rule 7 (`/dev/null` prohibition & registry) and
+  Rule 8 (`YYMMDD_HHMM_NNN`) timestamping, and synced telemetry with `make agy-
+  sync`.
+- `260720_0834_001` - Merged feature branch into `main` (approving initial repo
+  creation commits), created `tools/agy-next-work.sh` launcher script with root
+  symlink `agy-next-work.sh`, and added `make agy-next` target.
+- `260720_0841_001` - Created provisioning specifications
+  ([docs/PROVISIONING_NOTES.md](file:///home/fekerr/src/edge-
+  ai/docs/PROVISIONING_NOTES.md)), hardware load throttling & telemetry
+  guidelines
+  ([docs/RESOURCE_THROTTLING_AND_TELEMETRY.md](file:///home/fekerr/src/edge-
+  ai/docs/RESOURCE_THROTTLING_AND_TELEMETRY.md)), and llama.cpp fork necessity
+  audit ([docs/LLAMA_CPP_FORK_AUDIT.md](file:///home/fekerr/src/edge-
+  ai/docs/LLAMA_CPP_FORK_AUDIT.md)). Updated top-level documentation with dual
+  concise/verbose formats and submodule clone instructions.
+- `260720_0845_001` - Executed full work cycle: created real-time hardware load
+  & thermal throttling monitor script (`tools/monitor_system_load.py`), native
+  Linux GCC/Clang build targets (`infra/make/linux.mk`), GitHub Codespaces
+  devcontainer (`.devcontainer/devcontainer.json`), Docker containerization
+  (`Dockerfile`, `.dockerignore`), Win11/WSL2 provisioners
+  (`tools/provision.sh`, `tools/host/provision_ps7.ps1`), `pyproject.toml`,
+  registered Rule 7 exceptions `EXC-007`..`EXC-011`, verified out-of-tree builds
+  & telemetry, and synced AGY logs.
+- `260720_0926_001` - Created real-time log file tree watcher script
+  (`tools/tree_log_watcher.sh`), added `make watch-logs` target, registered Rule
+  7 exceptions `EXC-012`..`EXC-015`, and verified live event-driven / polling
+  refresh.
+- `260720_0931_001` - Extended log watcher with max 1Hz refresh rate limit
+  (`tools/log_watcher.py`), created TOML configuration specification
+  (`tools/log_watcher.toml`), added sectioned tree displays, auto-discovery log
+  populator, live prompt activity notifications, concise/verbose specification
+  ([docs/LOG_WATCHER_SPECIFICATION.md](file:///home/fekerr/src/edge-
+  ai/docs/LOG_WATCHER_SPECIFICATION.md)), and registered Rule 7 exception
+  `EXC-016`.
+- `260720_0932_001` - Established isolated Debug (`build/base_debug`,
+  `logs/debug/`) and extra Telemetry (`build/telemetry_release`,
+  `logs/telemetry/`) out-of-tree build targets
+  (`infra/make/telemetry_debug.mk`), updated `tools/log_watcher.toml`, and
+  launched background matrix compilation.
+- `260720_0934_001` - Created test discovery & execution runner
+  (`tools/test_runner_matrix.py`, `make test-all`), executing 41 unit tests
+  under throttled load and saving logs into `logs/tests/`. Built manifest audit
+  engine (`tools/generate_build_manifest.py`, `make manifest-build`)
+  categorizing executables (81), libraries (1711), tests (41), and separated
+  logs (5) into [docs/BUILD_AND_TEST_MANIFEST.md](file:///home/fekerr/src/edge-
+  ai/docs/BUILD_AND_TEST_MANIFEST.md) and `build/build_manifest.json`.
+- `260720_0940_001` - Configured VS Code workspace (`.vscode/settings.json`,
+  `tasks.json`, `launch.json`), GitHub Copilot instructions (`.github/copilot-
+  instructions.md`), Google Jules agent configuration (`.jules/config.yaml`,
+  [docs/JULES_AGENT_INTEGRATION.md](file:///home/fekerr/src/edge-
+  ai/docs/JULES_AGENT_INTEGRATION.md)), and instantiated `edge-ai/learning/`
+  domain with master lesson plans (`learning/LESSON_PLANS.md`, `01_*.md`,
+  `02_*.md`, `03_*.md`, `04_*.md`).
+- `260720_0942_001` - Parsed Intel Machine Learning Engineer requisition
+  (JR0284870) and created master learning goal specification
+  ([learning/GOAL_INTEL_MLE_AGENTIC_AI.md](file:///home/fekerr/src/edge-
+  ai/learning/GOAL_INTEL_MLE_AGENTIC_AI.md)), mapping agent harness, edge SLM
+  acceleration, quantization, RL environments, and benchmark metrics directly to
+  `edge-ai` repository capabilities.
+- `260720_0944_001` - Deconstructed 38 core AI topics from "Every AI Concept
+  Explained Intuitively!" (YouTube ID `LlYcDGrnXeY`) and established master
+  learning goal specification
+  ([learning/GOAL_EVERY_AI_CONCEPT_EXPLAINED.md](file:///home/fekerr/src/edge-
+  ai/learning/GOAL_EVERY_AI_CONCEPT_EXPLAINED.md)), mapping classical ML,
+  transformers, generative models, RL, and edge hardware throttling to
+  repository code.
+- `260720_0948_001` - Completed 100% compilation & linking of isolated Debug
+  engine profile (`build/base_debug/`), launched instrumented Telemetry
+  compilation (`build/telemetry_release/`), and updated asset inventory in
+  [docs/BUILD_AND_TEST_MANIFEST.md](file:///home/fekerr/src/edge-
+  ai/docs/BUILD_AND_TEST_MANIFEST.md) (135 executables, 2080
+  libraries/artifacts, 82 unit test binaries).
+- `260720_0952_001` - Completed 100% compilation & linking of instrumented
+  Telemetry profile (`build/telemetry_release/`), finishing all build profiles
+  across Release, Debug, and Telemetry matrix. Updated master asset manifest in
+  [docs/BUILD_AND_TEST_MANIFEST.md](file:///home/fekerr/src/edge-
+  ai/docs/BUILD_AND_TEST_MANIFEST.md) (207 built executables, 3132 shared
+  libraries/artifacts, 123 test binaries, 6 separated log streams).
+- `260720_0954_001` - Established `/home/fekerr/src/fekerr-dev` repository,
+  created master system review manifest
+  ([CORE12_SYSTEM_REVIEW_AND_MANIFEST.md](file:///home/fekerr/src/fekerr-
+  dev/CORE12_SYSTEM_REVIEW_AND_MANIFEST.md)), snapshot PR branch
+  (`feat/core12-snapshot-260720`), Windows Terminal `settings.json` auditor
+  (`tools/review_terminal_settings.py`), and Windows 11 toolchain configurator
+  suite (`config_win11.bat`, `config_win11.ps1`, `config_win11.sh`).
+- `260720_1402_001` - Created `make new-agy` target, `tools/agy-claude-1hr.sh`
+  launcher script, and root symlink `new-agy.sh` configuring AGY CLI sessions
+  with Claude 3.7 Sonnet model parameters under a 1-hour (3600s) clock-time
+  budget monitor.
+- `260720_1407_001` - Executed work cycle for `feat/work-cycle-260720_1407`:
+  verified out-of-tree build matrix (`build/`, `logs/`, `docs/`) with submodule
+  `irislime/irislime`, validated hardware throttling telemetry (<50% CPU/RAM
+  load limit, SSD disk I/O, Ethernet load), confirmed full `git clone --recurse-
+  submodules` and `git submodule update --init --recursive` instructions in
+  `README.md`, `GETTING_STARTED.md`, and `QUICK_START.md`, audited `aomaker-
+  org/llama.cpp` patch necessity in `docs/LLAMA_CPP_FORK_AUDIT.md`, reviewed
+  `tools/provision.sh` & `docs/PROVISIONING_NOTES.md`, verified dual
+  concise/verbose documentation structure, enforced Rule 7 exception `EXC-017`
+  in `infra/make/base.mk` & `docs/PIPE_TO_NULL_EXCEPTIONS.md`, generated build
+  manifest (`docs/BUILD_AND_TEST_MANIFEST.md`), and synced AGY telemetry.
+- `260720_1409_001` - Ported hardware acceleration make modules (`base.mk`,
+  `litert.mk`, `openvino.mk`, `sycl.mk`, `vulkan.mk`) from
+  `irislime/derived_components/make/` into `infra/make/`, verified out-of-tree
+  builds with `make build`, verified hardware inference under throttling with
+  `make test`, enforced Rule 7 exception registry in
+  `docs/PIPE_TO_NULL_EXCEPTIONS.md` and Rule 8 `YYMMDD_HHMM_NNN` timestamping
+  standard, and synced telemetry with `make agy-sync`.
+- `260720_1413_001` - Continued Milestone 2: re-synced
+  `irislime/derived_components/make/*.mk` mirror set with `infra/make/*.mk` (all
+  5 modules: `base.mk`, `litert.mk`, `openvino.mk`, `sycl.mk`, `vulkan.mk`)
+  adding Rule 7 EXC-005 and EXC-017 inline comments to derived copies. Ran
+  comprehensive Rule 7 `/dev/null` audit (all usages in `infra/make/` and
+  `derived_components/make/` properly annotated and registered). Verified out-
+  of-tree `make build` (100% success, `build/base_release` complete). Confirmed
+  Rule 8 `YYMMDD_HHMM_NNN` timestamps in all make modules. Synced AGY telemetry
+  (868 tracked entries). Committed timestamped milestone progress on `feat/work-
+  cycle-260720_1407`.
+- `260720_1430_001` - Continued Milestone 2 (/goal work cycle): Re-verified
+  hardware acceleration make module port from irislime/infra/make/ into edge-
+  ai/infra/make/ (all 5 modules: base.mk, litert.mk, openvino.mk, sycl.mk,
+  vulkan.mk). Confirmed infra/make/ ↔ derived_components/make/ in-sync (filename
+  header only diff). Verified make build completed 100% (build/base_release/
+  fully built, [100%] Built target llama-app). Enforced Rule 7 — all /dev/null
+  uses in infra/make/ are inline-annotated (EXC-001..EXC-006, EXC-017) and
+  registered in docs/PIPE_TO_NULL_EXCEPTIONS.md. Confirmed Rule 8
+  YYMMDD_HHMM_NNN timestamps in all 7 make modules. Ran make agy-sync (868 total
+  tracked entries). Verified hardware topology: 4 cores, 7GB RAM, calibrated
+  1-job build under throttle. Committed timestamped milestone progress.
+- `260720_1517_001` - Continued Milestone 2 (/goal work cycle): Ported hardware
+  acceleration make modules (base.mk, litert.mk, openvino.mk, sycl.mk,
+  vulkan.mk) from irislime/derived_components/make/ into infra/make/. Verified
+  out-of-tree build with 'make build' successfully producing 117
+  binaries/libraries. Enforced Rule 7 (/dev/null prohibition audit shows 100%
+  compliance across active workspace) and Rule 8 (YYMMDD_HHMM_NNN timestamping
+  standard). Synchronized telemetry via 'make agy-sync' (total 995 tracked
+  entries). Committed milestone progress.
+- `260720_1547_001` - Completed /goal mobile AI testbed scaffold for Pixel 6a
+  (Tensor G1) and Pixel 10 Pro XL (Tensor G5): created `devices/android/Pixel6a`
+  and `devices/android/Pixel10proxl` subdirectories, conducted research on
+  Tensor G1 Mali GPU / LiteRT delegates & Tensor G5 TPU v5 / Gemini Nano AICore
+  / LiteRT-LM, scaffolded full Android Jetpack Compose chatbot apps, C++ NDK
+  inference engines, JSON-RPC protocol over ADB reverse tunnel, python ADB
+  benchmark runner (`adb_testbed_runner.py`), interactive chatbot CLI
+  (`adb_chat_cli.py`), out-of-tree CMake build targets (`make devices-build`),
+  registered EXC-018 in `docs/PIPE_TO_NULL_EXCEPTIONS.md`, and verified 100%
+  test execution via `make devices-test`.
+- `260720_1833_001` - Removed `irislime/irislime` Git submodule and
+  `.gitmodules` file per user directive to ensure `edge-ai` is a standalone,
+  clean fresh tree structure; updated top-level documentation (`README.md`,
+  `GETTING_STARTED.md`, `QUICK_START.md`, `.devcontainer/devcontainer.json`) to
+  reflect standard cloning without submodule requirements; verified out-of-tree
+  builds with `make build` and `make devices-test`.
+- `260720_1833_002` - Re-organized submodules into lower-level domain paths:
+  `deps/llama.cpp` (aomaker-org/llama.cpp fork), `deps/litert-lm` (aomaker-
+  org/LiteRT-LM fork), `learning/cs249r_book`, `learning/minitorch`,
+  `learning/build-nanogpt`, and `learning/micrograd`. Updated
+  [infra/make/base.mk](file:///home/fekerr/src/edge-ai/infra/make/base.mk)
+  `ENGINE_DIR` to `deps/llama.cpp`. Updated
+  [README.md](file:///home/fekerr/src/edge-ai/README.md) directory tree and `git
+  clone --recursive` instructions. Verified build matrix and test suites via
+  `make test` and `make devices-test`.
+- `260721_0444_001` - Verified hardware acceleration make modules (`base.mk`,
+  `litert.mk`, `openvino.mk`, `sycl.mk`, `vulkan.mk`) in `infra/make/` and
+  `irislime/derived_components/make/`, verified out-of-tree builds with `make
+  build` and target builds (`make build-openvino`, `make build-sycl`, `make
+  build-vulkan`, `make litert-all`), added explicit Rule 7 comments for tree and
+  find null pipes, synced AGY telemetry entries with `make agy-sync`, and
+  committed Milestone 2 progress.
+- `260722_1021_001` - Continued Milestone 2: Ported and verified hardware
+  acceleration make modules in `infra/make/` and
+  `irislime/derived_components/make/`, verified out-of-tree base compilation
+  with `make build`, implemented STRICT compiler warnings mode in make targets,
+  added structured user onboarding workspace folder `users/`, implemented
+  Markdown-to-ASCII converter `tools/md2ascii.py` to mirror Markdown files into
+  Simple ASCII Text Format (`.txt`) with SHA-256 integrity checks, synced
+  session telemetry with `make agy-sync`, and committed milestone progress using
+  timestamped commits.
+
+
+
+
+
+================================================================================
+Integrity-Hash: 4cfdce5e8f9ee1f3bbf6a8f78bbc12682c6ec2cf9c4452ba34b0f3b3279170cb
+EOF:         TODO.txt
+================================================================================
