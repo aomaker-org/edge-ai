@@ -1,0 +1,61 @@
+# PROVENANCE BACKUP
+# Source: /mnt/c/Users/feker/OneDrive/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+# Date: 20260723_003954
+# ======================================================================
+#   Profile Version: 1.1.0 | Targets: PS7 Core Host Shells
+# ======================================================================
+
+# 1. Force establish central active dev environment working path baseline
+Set-Location -Path "C:\Users\feker\src\fekerr-dev"
+
+# 2. Advanced Dynamic Tracking Prompt Engine
+
+    # Extract relative folder layout path to display inside prompt anchor
+    $CurrentPathString = Split-Path -Leaf (Get-Location)
+    if ([string]::IsNullOrEmpty($CurrentPathString)) { $CurrentPathString = Get-Location }
+
+    Write-Output "[$(${SlotSignature})_${LineIndex}] C:\Users\feker\src\${CurrentPathString} > "
+}
+
+# 3. Universal Mesh Telemetry Fabric Harness Hook
+    param([string]$Slot = "AUTO")
+    $TargetHUDScript = "C:\Users\feker\src\fekerr-dev\ps7\Get-TerminalDashboard.ps1"
+    if (Test-Path -Path $TargetHUDScript) {
+        powershell -File $TargetHUDScript -SlotID $Slot
+    } else {
+        Write-Error "[-] Telemetry Engine Script Binary not found at: $TargetHUDScript"
+    }
+}
+
+# 4. Clean Environmental Initialization Notice
+Write-Host "`n======================================================================" -ForegroundColor Cyan
+Write-Host "======================================================================`n" -ForegroundColor Cyan
+
+    if ([string]::IsNullOrEmpty($env:WT_SESSION)) { return "W_CORE" }
+    try {
+        $Hash = 2166136261
+        foreach ($B in [System.Text.Encoding]::UTF8.GetBytes($env:WT_SESSION)) {
+            $Hash = ($Hash -bxor $B * 16777619) -band 0xFFFFFFFF
+        }
+        return "W_$(" {0:X4}" -f ($Hash -band 0xFFFF))"
+    } catch { return "W_FAIL" }
+}
+
+    param([string]$Action = "HELLO", [string]$Message = "Node state updated")
+    $TS = [DateTime]::UtcNow.ToString("yyyy-MM-dd HH:mm:ss")
+    $JsonLine = "{`"timestamp`":`"$TS`",`"node`":`"$MyID`",`"action`":`"$Action`",`"msg`":`"$Message`"}"
+    try { $JsonLine | Out-File -FilePath $HelloFile -Append -Encoding ascii } catch {}
+}
+
+
+    param([string]$Slot = "AUTO", [int]$Interval = 5, [switch]$Isolate)
+    $IsolateFlag = if ($Isolate.IsPresent) { "-Isolate" } else { "" }
+}
+
+# ==============================================================================
+# CLEAN DYNAMIC CWD PROMPT (RESTORED)
+# ==============================================================================
+function global:prompt {
+    "PS $($executionContext.SessionState.Path.CurrentLocation)> "
+}
+

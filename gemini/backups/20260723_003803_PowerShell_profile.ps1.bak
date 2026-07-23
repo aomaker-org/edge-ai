@@ -1,0 +1,98 @@
+# PROVENANCE BACKUP
+# Source: /mnt/c/Users/feker/OneDrive/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+# Date: 20260723_003803
+# ======================================================================
+#   MESH TELEMETRY FABRIC (MTF) | UNIFIED ENVIRONMENT USER PROFILE
+#   Profile Version: 1.1.0 | Targets: PS7 Core Host Shells
+# ======================================================================
+
+# 1. Force establish central active dev environment working path baseline
+Set-Location -Path "C:\Users\feker\src\fekerr-dev"
+
+# 2. Advanced Dynamic Tracking Prompt Engine
+function global:prompt {
+    $HistoryPath = "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
+    $LineIndex = 1
+    if (Test-Path -Path $HistoryPath) {
+        try { $LineIndex = [System.IO.File]::ReadAllLines($HistoryPath).Length + 1 } catch { $LineIndex = (Get-History).Count + 1 }
+    } else { $LineIndex = (Get-History).Count + 1 }
+
+    # Detect window slot by parsing current host panel details or fall back systematically
+    $HostTitle = $Host.UI.RawUI.WindowTitle
+    $SlotSignature = "W3"
+    if ($HostTitle -match 'W1') { $SlotSignature = "W1" }
+    elseif ($HostTitle -match 'W2') { $SlotSignature = "W2" }
+    elseif ($env:WT_SESSION -and (-not $HostTitle)) {
+        # Fallback heuristic mapper matching session footprints if Windows Terminal hides titles
+        $SlotSignature = "W3" 
+    }
+
+    # Extract relative folder layout path to display inside prompt anchor
+    $CurrentPathString = Split-Path -Leaf (Get-Location)
+    if ([string]::IsNullOrEmpty($CurrentPathString)) { $CurrentPathString = Get-Location }
+
+    Write-Output "[$(${SlotSignature})_${LineIndex}] C:\Users\feker\src\${CurrentPathString} > "
+}
+
+# 3. Universal Mesh Telemetry Fabric Harness Hook
+function global:mtfdash {
+    param([string]$Slot = "AUTO")
+    $TargetHUDScript = "C:\Users\feker\src\fekerr-dev\ps7\Get-TerminalDashboard.ps1"
+    if (Test-Path -Path $TargetHUDScript) {
+        powershell -File $TargetHUDScript -SlotID $Slot
+    } else {
+        Write-Error "[-] Telemetry Engine Script Binary not found at: $TargetHUDScript"
+    }
+}
+Set-Alias -Name dash -Value mtfdash -ErrorAction SilentlyContinue
+
+# 4. Clean Environmental Initialization Notice
+Write-Host "`n======================================================================" -ForegroundColor Cyan
+Write-Host "  MTF PROFILE INITIALIZED | Dev Environment Loaded Safely" -ForegroundColor Green
+Write-Host "  Universal Command Shortcut '[mtfdash]' is armed and ready." -ForegroundColor Yellow
+Write-Host "======================================================================`n" -ForegroundColor Cyan
+
+# --- MTF v1.4.1 GUID MANGLE & CENTRAL TICKER ALIGNMENT ---
+function global:Get-MtfHashedId {
+    if (-not [string]::IsNullOrEmpty($env:MTF_SLOT)) { return $env:MTF_SLOT }
+    if ([string]::IsNullOrEmpty($env:WT_SESSION)) { return "W_CORE" }
+    try {
+        $Hash = 2166136261
+        foreach ($B in [System.Text.Encoding]::UTF8.GetBytes($env:WT_SESSION)) {
+            $Hash = ($Hash -bxor $B * 16777619) -band 0xFFFFFFFF
+        }
+        return "W_$(" {0:X4}" -f ($Hash -band 0xFFFF))"
+    } catch { return "W_FAIL" }
+}
+
+function global:Write-MtfHelloAgy {
+    param([string]$Action = "HELLO", [string]$Message = "Node state updated")
+    $MyID = Get-MtfHashedId
+    $HelloFile = "C:\Users\feker\src\fekerr-dev\logs\hello.agy"
+    $TS = [DateTime]::UtcNow.ToString("yyyy-MM-dd HH:mm:ss")
+    $JsonLine = "{`"timestamp`":`"$TS`",`"node`":`"$MyID`",`"action`":`"$Action`",`"msg`":`"$Message`"}"
+    try { $JsonLine | Out-File -FilePath $HelloFile -Append -Encoding ascii } catch {}
+}
+
+function global:prompt {
+    $HistoryPath = "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
+    $LineIndex = 1
+    if (Test-Path $HistoryPath) { try { $LineIndex = [System.IO.File]::ReadAllLines($HistoryPath).Length + 1 } catch {} }
+    $DerivedSlot = Get-MtfHashedId
+    $CurrentPathString = Split-Path -Leaf (Get-Location)
+    if ([string]::IsNullOrEmpty($CurrentPathString)) { $CurrentPathString = Get-Location }
+    Write-Output "[${DerivedSlot}_${LineIndex}] C:\Users\feker\src\${CurrentPathString} > "
+}
+
+function global:mtfdash {
+    param([string]$Slot = "AUTO", [int]$Interval = 5, [switch]$Isolate)
+    $env:MTF_SLOT = if ($Slot -ne "AUTO") { $Slot } else { Get-MtfHashedId }
+    try { $Host.UI.RawUI.WindowTitle = "core12_$env:MTF_SLOT" } catch {}
+    Write-MtfHelloAgy -Action "DASH_START" -Message "Launching active telemetry dashboard loop"
+    $IsolateFlag = if ($Isolate.IsPresent) { "-Isolate" } else { "" }
+    powershell -Command "C:\Users\feker\src\fekerr-dev\ps7\Get-TerminalDashboard.ps1 -SlotID '$env:MTF_SLOT' -UpdateIntervalSec $Interval $IsolateFlag"
+}
+Set-Alias -Name dash -Value mtfdash -ErrorAction SilentlyContinue
+
+Write-MtfHelloAgy -Action "PROFILE_LOAD" -Message "Shell context successfully initialized"
+Write-Host "  [+] MTF v1.4.1 Core Hooks Armored and Active" -ForegroundColor Green

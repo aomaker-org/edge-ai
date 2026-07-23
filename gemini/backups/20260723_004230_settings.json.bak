@@ -1,0 +1,164 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [
+        {
+            "command": {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{541734e8-10d9-52a6-b820-75ccf4bbdcc0}",
+    "keybindings": [
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "newTabMenu": [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": {
+        "defaults": {},
+        "list": [
+            {
+                "bellStyle": "none",
+                "closeOnExit": "never",
+                "commandline": "cmd.exe /s /c \"\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\" -arch=amd64 && \"C:\\Program Files (x86)\\Intel\\oneAPI\\setvars.bat\" && \"C:\\Program Files\\Git\\bin\\bash.exe\" --login -i\"",
+                "guid": "{b6b47c92-7f14-4c54-809b-8ed65a51c9ea}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "win11 irislime Git Bash VS2022",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "commandline": "cmd.exe /c \"\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\" -arch=amd64 && \"C:\\Program Files\\Git\\bin\\bash.exe\" --login -i\"",
+                "guid": "{a6b47c92-7f14-4c54-809b-8ed65a51c9ea}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Developer Git Bash (VS 2022)",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "colorScheme": "One Half Dark",
+                "commandline": "wsl.exe -d ubu26_0715",
+                "cursorShape": "bar",
+                "font": {
+                    "face": "Cascadia Code PL",
+                    "size": 11
+                },
+                "guid": "{c72a818d-9372-7117-f6ee-1fe187ca9c2c}",
+                "hidden": false,
+                "icon": "https://raw.githubusercontent.com/aomaker-org/irislime/main/docs/assets/lime-icon.png",
+                "name": "IrisLime / Fekerr-Dev Workspace"
+            },
+            {
+                "closeOnExit": "never",
+                "colorScheme": "Pure-Black-Contrast",
+                "commandline": "pwsh.exe",
+                "guid": "{c0f3a46d-3b7c-4a2a-bc9e-0158dfb6920f}",
+                "hidden": false,
+                "name": "PS 7.6.3",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "bellStyle": "none",
+                "closeOnExit": "never",
+                "colorScheme": "Campbell",
+                "guid": "{541734e8-10d9-52a6-b820-75ccf4bbdcc0}",
+                "hidden": false,
+                "name": "Ubuntu-26.04",
+                "source": "Microsoft.WSL"
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "background": "#2E3440",
+            "black": "#3B4252",
+            "blue": "#81A1C1",
+            "brightBlack": "#4C566A",
+            "brightBlue": "#8FAFCF",
+            "brightCyan": "#94C7D6",
+            "brightGreen": "#B1C79D",
+            "brightPurple": "#BC9BB5",
+            "brightRed": "#C57279",
+            "brightWhite": "#ECEFF4",
+            "brightYellow": "#EFCF97",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#88C0D0",
+            "foreground": "#D8DEE9",
+            "green": "#A3BE8C",
+            "name": "Nord-Contrast",
+            "purple": "#B48EAD",
+            "red": "#BF616A",
+            "selectionBackground": "#FFFFFF",
+            "white": "#E5E9F0",
+            "yellow": "#EBCB8B"
+        },
+        {
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#3498DB",
+            "brightBlack": "#555555",
+            "brightBlue": "#56B4E9",
+            "brightCyan": "#23C4A1",
+            "brightGreen": "#34D075",
+            "brightPurple": "#A262B9",
+            "brightRed": "#E8543F",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#F2C71E",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#1ABC9C",
+            "foreground": "#F2F2F2",
+            "green": "#2ECC71",
+            "name": "Pure-Black-Contrast",
+            "purple": "#9B59B6",
+            "red": "#E74C3C",
+            "selectionBackground": "#FFFFFF",
+            "white": "#E0E0E0",
+            "yellow": "#F1C40F"
+        }
+    ],
+    "themes": []
+}
