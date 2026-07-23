@@ -1,0 +1,32 @@
+# ==============================================================================
+# FILENAME BEGIN: edge_ai_env.toml
+# Description: Workspace environment configuration for WSL and Windows targets.
+# ==============================================================================
+
+[workspace]
+name = "edge-ai"
+version = "1.0.0"
+
+[wsl_paths]
+root         = "/home/fekerr/src/edge-ai"
+tools        = "/home/fekerr/src/edge-ai/gemini/tools"
+logs         = "/home/fekerr/src/edge-ai/gemini/logs"
+build        = "/home/fekerr/src/edge-ai/build/win_iris_probe"
+iris_probe   = "/home/fekerr/src/edge-ai/src/win_iris_probe"
+
+[windows_paths]
+fekerr_dev   = "/mnt/c/Users/feker/src/fekerr-dev"
+win11_env    = "/mnt/c/Users/feker/src/fekerr-dev/win11_env"
+user_profile = "/mnt/c/Users/feker"
+
+[shortcuts]
+cdedge  = "wsl_paths.root"
+cdtools = "wsl_paths.tools"
+cdlogs  = "wsl_paths.logs"
+cdbuild = "wsl_paths.build"
+cdfek   = "windows_paths.fekerr_dev"
+cdwin   = "windows_paths.win11_env"
+
+# ==============================================================================
+# FILENAME END: edge_ai_env.toml
+# ==============================================================================

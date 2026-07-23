@@ -76,3 +76,8 @@ logs/
 *.chunk.*
 tools/bin/
 
+
+# Transient build outputs and logs
+build/
+gemini/logs/
+*.log
