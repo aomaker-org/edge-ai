@@ -76,3 +76,8 @@ logs/
 *.chunk.*
 tools/bin/
 
+
+# Transient build caches and archives
+rclone_cache/
+staging_tars/
+*.zip

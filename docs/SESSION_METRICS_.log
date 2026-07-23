@@ -1,0 +1,15 @@
+======================================================================
+WSL CONTAINER DOCKER PURGE TRANSACTION LOG
+Timestamp (UTC): 2026-07-18 14:14:28
+Target Instance: ubu26_0715
+======================================================================
+[DOCKER PURGE SKIPPED] Target instance ubu26_0715 was not running or available.
+
+--------------------------------------------------------------------------------
+# Integrity-Hash: 9e6fbc1ce46ec9b42f66156642c3f9f24ad56d084a1f366308ebb8a26ccdb16c
+================================================================================
+[ARCHIVE SUCCESS] Packed Archive Size: 2.54 GB | Path: C:\Users\feker\src\fekerr-dev\docs\minecraft_archive_20260718_140956.zip
+
+--------------------------------------------------------------------------------
+# Integrity-Hash: 4e736eaf1486dd784fcacddc4a056759415b9bfcb02284efe8d50d4318d660fd
+================================================================================
