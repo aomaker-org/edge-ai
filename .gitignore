@@ -81,3 +81,6 @@ tools/bin/
 rclone_cache/
 staging_tars/
 *.zip
+
+# Generated MSVC batch scripts
+win11_env/*.bat
