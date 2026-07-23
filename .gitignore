@@ -81,3 +81,17 @@ tools/bin/
 build/
 gemini/logs/
 *.log
+manifest.json
+gemini/captures/*.tar.gz
+gemini/captures/*.zip
+gemini/captures/*.tar.gz
+gemini/captures/*.zip
+gemini/captures/*.tar.gz
+gemini/captures/*.zip
+manifest.json
+
+# Workspace captures, archives, and inventories
+gemini/captures/
+manifest.json
+*.tar.gz
+*.zip
