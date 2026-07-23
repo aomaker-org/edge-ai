@@ -1,0 +1,14 @@
+/home/fekerr/src/edge-ai/src/tools/gix_manifest/target/release/deps/thiserror-f30e3fabebd3a586.d: /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/lib.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/aserror.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/display.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/var.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/private.rs /home/fekerr/src/edge-ai/src/tools/gix_manifest/target/release/build/thiserror-995e3629215eef60/out/private.rs
+
+/home/fekerr/src/edge-ai/src/tools/gix_manifest/target/release/deps/libthiserror-f30e3fabebd3a586.rlib: /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/lib.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/aserror.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/display.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/var.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/private.rs /home/fekerr/src/edge-ai/src/tools/gix_manifest/target/release/build/thiserror-995e3629215eef60/out/private.rs
+
+/home/fekerr/src/edge-ai/src/tools/gix_manifest/target/release/deps/libthiserror-f30e3fabebd3a586.rmeta: /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/lib.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/aserror.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/display.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/var.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/private.rs /home/fekerr/src/edge-ai/src/tools/gix_manifest/target/release/build/thiserror-995e3629215eef60/out/private.rs
+
+/home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/lib.rs:
+/home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/aserror.rs:
+/home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/display.rs:
+/home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/var.rs:
+/home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.19/src/private.rs:
+/home/fekerr/src/edge-ai/src/tools/gix_manifest/target/release/build/thiserror-995e3629215eef60/out/private.rs:
+
+# env-dep:OUT_DIR=/home/fekerr/src/edge-ai/src/tools/gix_manifest/target/release/build/thiserror-995e3629215eef60/out

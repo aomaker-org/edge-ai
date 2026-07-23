@@ -1,0 +1,11 @@
+/home/fekerr/src/edge-ai/src/tools/gix_manifest/target/release/deps/gix_utils-cc7ea4442c129ed8.d: /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/lib.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/backoff.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/buffers.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/str.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/btoi.rs
+
+/home/fekerr/src/edge-ai/src/tools/gix_manifest/target/release/deps/libgix_utils-cc7ea4442c129ed8.rlib: /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/lib.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/backoff.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/buffers.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/str.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/btoi.rs
+
+/home/fekerr/src/edge-ai/src/tools/gix_manifest/target/release/deps/libgix_utils-cc7ea4442c129ed8.rmeta: /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/lib.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/backoff.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/buffers.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/str.rs /home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/btoi.rs
+
+/home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/lib.rs:
+/home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/backoff.rs:
+/home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/buffers.rs:
+/home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/str.rs:
+/home/fekerr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-utils-0.1.14/src/btoi.rs:
