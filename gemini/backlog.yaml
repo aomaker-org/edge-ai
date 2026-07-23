@@ -28,3 +28,8 @@ backlog_items:
     status: "backlog"
     priority: "low"
     documentation_ref: "gemini/docs/tools_inventory.md"
+  - id: "TODO-008"
+    title: "Adapt GitHub billing audit script to new endpoints (HTTP 410) and admin:org scope"
+    status: "backlog"
+    priority: "medium"
+    documentation_ref: "gemini/docs/tools_inventory.md"
