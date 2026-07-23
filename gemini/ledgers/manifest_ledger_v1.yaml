@@ -1,0 +1,20 @@
+schema_version: "1.0.0"
+description: "Offsite artifact catalog tracking heavy binaries moved to cloud storage."
+offload_destination_root: "gdrive:transfer/edge-ai/captures/"
+artifacts:
+  - name: "20260722_143216_multi_repo_workspace.tar.gz"
+    size_bytes: 1320000000
+    remote_path: "gdrive:transfer/edge-ai/captures/20260722_143216_multi_repo_workspace.tar.gz"
+    status: "offloaded"
+  - name: "20260722_143216_multi_repo_workspace.zip"
+    size_bytes: 1350000000
+    remote_path: "gdrive:transfer/edge-ai/captures/20260722_143216_multi_repo_workspace.zip"
+    status: "offloaded"
+  - name: "20260722_213659_multi_repo_workspace.tar.gz"
+    size_bytes: 1320000000
+    remote_path: "gdrive:transfer/edge-ai/captures/20260722_213659_multi_repo_workspace.tar.gz"
+    status: "offloaded"
+  - name: "20260722_213659_multi_repo_workspace.zip"
+    size_bytes: 1350000000
+    remote_path: "gdrive:transfer/edge-ai/captures/20260722_213659_multi_repo_workspace.zip"
+    status: "offloaded"
