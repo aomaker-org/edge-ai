@@ -42,20 +42,21 @@ def run_build():
     bat_file_wsl = WIN11_ENV_DIR / "run_sycl_build.bat"
     bat_file_win = r"C:\Users\feker\src\fekerr-dev\win11_env\run_sycl_build.bat"
 
-    oneapi_vars = r"C:\Program Files (x86)\Intel\oneAPI\setvars.bat"
-
+    # Avoid parenthesized IF block in CMD to prevent (x86) path syntax errors
     bat_content = f"""@echo off
-if exist "{oneapi_vars}" (
-    call "{oneapi_vars}" >nul 2>&1
-    echo [WIN11_ENV] Initialized Intel oneAPI Environment.
-    cd /d "{win_build}"
-    cmake "{win_llama}" -G "NMake Makefiles" -DGGML_SYCL=ON -DCMAKE_BUILD_TYPE=Release
-    nmake llama-ls-sycl-device
-) else (
-    echo [WIN11_ENV] Intel oneAPI setvars.bat not found at {oneapi_vars}.
-    echo [WIN11_ENV] Please verify Intel oneAPI Base Toolkit is installed on Windows 11 host.
-    exit /b 1
-)
+set "ONEAPI_VARS=C:\\Program Files (x86)\\Intel\\oneAPI\\setvars.bat"
+if not exist "%ONEAPI_VARS%" goto :NO_ONEAPI
+call "%ONEAPI_VARS%" >nul 2>&1
+echo [WIN11_ENV] Initialized Intel oneAPI Environment.
+cd /d "{win_build}"
+cmake "{win_llama}" -G "NMake Makefiles" -DGGML_SYCL=ON -DCMAKE_BUILD_TYPE=Release
+nmake llama-ls-sycl-device
+exit /b %ERRORLEVEL%
+
+:NO_ONEAPI
+echo [WIN11_ENV] Intel oneAPI setvars.bat not found at %ONEAPI_VARS%.
+echo [WIN11_ENV] Please verify Intel oneAPI Base Toolkit is installed on Windows 11 host.
+exit /b 1
 """
     bat_file_wsl.write_text(bat_content, encoding="utf-8")
 
