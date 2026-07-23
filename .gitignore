@@ -76,3 +76,7 @@ logs/
 *.chunk.*
 tools/bin/
 
+
+# --- Heavy Capture Offload Rule ---
+gemini/captures/*.tar.gz
+gemini/captures/*.zip

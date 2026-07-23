@@ -1,0 +1,25 @@
+================================================================================
+ EDGE-AI GEMINI INFRASTRUCTURE SYNC AUDIT
+================================================================================
+ Repository Root : /home/fekerr/src/edge-ai
+ Gemini Directory: /home/fekerr/src/edge-ai/gemini
+
+[1] Checking Tool Suite Permissions:
+  - [OK (Executable)] audit_scaffold.sh
+  - [OK (Executable)] build_runner.py
+  - [OK (Executable)] mod_toggle.py
+  - [OK (Executable)] process_inbox.py
+  - [OK (Executable)] clip_logger.py
+  - [OK (Executable)] sync_session.py
+
+[2] Checking Inbox Status:
+  - gemini/inbox.file present (0 bytes).
+
+[3] Session Notes Inventory:
+  - Found: session_notes_001.txt
+  - Found: session_notes_002.txt
+  - Found: session_notes_003.txt
+
+================================================================================
+ Sync audit complete! System ready.
+================================================================================
