@@ -15,7 +15,8 @@ build/
 *.egg-info/
 
 # --- Rust ---
-/target/
+target/
+**/target/
 **/*.rs.bk
 
 # Tracking dependencies, so keeping Cargo.lock
