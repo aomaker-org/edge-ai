@@ -1,31 +1,20 @@
 {
-	"name": "edge-ai Development Container",
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
-	"features": {
-		"ghcr.io/devcontainers/features/python:1": {
-			"version": "3.12",
-			"installTools": true
-		},
-		"ghcr.io/devcontainers/features/common-utils:1": {
-			"configureZshAsDefaultShell": true
-		}
-	},
-	"customizations": {
-		"vscode": {
-			"settings": {
-				"python.defaultInterpreterPath": "/usr/local/bin/python",
-				"cmake.configureOnOpen": true,
-				"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
-			},
-			"extensions": [
-				"ms-vscode.cpptools",
-				"ms-vscode.cmake-tools",
-				"ms-python.python",
-				"ms-python.vscode-pylance",
-				"twxs.cmake"
-			]
-		}
-	},
-	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y build-essential cmake ninja-build ccache && curl -LsSf https://astral.sh/uv/install.sh | sh && make build",
-	"remoteUser": "vscode"
+  "name": "Edge AI System Toolchain (2026)",
+  "image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/rust:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "rust-lang.rust-analyzer",
+        "twxs.cmake"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder}/build,target=/workspace/build,type=bind"
+  ],
+  "postCreateCommand": "g++ --version && rustc --version"
 }
