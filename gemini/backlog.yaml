@@ -23,3 +23,8 @@ backlog_items:
     status: "backlog"
     priority: "high"
     documentation_ref: "gemini/docs/ledger_design_status.md"
+  - id: "TODO-006"
+    title: "Eternal review of legacy configuration and dotfiles"
+    status: "backlog"
+    priority: "low"
+    documentation_ref: "gemini/docs/tools_inventory.md"
