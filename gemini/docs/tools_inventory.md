@@ -23,3 +23,8 @@ This document provides a formal inventory and architectural reference for the ut
 
 ---
 *Maintained under the Gemini governance and telemetry framework.*
+
+## 4. GitHub Actions Billing & Telemetry Auditor (`gemini/tools/actions_billing_audit.py`)
+* **Language:** Python 3
+* **Core Purpose:** Queries the GitHub REST API (`gh api`) to retrieve organization-level Actions minute consumption, paid runner usage, and shared storage metrics.
+* **Telemetry Output:** Appends timestamped JSON records to `gemini/logs/actions_billing_telemetry.jsonl`.
