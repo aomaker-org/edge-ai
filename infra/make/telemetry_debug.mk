@@ -34,7 +34,8 @@ build-debug: verify-infra ## Compile isolated Debug engine build into build/base
 				-DGGML_DEBUG=ON \
 				-DLLAMA_BUILD_TESTS=ON \
 				-DCMAKE_C_COMPILER_LAUNCHER=ccache \
-				-DCMAKE_CXX_COMPILER_LAUNCHER=ccache; \
+				-DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+				$(STRICT_CMAKE_FLAGS); \
 		fi; \
 		cmake --build "$(DEBUG_BUILD_DIR)" -j$(NUM_BUILD_JOBS) | tee "$(DEBUG_LOGS_DIR)/build_debug_$(TIMESTAMP).log"; \
 	else \
@@ -57,7 +58,8 @@ build-telemetry: verify-infra ## Compile isolated Telemetry-instrumented engine 
 				-DEDGE_AI_TELEMETRY=ON \
 				-DLLAMA_BUILD_TESTS=ON \
 				-DCMAKE_C_COMPILER_LAUNCHER=ccache \
-				-DCMAKE_CXX_COMPILER_LAUNCHER=ccache; \
+				-DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+				$(STRICT_CMAKE_FLAGS); \
 		fi; \
 		cmake --build "$(TELEMETRY_BUILD_DIR)" -j$(NUM_BUILD_JOBS) | tee "$(TELEMETRY_LOGS_DIR)/build_telemetry_$(TIMESTAMP).log"; \
 	else \

@@ -16,6 +16,15 @@ SHELL        := bash
 
 QUIET ?= 0
 
+# --- STRICT COMPILATION LEVEL OPTIONS ---
+STRICT ?= 0
+ifeq ($(STRICT),1)
+  STRICT_CMAKE_FLAGS := -DCMAKE_COMPILE_WARNING_AS_ERROR=ON -DCMAKE_CXX_FLAGS="-Wall -Wextra -Werror" -DCMAKE_C_FLAGS="-Wall -Wextra -Werror"
+else
+  STRICT_CMAKE_FLAGS :=
+endif
+
+
 # --- HARDWARE TOPOLOGY & MEMORY PARSER ---
 # Rule 7 Exceptions: EXC-001 to EXC-004 registered in docs/PIPE_TO_NULL_EXCEPTIONS.md
 TOTAL_THREADS := $(shell nproc 2>/dev/null || echo 4) # Rule 7 Exception: EXC-001 (silent nproc fallback)
@@ -49,7 +58,7 @@ endif
 NUM_BUILD_JOBS ?= $(CALIBRATED_BUILD_JOBS)
 
 # --- SHARED CONFIGURATION MATRIX ---
-ENGINE_DIR    ?= $(PROJECT_ROOT)/irislime/irislime/llama.cpp
+ENGINE_DIR    ?= $(PROJECT_ROOT)/deps/llama.cpp
 BUILD_DIR     ?= $(PROJECT_ROOT)/build
 LOGS_DIR      ?= $(PROJECT_ROOT)/logs
 AGY_DIR       ?= $(PROJECT_ROOT)/agy
@@ -109,7 +118,8 @@ build-base: verify-infra ## Compile base CPU inference target (out-of-tree in bu
 				-DGGML_EXCEPTIONS=ON \
 				-DLLAMA_BUILD_TESTS=ON \
 				-DCMAKE_C_COMPILER_LAUNCHER=ccache \
-				-DCMAKE_CXX_COMPILER_LAUNCHER=ccache; \
+				-DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+				$(STRICT_CMAKE_FLAGS); \
 		fi; \
 		cmake --build "$$TARGET_DIR" -j$(NUM_BUILD_JOBS); \
 	else \
